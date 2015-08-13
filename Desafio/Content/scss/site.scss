@@ -3,17 +3,17 @@
 @import 'boot.scss';
 
 // Temas
-@import 'themes/new-theme.scss';
-
-// Css customizados
-@import 'main.scss';
-
-//Fontes
-@import 'typos/icons/_icons.scss'; 
+@import 'themes/fortes.scss';
 
 //Componentes
 @import 'components/_dropdown.scss';
 
+// Css customizados
+@import 'layout/main.scss';
+
+//Fontes
+@import 'typos/icons/_icons.scss'; 
+
+
 //Css Layout
-/*@import 'layout/header.scss';
-@import 'layout/content.scss';*/
+@import 'layout/header.scss';

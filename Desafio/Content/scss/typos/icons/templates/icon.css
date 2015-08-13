@@ -16,7 +16,7 @@
 * 4. Correct line-height
 * 5. Better font rendering
 */
-[class*='<%= baseClass %>'] {
+.<%= baseClass %> {
 	font-family:"<%= fontBaseName %>";
 	/* 1 */
 	display:inline-block;

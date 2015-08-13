@@ -132,8 +132,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
     <Folder Include="Content\css\fonts\" />
-    <Folder Include="Content\scss\OLD\base\" />
-    <Folder Include="Content\scss\OLD\componentes\" />
     <Folder Include="Content\scss\vendor\plugins\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -163,15 +161,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\scss\site.scss" />
     <Content Include="Content\css\site.css.map" />
-    <Content Include="Content\scss\OLD\core\_grid.scss" />
-    <Content Include="Content\scss\OLD\layout\_header.scss" />
-    <Content Include="Content\scss\OLD\core\_variables.scss" />
+    <Content Include="Content\scss\layout\_header.scss" />
     <Content Include="Content\scss\base\_normalize.scss" />
-    <Content Include="Content\scss\OLD\core\_base.scss" />
-    <Content Include="Content\scss\OLD\layout\_content.scss" />
+    <Content Include="Content\scss\layout\_content.scss" />
     <Content Include="Content\scss\components\_dropdown.scss" />
-    <Content Include="Content\scss\OLD\form\form.scss" />
-    <Content Include="Content\scss\OLD\form\_search.scss" />
     <Content Include="Content\scss\base\boilerplate.scss" />
     <Content Include="Content\scss\base\_core.scss" />
     <Content Include="Content\scss\boot.scss" />
@@ -196,15 +189,13 @@
     <Content Include="Content\scss\features\responsive.scss" />
     <Content Include="Content\scss\features\rtl.scss" />
     <Content Include="Content\scss\layout\main.scss" />
-    <Content Include="Content\scss\main.scss" />
-    <Content Include="Content\scss\themes\new-theme.scss" />
+    <Content Include="Content\scss\themes\fortes.scss" />
     <Content Include="Content\scss\utils\helpers.scss" />
     <Content Include="Content\scss\utils\various\_hsla-converter.scss" />
     <Content Include="Content\scss\vendor\uikit\addons\uikit-addons.scss" />
     <Content Include="Content\scss\vendor\uikit\custom-uikit.scss" />
     <Content Include="Content\scss\vendor\uikit\responsive.scss" />
     <Content Include="Content\scss\vendor\uikit\uikit.scss" />
-    <Content Include="Content\scss\themes\_config.scss" />
     <Content Include="Content\scss\config\_config.scss" />
     <Content Include="Content\scss\typos\icons\templates\icon.json" />
     <Content Include="Content\scss\typos\icons\_icons.scss" />

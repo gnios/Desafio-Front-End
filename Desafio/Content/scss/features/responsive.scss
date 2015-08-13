@@ -360,7 +360,7 @@
             font-size: 85%;
         }
         thead th:last-child .title {
-            border-right: 0.0833em solid rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            border-right: 0.0833em solid $negativeColor;
         }
         tbody td .icon {
             margin-top: 0;
@@ -803,7 +803,7 @@
             font-size: 85%;
         }
         thead th:last-child .title {
-            border-right: 0.0833em solid rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            border-right: 0.0833em solid $negativeColor;
         }
         tbody td .icon {
             margin-top: 0;
