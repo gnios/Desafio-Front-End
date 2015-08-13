@@ -1,0 +1,142 @@
+﻿
+.contain-i-e-s, .icon-empty-star, .text-i-e-s {
+    height: 100px;
+    width: 100px;
+}
+
+.contain-i-e-s {
+    position: relative;
+}
+
+.text-i-e-s {
+    text-align: center;
+    position: absolute;
+}
+
+.header {
+    background: $color-primary;
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: table;
+
+    .container {
+        position: relative;
+    }
+}
+
+.logo {
+    text-align: center;
+
+    a {
+        /*@extend %image-replace;*/
+        width: 180px;
+        height: 63px;
+        background: url(images/logo-header.png) no-repeat center;
+        background-size: contain;
+    }
+}
+
+.social {
+    position: absolute;
+    right: $default-space;
+    top: 15px;
+    list-style: none;
+    margin: 0px;
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        /*@extend %image-replace;*/
+        width: 20px;
+        height: 20px;
+        background: url(images/social-icons.png) no-repeat;
+        margin-left: $default-space;
+    }
+
+    li:nth-child(1) a {
+        background-position: -50px 0;
+    }
+
+    li:nth-child(2) a {
+        background-position: -90px 0;
+    }
+
+    li:nth-child(3) a {
+        background-position: -128px 0;
+    }
+}
+
+.menu-empresa {
+    $width-menu: 235px;
+
+    color: #4d4d4d;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    width: $width-menu;
+    margin-left: $default-margin;
+    margin-top: 15px;
+
+    .stack {
+        float: left;
+        margin-top: -5px;
+        margin-right: 5px;
+    }
+
+    h1 {
+        margin: 0px;
+        font-size: 12pt;
+    }
+
+    h2 {
+        margin: 0px;
+        font-size: 8pt;
+    }
+
+    h1:after {
+        @extend .icon;
+        content: $icon-angle-down;
+        margin-left: 5px;
+        font-weight: bold;
+    }
+
+    &:hover {
+        background: darken($color-primary, 8);
+    }
+
+    jq-dropdown-open {
+        background: #888;
+        color: #fff;
+    }
+
+    jq-dropdown-open:after {
+        color: #fff;
+    }
+
+    .jq-dropdown {
+        width: $width-menu !important;
+    }
+}
+
+////
+//// MOBILE
+////
+@media only screen and (max-width: $mobile-break) {
+    .header {
+        height: 63px;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .logo a {
+        width: 120px;
+    }
+}

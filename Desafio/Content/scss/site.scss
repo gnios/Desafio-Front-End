@@ -1,0 +1,19 @@
+﻿
+// configuracoes iniciais
+@import 'boot.scss';
+
+// Temas
+@import 'themes/new-theme.scss';
+
+// Css customizados
+@import 'main.scss';
+
+//Fontes
+@import 'typos/icons/_icons.scss'; 
+
+//Componentes
+@import 'components/_dropdown.scss';
+
+//Css Layout
+/*@import 'layout/header.scss';
+@import 'layout/content.scss';*/

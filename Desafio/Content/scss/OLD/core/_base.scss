@@ -1,0 +1,25 @@
+﻿*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	/*font: {
+		size: 1.6rem;
+		family: $primary-font; // variables inside partials > _variables.scss
+	}*/
+	/*color: $color-primary;
+	background-color: $color-secondary;*/
+	width: 100%;
+	@include clearfix();
+}
+
+a {
+	color: $color-secondary;
+	text-decoration: none;
+}
+
+

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html id="document" class="no-js document">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/bundles/css")
+
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'><!-- BODY FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'><!-- HEADINGS FONT -->
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body id="gnio-framework" class="gnio-framework no-text-shadow">
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="framework" class="framework">
+
+        <!-- FRAMEWORK STARTS HERE -->
+        <header id="main-header" class="section-free">
+            <!-- MAIN HEADER STARTS HERE -->
+            <!-- YOUR MAIN HEADER MARKUP -->
+            <div class="wrapper">
+
+                <!-- MAIN HEADER WRAPPER STARTS HERE -->
+                <aside class="logo">
+                    <span class="icon-stack icon-size-2x">
+                        <i class="icon icon-circle icon-stack-2x"></i>
+                        <i class="icon icon-user icon-stack-1x icon-inverse"></i>
+                        Forter
+                    </span>
+                </aside>
+            </div>
+        </header>
+
+        <!-- MAIN HEADER ENDS HERE -->
+        <section id="main-section" class="section">
+            <!-- MAIN SECTION STARTS HERE -->
+            <div id="main-content" class="section-free">
+                @RenderBody()
+            </div>
+        </section><!-- MAIN SECTION ENDS HERE -->
+
+        <footer id="main-footer" class="section-free">
+            <!-- MAIN FOOTER STARTS HERE -->
+            <!-- YOUR MAIN FOOTER MARKUP -->
+            <div class="wrapper">
+                <!-- MAIN FOOTER WRAPPER STARTS HERE -->
+                <span class="copyright"><strong>Blackhole</strong> - Developed by <a href="mailto:alin@html5depot.com" title="Contact the Author">Alin Seba</a> and released under <a href="http://opensource.org/licenses/MIT" target="_blank" title="MIT License">MIT</a> license</span>
+                <ul class="list social with-background">
+                    <li class="item twitter">
+                        <a href="https://twitter.com/blackholesass" title="Twitter" data-uk-tooltip><span class="icon"></span></a>
+                    </li>
+                    <li class="item github">
+                        <a href="https://github.com/alinseba/blackhole" title="Github" data-uk-tooltip><span class="icon"></span></a>
+                    </li>
+                </ul>
+                <span class="version">
+                    <span class="name">version:</span>
+                    <strong class="value">1.11</strong>
+                </span>
+            </div><!-- MAIN FOOTER WRAPPER ENDS HERE -->
+        </footer><!-- MAIN FOOTER ENDS HERE -->
+    </div><!-- FRAMEWORK ENDS HERE -->
+    @*<div class="wrap">
+            <header class="header">
+
+                <ul class="social">
+                    <li>
+                        <div class="ui fluid category search">
+                            <div class="ui icon input">
+                                <input class="prompt" type="text" placeholder="Search animals...">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="icon bell-o size-3x"></i>
+                    </li>
+                    <li><a href="#" title="sair"><i class="icon sign-out size-3x"></i></a></li>
+                </ul>
+                <div class="menu-empresa" data-jq-dropdown="#menu-empresa">
+                    <span class="stack size-2x">
+                        <i class="icon circle stack-2x"></i>
+                        <i class="icon user stack-1x inverse"></i>
+                    </span>
+                    <h1>Fortes Contabilidade</h1>
+                    <h2>Empresa de contabilidade</h2>
+                    <div id="menu-empresa" class="jq-dropdown jq-dropdown-tip">
+                        <ul class="jq-dropdown-menu">
+                            <li><a href="#1">Item 1</a></li>
+                            <li><a href="#2">Item 2</a></li>
+                            <li><a href="#3">Item 3</a></li>
+                            <li class="jq-dropdown-divider"></li>
+                            <li><a href="#4">Item 4</a></li>
+                            <li><a href="#5">Item 5</a></li>
+                            <li><a href="#5">Item 6</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content">
+
+            </section>
+
+            <aside class="sidebar">
+                <h1>Sidebar</h1>
+            </aside>
+
+            <footer class="footer">
+                <h1>Footer</h1>
+            </footer>
+        </div>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/plugins")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
