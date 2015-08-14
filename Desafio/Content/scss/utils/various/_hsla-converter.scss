@@ -11,9 +11,9 @@
 /// @return {Color}
 /// @example scss - Example
 /// .foo {
-///     color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)); // This will output the HSL color 'hsla(0, 0%, 100%, 1)', which is white
+///     color: $negativeColor; // This will output the HSL color 'hsla(0, 0%, 100%, 1)', which is white
 /// }
-@function rgbToHsla($r, $g, $b, $a: 1.0) {
+@function rgb($r, $g, $b, $a: 1.0) {
     $r: $r / 255;
     $g: $g / 255;
     $b: $b / 255;

@@ -41,41 +41,21 @@
                 <div class="uk-width-1-2">
                     <ul class="actions">
                         <li><input type="text" /> </li>
-                        <li><a href="#" title="sair"><i class="icon icon-bell-o  icon-medium"> <span class="uk-badge uk-badge-notification  uk-badge-danger">8</span></i></a></li>
+                        <li><a href="#" title="sair"><i class="icon icon-bell-o  icon-medium"> <span class="uk-badge uk-badge-notification uk-badge-danger">8</span></i></a></li>
                         <li><a href="#" title="sair"><i class="icon icon-sign-out icon-medium"></i></a></li>
                     </ul>
                 </div>
         </header>
-        @*<!-- FRAMEWORK STARTS HERE -->
-            <header id="main-header" class="section-free">
-                <!-- MAIN HEADER STARTS HERE -->
-                <!-- YOUR MAIN HEADER MARKUP -->
-                <div class="wrapper">
-
-                    <!-- MAIN HEADER WRAPPER STARTS HERE -->
-                    <aside class="logo">
-                        <span class="icon-stack icon-size-2x">
-                            <i class="icon icon-circle icon-stack-2x"></i>
-                            <i class="icon icon-user icon-stack-1x icon-inverse"></i>
-                            Forter
-                        </span>
-                    </aside>
-                </div>
-            </header>*@
-
         <!-- MAIN HEADER ENDS HERE -->
         <section id="main-section" class="section">
             <!-- MAIN SECTION STARTS HERE -->
             <div id="main-content" class="section-free">
                 @RenderBody()
             </div>
-        </section><!-- MAIN SECTION ENDS HERE -->
+        </section>
 
         <footer id="main-footer" class="section-free">
-            <!-- MAIN FOOTER STARTS HERE -->
-            <!-- YOUR MAIN FOOTER MARKUP -->
             <div class="wrapper">
-                <!-- MAIN FOOTER WRAPPER STARTS HERE -->
                 <span class="copyright"><strong>Blackhole</strong> - Developed by <a href="mailto:alin@html5depot.com" title="Contact the Author">Alin Seba</a> and released under <a href="http://opensource.org/licenses/MIT" target="_blank" title="MIT License">MIT</a> license</span>
                 <ul class="list social with-background">
                     <li class="item twitter">
@@ -89,24 +69,9 @@
                     <span class="name">version:</span>
                     <strong class="value">1.11</strong>
                 </span>
-            </div><!-- MAIN FOOTER WRAPPER ENDS HERE -->
-        </footer><!-- MAIN FOOTER ENDS HERE -->
-    </div><!-- FRAMEWORK ENDS HERE -->
-    @*<div class="wrap">
-
-
-            <section class="content">
-
-            </section>
-
-            <aside class="sidebar">
-                <h1>Sidebar</h1>
-            </aside>
-
-            <footer class="footer">
-                <h1>Footer</h1>
-            </footer>
-        </div>*@
+            </div>
+        </footer>
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/knockout")

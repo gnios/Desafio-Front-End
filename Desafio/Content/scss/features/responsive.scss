@@ -329,7 +329,7 @@
                 margin-left: 1.5em;
             }
             &:last-child {
-                border-bottom: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+                border-bottom: 0.0833em solid $elementsActionBackground;
             }
         }
         td.gutter, td.code {
@@ -687,7 +687,7 @@
                 margin-left: 1.5em;
             }
             &:last-child {
-                border-bottom: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+                border-bottom: 0.0833em solid $elementsActionBackground;
             }
         }
         td.gutter, td.code {

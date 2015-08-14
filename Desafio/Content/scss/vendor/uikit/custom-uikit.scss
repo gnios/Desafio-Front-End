@@ -37,12 +37,12 @@
     padding: 0.5em 0.75em;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.85);
-    border-bottom: 0.0833em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.025);
-    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+    color: rgba( $negativeColor, 0.85);
+    border-bottom: 0.0833em solid rgba( $blackColor,  0.025);
+    background-color: $accentColor;
     &:hover, &:active {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($buttonColor, 1), nth($buttonColor, 2), nth($buttonColor, 3)) !important;
+        color: $negativeColor;
+        background-color: $buttonColor !important;
     }
 }
 
@@ -68,26 +68,26 @@
 #{$documentID} #{$frameworkClass} .uikit-component {
     position: relative;
     ::-moz-selection {
-        background: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        background: $accentColor;
+        color: $negativeColor;
         @include text-shadow(none);
     }
 
     ::selection {
-        background: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        background: $accentColor;
+        color: $negativeColor;
         @include text-shadow(none);
     }
     .uk-link, .uk-form-file {
-        color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        color: $accentColor;
         &:hover, &:active {
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
         }
     }
     .uk-placeholder {
-        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
-        border-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+        color: $mainColor;
+        background-color: $elementsBackground;
+        border-color: $elementsBackground2;
         margin-bottom: 1em;
         padding: 1.5em;
     }
@@ -96,7 +96,7 @@
     }
     // Progress Bar
     .uk-progress {
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3), 0.75);
+        background-color: rgba( $accentColor, 0.75);
         position: relative;
         border: none;
         height: auto;
@@ -110,36 +110,36 @@
         margin-top: 0.25em;
     }
     .uk-progress .uk-progress-bar {
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        background-color: $accentColor;
         position: absolute;
         margin: 0;
-        border: 0.1em solid rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        border: 0.1em solid $accentColor;
     }
     .uk-progress .uk-progress-bar {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.85);
+        color: rgba( $negativeColor, 0.85);
         font-size: $fontSize;
         font-weight: $thickFontWeight;
     }
     .uk-progress.uk-progress-success {
-        background-color: rgbToHsla(nth($successColor, 1), nth($successColor, 2), nth($successColor, 3), 0.35);
+        background-color: rgba( $successColor , 0.35);
     }
     .uk-progress.uk-progress-success .uk-progress-bar {
-        background-color: rgbToHsla(nth($successColor, 1), nth($successColor, 2), nth($successColor, 3));
-        border-color: rgbToHsla(nth($successColor, 1), nth($successColor, 2), nth($successColor, 3));
+        background-color: $successColor;
+        border-color: $successColor;
     }
     .uk-progress.uk-progress-warning {
-        background-color: rgbToHsla(nth($pendingColor, 1), nth($pendingColor, 2), nth($pendingColor, 3), 0.35);
+        background-color: rgba( $pendingColor, 0.35);
     }
     .uk-progress.uk-progress-warning .uk-progress-bar {
-        background-color: rgbToHsla(nth($pendingColor, 1), nth($pendingColor, 2), nth($pendingColor, 3));
-        border-color: rgbToHsla(nth($pendingColor, 1), nth($pendingColor, 2), nth($pendingColor, 3));
+        background-color: $pendingColor;
+        border-color: $pendingColor;
     }
     .uk-progress.uk-progress-danger {
-        background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3), 0.35);
+        background-color: rgba( $errorColor, 0.35);
     }
     .uk-progress.uk-progress-danger .uk-progress-bar {
-        background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
-        border-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+        background-color: $errorColor;
+        border-color: $errorColor;
     }
     // Dropdown
     .uikit-dropdown {
@@ -158,8 +158,8 @@
         width: 100%;
         min-width: 200px;
         font-size: $fontSize;
-        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-        background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        color: $mainColor;
+        background-color: $negativeColor;
         .uk-nav {
             margin: 0;
         }
@@ -173,7 +173,7 @@
                 margin-bottom: -0.4166em;
                 padding-top: 0.5833em;
                 padding-bottom: 0.6em;
-                border-left: 0.0833em solid rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.25);
+                border-left: 0.0833em solid rgba( $negativeColor, 0.25);
             }
             .uikit-trigger .icon {
                 margin: 0.1666em 0;
@@ -208,7 +208,7 @@
     .uk-offcanvas {
         .uk-offcanvas-bar {
             color: inherit;
-            background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+            background-color: $elementsBackground;
             width: auto;
             min-width: 25%;
             max-width: 25%;
@@ -220,18 +220,18 @@
     }
     // Switcher
     .uk-tab {
-        border-bottom-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+        border-bottom-color: $elementsBackground2;
         > li {
             a:hover, a:active {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $accentColor;
                 background: transparent;
                 border-color: transparent;
             }
             &.uk-active {
                 a, a:hover, a:active {
-                    background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-                    border-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+                    background-color: $negativeColor;
+                    color: $mainColor;
+                    border-color: $elementsBackground2;
                 }
             }
         }
@@ -241,7 +241,7 @@
             }
         }
         &.uk-tab-bottom {
-            border-top-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+            border-top-color: $elementsBackground2;
             > li:not(.uk-active) {
                 > a:hover, > a:focus {
                     margin-top: 0;
@@ -249,7 +249,7 @@
             }
         }
         &.uk-tab-left {
-            border-right-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+            border-right-color: $elementsBackground2;
             > li:not(.uk-active) {
                 > a:hover, > a:focus {
                     margin-right: 0;
@@ -257,7 +257,7 @@
             }
         }
         &.uk-tab-right {
-            border-left-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+            border-left-color: $elementsBackground2;
             > li:not(.uk-active) {
                 > a:hover, > a:focus {
                     margin-left: 0;
@@ -293,17 +293,17 @@
         top: 1em;
         .item {
             a {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3), 0.9);
+                color: $negativeColor;
+                background-color: rgba( $accentColor, 0.9);
                 &:hover, &:active {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                    color: $negativeColor;
+                    background-color: $accentColor;
                 }
             }
             &.uk-active {
                 a {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                    color: $negativeColor;
+                    background-color: $accentColor;
                 }
             }
         }
@@ -316,20 +316,20 @@
             }
             a {
                 color: transparent;
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3), 0.5);
+                background-color: rgba( $accentColor, 0.5);
                 width: 1.25em;
                 height: 1.25em;
                 padding: 0;
                 @include border-radius(1em);
                 &:hover, &:active {
                     color: transparent;
-                    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                    background-color: $accentColor;
                     @include transform(scale(1.25));
                 }
             }
             &.uk-active {
                 a {
-                    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                    background-color: $accentColor;
                     @include transform(scale(1.25));
                 }
             }
@@ -356,11 +356,11 @@
             top: 0.5833em;
             right: 0.4166em;
             font-size: 125%;
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
             background-color: transparent;
             @include box-shadow(none);
             &:hover, &:active {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $accentColor;
             }
         }
         &:after {
@@ -377,23 +377,23 @@
         .item > .link, .item > a {
             max-width: 100%;
             &:hover, &:active {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $accentColor;
                 background-color: transparent;
             }
         }
         > .item > .link, > .item > a {
             text-transform: uppercase;
             font-weight: $thickFontWeight;
-            background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+            background-color: $elementsBackground;
             &:hover, &:active {
-                background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                background-color: $elementsBackground;
             }
         }
         .uk-parent {
             &.uk-open {
                 > a, > a:hover, > a:active {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                    color: $negativeColor;
+                    background-color: $accentColor;
                 }
                 > div {
                     height: 100% !important;
@@ -424,26 +424,26 @@
         .uk-nav-header {
             font-size: $fontSize;
             padding: 0.5em 1em;
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
         }
         &.uk-nav-autocomplete, &.uk-nav-search {
             > li {
                 > a {
-                    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-                    background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                    color: $mainColor;
+                    background-color: $negativeColor;
                     &:hover, &:active {
-                        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-                        background-color: rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+                        color: $mainColor;
+                        background-color: $elementsActionBackground;
                     }
                 }
                 &.uk-active {
                     > a {
-                        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-                        background-color: rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+                        color: $mainColor;
+                        background-color: $elementsActionBackground;
                     }
                 }
                 &.uk-nav-divider {
-                    border-top-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+                    border-top-color: $elementsBackground2;
                 }
             }
         }
@@ -451,10 +451,10 @@
 
     // Navbar
     .uk-navbar {
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
         .uk-navbar-nav {
             .uk-nav-divider {
-                border-top-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+                border-top-color: $elementsBackground2;
             }
             > li > a {
                 height: auto;
@@ -464,10 +464,10 @@
                 font-weight: $thickFontWeight;
                 padding: 0.75em 1em;
                 text-transform: uppercase;
-                color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+                color: $mainColor;
                 &:hover, &:active {
-                    color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                    background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.75);
+                    color: $accentColor;
+                    background-color: rgba( $negativeColor, 0.75);
                 }
             }
             > li > a[href="#"] {
@@ -480,23 +480,23 @@
                 }
             }
             > li.uk-active > a, > li.uk-active > a:hover, > li.uk-active > a:active {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
+                color: $accentColor;
+                background-color: rgba( $negativeColor, 0.5);
             }
             > li.uk-parent.uk-open > a {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.75);
+                color: $accentColor;
+                background-color: rgba( $negativeColor, 0.75);
             }
             > li.uk-parent .uk-dropdown {
-                background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                background-color: $elementsBackground;
                 li a {
-                    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-                    background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                    color: $mainColor;
+                    background-color: $elementsBackground;
                     text-transform: none;
                     font-weight: $fontWeight;
                     &:hover, &:active {
-                        color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                        background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.75);
+                        color: $accentColor;
+                        background-color: rgba( $negativeColor, 0.75);
                     }
                 }
             }
@@ -506,16 +506,16 @@
     // Nestable
     .uk-nestable {
         .uk-nestable-item {
-            background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+            background-color: $elementsBackground;
             padding: 0.5em;
             margin-bottom: 0.5em;
             .uk-nestable-handle {
                 margin-left: 0;
                 font-size: 125%;
                 padding: 0 0.5em;
-                color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3), 0.5);
+                color: rgba( $mainColor, 0.5);
                 &:hover, &:active {
-                    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+                    color: $mainColor;
                 }
             }
             .toggle-nestable {
@@ -532,7 +532,7 @@
             }
         }
         .uk-nestable-placeholder {
-            border: 0.1666em dashed rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+            border: 0.1666em dashed $elementsBackground;
             margin-bottom: 0.5em;
         }
         .uk-nestable-list {
@@ -579,14 +579,14 @@
             li {
                 a {
                     &:hover, &:active {
-                        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-                        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                        color: $mainColor;
+                        background-color: $elementsBackground;
                     }
                 }
                 &.uk-active {
                     a {
-                        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-                        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                        color: $mainColor;
+                        background-color: $elementsBackground;
                     }
                 }
             }
@@ -596,20 +596,20 @@
     // HTML Editor
     .uk-htmleditor {
         .uk-htmleditor-navbar {
-            background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
-            border: 0.0833em solid rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+            background-color: $elementsBackground;
+            border: 0.0833em solid $elementsBackground;
             .uk-htmleditor-navbar-nav {
                 > li:hover > a, > li > a:focus {
-                    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-                    background-color: rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+                    color: $mainColor;
+                    background-color: $elementsActionBackground;
                 }
             }
         }
         .uk-htmleditor-content {
-            border: 0.0833em solid rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));;
+            border: 0.0833em solid $elementsBackground;;
             border-top: none;
             .uk-htmleditor-code {
-                border-right: 0.0833em solid rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                border-right: 0.0833em solid $elementsBackground;
             }
             .uk-htmleditor-preview {
                 padding: 1.5em;
@@ -628,16 +628,16 @@
     .uk-notify-message {
         font-size: $fontSize;
         line-height: $lineHeight;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3), 0.9);
+        color: $negativeColor;
+        background-color: rgba( $complementaryColor, 0.9);
         a.uk-close {
             padding: 0.25em 0.5em;
             margin-top: 0;
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
-            background-color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.05);
+            color: $negativeColor !important;
+            background-color: rgba( $blackColor,  0.05);
             border-bottom-color: transparent !important;
             &:hover, &:active {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+                color: $negativeColor !important;
             }
         }
     }
@@ -645,14 +645,14 @@
 
 // Dropdown
 #{$documentID} #{$frameworkClass} .uk-dropdown {
-    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-    background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+    color: $mainColor;
+    background-color: $negativeColor;
 }
 
 // Datepicker
 #{$documentID} #{$frameworkClass} .uk-datepicker {
     margin-top: 0;
-    background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+    background-color: $negativeColor;
     .uk-datepicker-nav {
         margin-bottom: 1em;
         line-height: $lineHeight;
@@ -667,14 +667,14 @@
             display: block;
             width: 100%;
             padding: 0.5em 0.75em;
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
             &:hover, &:active {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                color: $accentColor;
+                background-color: $elementsBackground;
             }
             &.uk-active {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $negativeColor;
+                background-color: $accentColor;
             }
         }
     }
@@ -686,10 +686,10 @@
             font-size: $fontSize;
             font-weight: $thickFontWeight;
             padding: 0.7em 0.3em;
-            background-color: rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+            background-color: $elementsActionBackground;
         }
         .uk-datepicker-table-muted, .uk-datepicker-table-muted:hover, .uk-datepicker-table-muted:active {
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
             @include opacity(0.5);
         }
     }
@@ -708,8 +708,8 @@
     .uikit-dropdown.uk-open {
         .uikit-trigger {
             margin-bottom: -0.1666em;
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-            background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+            color: $negativeColor;
+            background-color: $accentColor;
         }
     }
 }
@@ -761,7 +761,7 @@
 		        }
 		        &.uk-tab-left {
 		            border-right: none;
-		            border-left: 0.0833em solid rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+		            border-left: 0.0833em solid $elementsBackground2;
 		            > li {
 		                margin-right: 0;
 		                margin-left: -1px;
@@ -771,12 +771,12 @@
 		                border-right-width: 0.0833em;
 		            }
 		            > li.uk-active > a {
-		                border-right: 0.0833em solid rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+		                border-right: 0.0833em solid $elementsBackground2;
 		            }
 		        }
 		        &.uk-tab-right {
 		            border-left: none;
-		            border-right: 0.0833em solid rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+		            border-right: 0.0833em solid $elementsBackground2;
 		            > li {
 		                margin-left: 0;
 		                margin-right: -1px;
@@ -786,7 +786,7 @@
 		                border-left-width: 0.0833em;
 		            }
 		            > li.uk-active > a {
-		                border-left: 0.0833em solid rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+		                border-left: 0.0833em solid $elementsBackground2;
 		            }
 		        }
 		    }
@@ -805,7 +805,7 @@
 		        }
 		        .uikit-dropdown .uikit-trigger {
 		            border-left: none;
-		            border-right: 0.0833em solid rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.25);
+		            border-right: 0.0833em solid rgba( $negativeColor, 0.25);
 		        }
 		    }
 		    .uk-nestable {
@@ -875,7 +875,7 @@
 		            .uk-htmleditor-code {
 		                float: right;
 		                border-right: none;
-		                border-left: 0.0833em solid rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+		                border-left: 0.0833em solid $elementsBackground;
 		            }
 		            .uk-htmleditor-preview {
 		                float: left;

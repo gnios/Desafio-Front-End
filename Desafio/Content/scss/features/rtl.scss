@@ -291,7 +291,7 @@
         }
         .table .col .item {
             border-right: none;
-            border-left: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+            border-left: 0.0833em solid $elementsActionBackground;
         }
         .feedback, .feedback-right {
             float: right;

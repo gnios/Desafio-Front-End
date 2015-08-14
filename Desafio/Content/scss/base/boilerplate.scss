@@ -8,7 +8,7 @@ button,
 input,
 select,
 textarea {
-    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+    color: $mainColor;
 }
 
 body {
@@ -17,14 +17,14 @@ body {
 }
 
 ::-moz-selection {
-    background: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+    background: $accentColor;
+    color: $negativeColor;
     @include text-shadow(none);
 }
 
 ::selection {
-    background: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+    background: $accentColor;
+    color: $negativeColor;
     @include text-shadow(none);
 }
 
@@ -32,7 +32,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid rgbToHsla(204,204,204);
+    border-top: 1px solid rgb(204,204,204);
     margin: 1em 0;
     padding: 0;
 }
@@ -53,8 +53,8 @@ textarea {
 
 .chromeframe {
     margin: 0.2em 0;
-    background: rgbToHsla(204,204,204);
-    color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3));
+    background: rgb(204,204,204);
+    color: $blackColor;
     padding: 0.2em 0;
 }
 
@@ -80,8 +80,8 @@ body {
     font-weight: $fontWeight;
     margin: 0;
     padding: 0;
-    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3)); // Providing each RGB value for the function
-    background-color: rgbToHsla(nth($mainBackground, 1), nth($mainBackground, 2), nth($mainBackground, 3));
+    color: $mainColor; // Providing each RGB value for the function
+    background-color: $mainBackground;
     @include outline(none);
 }
 
@@ -151,7 +151,7 @@ p {
         max-width: 320px;
         font-size: 125%;
         float: left;
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
         &.right {
             float: right;
             left: auto;
@@ -188,7 +188,7 @@ span {
 pre {
     margin: 0.5em 0;
     font-weight: $thickFontWeight;
-    color: rgbToHsla(166,226,46);
+    color: rgb(166,226,46);
 }
 
 small {
@@ -207,9 +207,9 @@ dt {
 }
 
 code {
-    color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
-    background-color: rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
-    border: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+    color: $complementaryColor;
+    background-color: $elementsActionBackground;
+    border: 0.0833em solid $elementsActionBackground;
     padding: 0.25em;
 }
 
@@ -218,12 +218,12 @@ img, .img {
     height: auto;
     max-width: 100%;
     &.border {
-        border-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        border-color: $negativeColor;
     }
 }
 
 a {
-    color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+    color: $accentColor;
     text-decoration: none;
     line-height: $lineHeight;
     @include outline(none);
@@ -232,13 +232,13 @@ a {
     }
     &.content {
         display: block;
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
         #{$documentID} &:hover, #{$documentID} &:active {
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
         }
         #{$documentID} .invert &:hover, #{$documentID} .invert &:active {
-            background-color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+            background-color: $mainColor;
+            color: $negativeColor !important;
         }
     }
     &:focus {
@@ -277,8 +277,8 @@ header {
 
 footer {
     padding: 0.5em 1em;
-    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
-    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+    color: rgba( $negativeColor, 0.5 );
+    background-color: $complementaryColor;
 }
 
 /*
@@ -298,7 +298,7 @@ footer {
         &.error {
             display: inline-block;
             margin-top: 0;
-            color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+            color: $errorColor;
         }
         &:first-child {
             margin-top: 0;
@@ -434,7 +434,7 @@ footer {
                     background-color: transparent;
                     border: none;
                     @include box-shadow(none);
-                    color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+                    color: $mainColor;
                 }
                 .button {
                     padding: 0.5833em 1em;
@@ -447,8 +447,8 @@ footer {
                     top: 0;
                     margin-bottom: 0;
                     border-bottom-width: 0.1666em;
-                    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.85);
+                    background-color: $accentColor;
+                    color: rgba( $negativeColor, 0.85 );
                 }
                 .link, .link:hover, .link:active {
                     @include opacity(0.75);
@@ -467,7 +467,7 @@ footer {
             padding: 0;
             &.with-separator {
                 padding: 0.5em 0;
-                background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                background-color: $elementsBackground;
                 .separator {
                     margin: 0.5em 0;
                 }
@@ -479,7 +479,7 @@ footer {
     }
     .menu, .menu-list, .submenu {
         &.with-separator {
-            background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+            background-color: $accentColor;
         }
     }
     ol.list, ol.list.with-bullet {
@@ -557,7 +557,7 @@ footer {
                 background-color: transparent;
                 border: none;
                 @include box-shadow(none);
-                color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+                color: $mainColor;
             }
             .button {
                 padding: 0.5833em 1em;
@@ -570,8 +570,8 @@ footer {
                 top: 0;
                 margin-bottom: 0;
                 border-bottom-width: 0.1666em;
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.85);
+                background-color: $accentColor;
+                color: rgba( $negativeColor, 0.85 );
             }
             .link, .link:hover, .link:active {
                 @include opacity(0.75);
@@ -585,7 +585,7 @@ footer {
 #{$frameworkClass} {
     .hr, .hr-dotted, .hr-dashed, .hr-thick, .hr-stripes {
         display: block;
-        border-bottom: 0.0833em solid rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+        border-bottom: 0.0833em solid $elementsBackground2;
         margin: 0.5em 0;
     }
 
@@ -619,7 +619,7 @@ footer {
             padding: 0.3333em;
             min-width: 1.5em;
             min-height: 1.5em;
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            color: $negativeColor;
         }
         &.box-shadow {
             @include box-shadow($customOutsetBoxShadow2);
@@ -749,30 +749,30 @@ footer {
         font-size: 85%;
     }
     .close {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        color: $negativeColor !important;
         float: right;
         display: inline-block;
         margin: 0.1666em -0.25em 0 0;
         padding: 0.3333em 0.5em;
-        background: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.1);
+        background: rgba( $negativeColor, .1 );
         &:hover, &:active {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-            background: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+            color: $negativeColor;
+            background: $errorColor;
         }
     }
     .closed {
         display: none !important;
     }
     .message .close {
-        color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.25);
-        background-color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.05);
+        color: rgba( $blackColor, 0.25 );
+        background-color: rgba( $blackColor,  0.05);
         &:hover, &:active {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-            background-color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            color: $negativeColor;
+            background-color: rgba( $blackColor,  0.15);
         }
     }
     .collapse {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        color: $negativeColor !important;
         float: right;
         display: inline-block;
         margin: 0.1666em -0.25em 0 0;
@@ -803,8 +803,8 @@ footer {
         .tag {
             display: block;
             position: absolute;
-            background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3)) !important;
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            background-color: $errorColor !important;
+            color: $negativeColor;
             right: -0.75em;
             top: -0.75em;
             padding: 0.3333em 0.25em 0.25em;
@@ -831,16 +831,16 @@ footer {
         }
     }
     .with-background {
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        background-color: $accentColor;
+        color: $negativeColor;
         padding: 0 0.5em;
     }
     .label {
         display: inline-block;
         padding: 0.25em 0.5em;
         margin: 0.5em;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        color: $negativeColor;
+        background-color: $accentColor;
     }
     .with-label {
         display: inline-block;
@@ -874,7 +874,7 @@ footer {
         line-height: 2;
         padding-top: 0.125em;
         padding-right: 0.125em;
-        color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        color: $accentColor;
     }
     &.chrome, &.webkit {
         .drop-caps:first-letter, .drop-caps::first-letter {
@@ -882,21 +882,21 @@ footer {
         }
     }
     .highlighted {
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        background-color: $accentColor;
+        color: $negativeColor;
     }
     .underlined {
-        border-bottom: 0.1666em solid rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        border-bottom: 0.1666em solid $accentColor;
     }
     .stroked {
         text-decoration: line-through;
     }
     .colored {
-        color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        color: $accentColor;
     }
     .quote, blockquote {
         display: block;
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
         border-left: 0.4166em solid transparent;
         padding: 1em;
         font-style: italic;
@@ -912,13 +912,13 @@ footer {
     }
     .tag {
         padding: 0.25em 0.75em;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        color: $negativeColor;
+        background-color: $accentColor;
     }
     .ribbon, .ribbon-left, .ribbon-right {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.85);
+        color: rgba( $negativeColor, 0.85 );
         position: absolute;
-        background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+        background-color: $errorColor;
         padding: 0.5em 0.75em;
         clear: both;
         z-index: 990;
@@ -948,7 +948,7 @@ footer {
         left: -1%;
         content: "";
         border-bottom: 0.75em solid transparent;
-        border-right: 0.75em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.2);
+        border-right: 0.75em solid rgba( $blackColor,  0.2);
     }
     .ribbon::after {
         display: block;
@@ -960,7 +960,7 @@ footer {
         content: "";
         @include transform(rotate(270deg));
         border-bottom: 0.75em solid transparent;
-        border-right: 0.75em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.2);
+        border-right: 0.75em solid rgba( $blackColor,  0.2);
     }
     .ribbon-left {
         margin-left: -0.75em;
@@ -975,7 +975,7 @@ footer {
         left: -1em;
         content: "";
         border-bottom: 0.75em solid transparent;
-        border-right: 0.75em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.2);
+        border-right: 0.75em solid rgba( $blackColor,  0.2);
     }
     .ribbon-right {
         margin-right: -0.75em;
@@ -992,7 +992,7 @@ footer {
         content: "";
         @include transform(rotate(270deg));
         border-bottom: 0.75em solid transparent;
-        border-right: 0.75em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.2);
+        border-right: 0.75em solid rgba( $blackColor,  0.2);
     }
     .hidden-text {
         text-indent: -999em;
@@ -1001,7 +1001,7 @@ footer {
         @include opacity(0.5);
     }
     .border {
-        border: 0.0833em solid rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+        border: 0.0833em solid $elementsBackground2;
     }
     .disabled {
         @include opacity(0.5);
@@ -1103,159 +1103,159 @@ footer {
 
     // Colors
     .red, .red-color, .icon.error {
-        color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+        color: $errorColor;
     }
 
     .green, .green-color, .icon.ok {
-        color: rgbToHsla(nth($successColor, 1), nth($successColor, 2), nth($successColor, 3));
+        color: $successColor;
     }
 
     .blue, .blue-color {
-        color: rgbToHsla(nth($infoColor, 1), nth($infoColor, 2), nth($infoColor, 3));
+        color: $infoColor;
     }
 
     .yellow, .yellow-color {
-        color: rgbToHsla(251,184,41);
+        color: rgb(251,184,41);
     }
 
     .orange, .orange-color {
-        color: rgbToHsla(nth($pendingColor, 1), nth($pendingColor, 2), nth($pendingColor, 3));
+        color: $pendingColor;
     }
 
     .pink, .pink-color {
-        color: rgbToHsla(215,33,126);
+        color: rgb(215,33,126);
     }
 
     .purple, .purple-color {
-        color: rgbToHsla(91,77,107);
+        color: rgb(91,77,107);
     }
 
     .brown, .brown-color {
-        color: rgbToHsla(135,64,46);
+        color: rgb(135,64,46);
     }
 
     // Background Colors
     .background {
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        background-color: $accentColor;
+        color: $negativeColor;
     }
 
     .background-neutral, .background-neutral > .content {
-        background-color: rgbToHsla(250,250,250);
-        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+        background-color: rgb(250,250,250);
+        color: $mainColor;
     }
 
     .background-grey, .background-grey > .content {
-        background-color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        background-color: $mainColor;
+        color: $negativeColor;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     .background-red, .background-red > .content {
-        background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3)) !important;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        background-color: $errorColor !important;
+        color: $negativeColor !important;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     .background-green, .background-green > .content {
-        background-color: rgbToHsla(0,205,172) !important;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        background-color: rgb(0,205,172) !important;
+        color: $negativeColor !important;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     .background-blue, .background-blue > .content {
-        background-color: rgbToHsla(42,143,189) !important;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        background-color: rgb(42,143,189) !important;
+        color: $negativeColor !important;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     .background-yellow, .background-yellow > .content {
-        background-color: rgbToHsla(251,184,41) !important;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        background-color: rgb(251,184,41) !important;
+        color: $negativeColor !important;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     .background-orange, .background-orange > .content {
-        background-color: rgbToHsla(255,78,80) !important;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        background-color: rgb(255,78,80) !important;
+        color: $negativeColor !important;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     .background-pink, .background-pink > .content {
-        background-color: rgbToHsla(215,33,126) !important;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        background-color: rgb(215,33,126) !important;
+        color: $negativeColor !important;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     .background-purple, .background-purple > .content {
-        background-color: rgbToHsla(91,77,107) !important;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        background-color: rgb(91,77,107) !important;
+        color: $negativeColor !important;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     .background-brown, .background-brown > .content {
-        background-color: rgbToHsla(135,64,46) !important;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
+        background-color: rgb(135,64,46) !important;
+        color: $negativeColor !important;
         img {
-            border: 0.3333em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+            border: 0.3333em solid rgba( $blackColor,  0.15);
         }
     }
 
     // Border Colors
     .hr-neutral, .border-neutral {
-        border-color: rgbToHsla(250,250,250);
+        border-color: rgb(250,250,250);
     }
 
     .hr-grey, .border-grey {
-        border-color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+        border-color: $mainColor;
     }
 
     .hr-red, .border-red {
-        border-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+        border-color: $errorColor;
     }
 
     .hr-green, .border-green {
-        border-color: rgbToHsla(nth($successColor, 1), nth($successColor, 2), nth($successColor, 3));
+        border-color: $successColor;
     }
 
     .hr-blue, .border-blue {
-        border-color: rgbToHsla(nth($infoColor, 1), nth($infoColor, 2), nth($infoColor, 3));
+        border-color: $infoColor;
     }
 
     .hr-yellow, .border-yellow {
-        border-color: rgbToHsla(251,184,41);
+        border-color: rgb(251,184,41);
     }
 
     .hr-orange, .border-orange {
-        border-color: rgbToHsla(nth($pendingColor, 1), nth($pendingColor, 2), nth($pendingColor, 3));
+        border-color: $pendingColor;
     }
 
     .hr-pink, .border-pink {
-        border-color: rgbToHsla(215,33,126);
+        border-color: rgb(215,33,126);
     }
 
     .hr-purple, .border-purple {
-        border-color: rgbToHsla(91,77,107);
+        border-color: rgb(91,77,107);
     }
 
     .hr-brown, .border-brown {
-        border-color: rgbToHsla(135,64,46);
+        border-color: rgb(135,64,46);
     }
 
     // Loading Spinner
@@ -1266,14 +1266,14 @@ footer {
         top: 0;
         width: 100%;
         height: 100%;
-        background-color:  rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.75);
+        background-color:  rgba( $blackColor,  0.75);
         z-index: 999;
         text-align: center;
         .icon {
             position: absolute;
             top: 50%;
             font-size: 500%;
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            color: $negativeColor;
             @include animation(rotate 0.75s infinite linear);
         }
     }
@@ -1305,8 +1305,8 @@ footer {
         display: inline-block;
         text-decoration: none;
         padding: 0.5em 1em;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.75);
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3), 0.85);
+        color: rgba( $negativeColor, 0.75);
+        background-color: rgba( $accentColor, 0.85);
         text-align: center;
         border: none;
         position: relative;
@@ -1330,12 +1330,12 @@ footer {
             padding-bottom: 0.25em;
         }
         &:hover {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-            background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+            color: $negativeColor;
+            background-color: $accentColor;
         }
         #{$documentID} &:active, #{$documentID} &.uk-active {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
-            background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+            color: rgba( $negativeColor, 0.5 );
+            background-color: $accentColor;
             @include transition(none);
         }
         &.only-icon .icon {
@@ -1362,8 +1362,8 @@ footer {
             top: 0;
             margin-bottom: 0;
             border-bottom-width: 0.25em;
-            background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.85);
+            background-color: $accentColor;
+            color: rgba( $negativeColor, 0.85 );
         }
         .icon {
             margin-top: 0.25em;
@@ -1437,14 +1437,14 @@ footer {
                 background: transparent;
             }
             .link:hover, .link:active {
-                color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                color: $errorColor;
             }
             .icon {
                 font-size: 65%;
                 margin-left: 1em;
             }
             &.active .link, &.active span {
-                color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                color: $errorColor;
             }
             &.active span {
                 cursor: default;
@@ -1464,10 +1464,10 @@ footer {
         .link {
             display: block;
             padding: 0.75em 1em;
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
             &:hover, &:active {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3), 0.9);
+                color: $negativeColor;
+                background-color: rgba( $accentColor, 0.9);
             }
         }
     }
@@ -1476,7 +1476,7 @@ footer {
             margin: 0;
             border: none;
             padding: 0.1666em 0 0;
-            background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.1);
+            background-color: rgba( $negativeColor, .1 );
         }
     }
     &.list {
@@ -1484,11 +1484,11 @@ footer {
             .link {
                 background-color: transparent;
                 &:hover, &:active {
-                    color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                    color: $accentColor;
                 }
             }
             &.active .link, &.active .link:hover, &.active .link:active {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $accentColor;
             }
         }
     }
@@ -1599,12 +1599,12 @@ footer {
         .link {
             background-color: transparent;
             &:hover, &:active {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $accentColor;
                 background-color: transparent;
             }
         }
         &.active .link, &.active .link:hover, &.active .link:active {
-            color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+            color: $accentColor;
         }
         > .link {
             text-transform: uppercase;
@@ -1642,7 +1642,7 @@ footer {
             font-size: 65%;
         }
         &.active .link, &.active span {
-            color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+            color: $errorColor;
         }
         &.active span {
             cursor: default;
@@ -1673,7 +1673,7 @@ footer {
 
 .fixed-nav .menu.vertical.plain {
     background-color: transparent;
-    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+    color: $negativeColor;
     padding: 0;
 }
 
@@ -1687,17 +1687,17 @@ footer {
 }
 
 .fixed-nav > .trigger.active {
-    background-color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+    background-color: $mainColor;
 }
 
 .fixed-nav .menu .item .link {
-    background-color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-    color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+    background-color: $mainColor;
+    color: $accentColor;
 }
 
 .fixed .menu .item .link:hover, .fixed .menu .item .link:active {
-    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+    background-color: $accentColor;
+    color: $negativeColor;
 }
 
 
@@ -1707,9 +1707,9 @@ footer {
         padding: 0.75em 1em;
         @include box-sizing(border-box);
         @include outline(none);
-        background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        border: 0.1666em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
-        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+        background-color: $negativeColor;
+        border: 0.1666em solid $elementsActionBackground;
+        color: $mainColor;
         cursor: text;
         @include transition($defaultTransition);
         &.values {
@@ -1720,14 +1720,14 @@ footer {
             @include box-shadow(none);
         }
         &:focus {
-            color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
-            border-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-            background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            color: $complementaryColor;
+            border-color: $accentColor;
+            background-color: $negativeColor;
         }
     }
     select {
         padding: 0.75em 1em;
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
         border: none;
         -webkit-appearance: none;
     }
@@ -1765,9 +1765,9 @@ footer {
     &.text, &.editable:focus {
         padding: 0.75em 1em;
         @include box-sizing(border-box);
-        background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        border: 0.1666em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
-        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+        background-color: $negativeColor;
+        border: 0.1666em solid $elementsActionBackground;
+        color: $mainColor;
         cursor: text;
         @include box-shadow(none);
         @include transition($defaultTransition);
@@ -1775,36 +1775,36 @@ footer {
     }
     &.text {
         &:focus {
-            color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
-            border-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-            background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            color: $complementaryColor;
+            border-color: $accentColor;
+            background-color: $negativeColor;
         }
         &.disabled {
             cursor: default;
             @include opacity(0.75);
         }
         &.error {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-            background-color: rgbToHsla(nth($errorBack, 1), nth($errorBack, 2), nth($errorBack, 3));
+            color: $negativeColor;
+            background-color: $errorBack;
             border-color: transparent !important;
             + .icon {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+                color: rgba( $negativeColor, 0.35);
             }
             /* Chrome Placeholder Fix */
             &::-webkit-input-placeholder {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
+                color: rgba( $negativeColor, 0.5 );
             }
         }
         &.ok {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-            background-color: rgbToHsla(nth($successBack, 1), nth($successBack, 2), nth($successBack, 3));
+            color: $negativeColor;
+            background-color: $successBack;
             border-color: transparent !important;
             + .icon {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+                color: rgba( $negativeColor, 0.35);
             }
             /* Chrome Placeholder Fix */
             &::-webkit-input-placeholder {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
+                color: rgba( $negativeColor, 0.5 );
             }
         }
         &.thin {
@@ -1821,7 +1821,7 @@ footer {
     &.blocknote {
         background: transparent;
         border: none;
-        border-bottom: 0.1666em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+        border-bottom: 0.1666em solid $elementsActionBackground;
         @include box-shadow(none);
         padding-left: 0;
         padding-right: 0;
@@ -1833,7 +1833,7 @@ footer {
         @include box-shadow(none);
         cursor: default;
         &:hover {
-            border: 0.1666em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+            border: 0.1666em solid $elementsActionBackground;
         }
     }
     &.expanding {
@@ -1851,7 +1851,7 @@ footer {
             + label {
                 display: inline-block;
                 padding: 0.5em 0.75em;
-                background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                background-color: $elementsBackground;
                 cursor: pointer;
                 margin-left: -0.25em;
                 min-width: 16px;
@@ -1860,20 +1860,20 @@ footer {
                 @include transition($defaultTransition);
             }
             &:checked + label {
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                background-color: $accentColor;
+                color: $negativeColor;
             }
         }
         &.custom.alt {
             + label {
-                background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                background-color: $elementsBackground;
                 padding: 0.5em 0.75em;
                 border: 0.1666em solid transparent;
             }
             &:checked + label {
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                border-color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+                background-color: $accentColor;
+                color: $negativeColor;
+                border-color: rgba( $blackColor,  0.15);
             }
         }
     }
@@ -1884,7 +1884,7 @@ footer {
             + label {
                 display: inline-block;
                 padding: 0.5em 1em;
-                background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                background-color: $elementsBackground;
                 cursor: pointer;
                 min-width: 16px;
                 min-height: 16px;
@@ -1894,8 +1894,8 @@ footer {
                 }
             }
             &:checked + label {
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                background-color: $accentColor;
+                color: $negativeColor;
                 .icon {
                     margin: 0;
                 }
@@ -1904,7 +1904,7 @@ footer {
     }
     &.select {
         padding: 0.75em 1em;
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
         border: none;
         &.multiple {
             min-height: 6.75em;
@@ -1922,15 +1922,15 @@ footer {
             top: 0.5em;
             margin: 0;
             font-size: 150%;
-            color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+            color: $accentColor;
         }
         > .icon.close {
             right: 0.6666em;
             top: 0.5833em;
             font-size: 100%;
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
             &:hover, &:active {
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $accentColor;
                 background-color: transparent;
             }
         }
@@ -1946,10 +1946,10 @@ footer {
             .input {
                 padding-right: 3em;
                 &.error + .icon {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+                    color: rgba( $negativeColor, 0.35);
                 }
                 &.ok + .icon {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+                    color: rgba( $negativeColor, 0.35);
                 }
             }
         }
@@ -2013,39 +2013,39 @@ footer {
         line-height: 2.25;
     }
     .message-warning, .message-modal.warning, .uk-notify .uk-notify-message-warning {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($pendingBack, 1), nth($pendingBack, 2), nth($pendingBack, 3));
+        color: $negativeColor;
+        background-color: $pendingBack;
         .icon {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+            color: rgba( $negativeColor, 0.35);
         }
     }
     .message-error, .message-alert, .message-modal.error, .message-modal.alert, .uk-notify .uk-notify-message-danger {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($errorBack, 1), nth($errorBack, 2), nth($errorBack, 3));
+        color: $negativeColor;
+        background-color: $errorBack;
         .icon {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+            color: rgba( $negativeColor, 0.35);
             &.tooltip {
                 margin-top: 0.1666em;
             }
         }
     }
     .message-info, .message-modal.info, .uk-notify .uk-notify-message-info {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($infoBack, 1), nth($infoBack, 2), nth($infoBack, 3));
+        color: $negativeColor;
+        background-color: $infoBack;
         .icon {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+            color: rgba( $negativeColor, 0.35);
         }
     }
     .message-ok, .message-modal.ok, .uk-notify .uk-notify-message-success {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($successBack, 1), nth($successBack, 2), nth($successBack, 3));
+        color: $negativeColor;
+        background-color: $successBack;
         .icon {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+            color: rgba( $negativeColor, 0.35);
         }
     }
     .message, .message-neutral, .message-modal.neutral {
-        color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        color: $mainColor;
+        background-color: $elementsBackground;
     }
     .message-modal {
         display: block;
@@ -2059,11 +2059,11 @@ footer {
             cursor: pointer;
             padding: 0.3333em 0.5em;
             margin-top: 0;
-            background-color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.05);
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.35);
+            background-color: rgba( $blackColor,  0.05);
+            color: rgba( $negativeColor, 0.35);
             &:hover {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                background-color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.15);
+                color: $negativeColor;
+                background-color: rgba( $blackColor,  0.15);
             }
         }
     }
@@ -2088,7 +2088,7 @@ footer {
     }
 
     .box {
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
         .flyer & {
             background-color: transparent;
         }
@@ -2099,7 +2099,7 @@ footer {
 }
 
 #{$frameworkClass} .pane {
-    background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+    background-color: $elementsBackground;
     position: relative;
     left: 0;
     top: 0;
@@ -2146,11 +2146,11 @@ footer {
             padding: 0.1666em 0.1666em 0.2em;
             margin-top: 0;
             font-size: 150%;
-            color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-            background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+            color: $accentColor;
+            background-color: $elementsBackground;
             &:hover {
-                background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                background-color: $complementaryColor;
+                color: $negativeColor;
             }
             .icon {
                 display: block;
@@ -2204,7 +2204,7 @@ footer {
     header .controls, header .controls-horizontal {
         margin-top: 0.3333em;
         .item a {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            color: $negativeColor;
         }
     }
 }
@@ -2221,10 +2221,10 @@ footer {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3)) !important;
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3), 0.5);
+        color: $negativeColor !important;
+        background-color: rgba( $accentColor, 0.5);
         .description {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            color: $negativeColor;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -2236,8 +2236,8 @@ footer {
             overflow: visible;
             white-space: normal;
             text-overflow: clip;
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-            background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+            color: $negativeColor;
+            background-color: $accentColor;
             .description {
                 overflow: visible;
                 white-space: normal;
@@ -2268,8 +2268,8 @@ footer {
         left: 0;
         padding: 0.5em 0.75em;
         width: auto;
-        background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.75);
-        color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+        background-color: rgba( $negativeColor, 0.75);
+        color: $complementaryColor;
         font-weight: $thickFontWeight;
         width: auto;
     }
@@ -2293,7 +2293,7 @@ footer {
 
     .thumb {
         max-width: 120px;
-        border: 0.4166em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.1);
+        border: 0.4166em solid rgba( $blackColor,  0.1);
     }
 
     a .thumb {
@@ -2309,7 +2309,7 @@ footer {
             }
             .thumb {
                 max-width: 120px;
-                border: 0.4166em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.1);
+                border: 0.4166em solid rgba( $blackColor,  0.1);
             }
         }
     }
@@ -2320,17 +2320,17 @@ footer {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        background-color: $negativeColor;
         @include opacity(0);
         a.img:hover & {
-            background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
+            background-color: rgba( $negativeColor, 0.5 );
             z-index: 990;
             @include opacity(1);
             @include transition(opacity 0.4s linear);
         }
         .icon {
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
-            background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.75);
+            color: $mainColor;
+            background-color: rgba( $negativeColor, 0.75);
             font-size: 200%;
             position: absolute;
             right: 0.5em;
@@ -2338,8 +2338,8 @@ footer {
             padding: 0.25em 0.3333em;
             margin-top: 0;
             &:hover {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $negativeColor;
+                background-color: $accentColor;
             }
         }
     }
@@ -2364,14 +2364,14 @@ footer {
         }
     }
     > header, &.slide.active > header {
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-        background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+        color: $negativeColor;
+        background-color: $accentColor;
     }
     > footer {
         padding-top: 0.25em;
         padding-bottom: 0.25em;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
-        background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+        color: rgba( $negativeColor, 0.5 );
+        background-color: $complementaryColor;
     }
     .scroll {
         max-height: 10em;
@@ -2397,8 +2397,8 @@ footer {
 
 /* Content Header */
 #{$frameworkClass} .content > header {
-    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-    background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+    color: $negativeColor;
+    background-color: $accentColor;
     padding: 0.75em 1em;
     font-size: 125%;
 }
@@ -2408,26 +2408,26 @@ footer {
     /* Classic Tables */
     table {
         &.stripes tbody tr:nth-child(even) {
-            background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+            background-color: $elementsBackground;
         }
         td, th {
             padding: 0.5em 1em;
-            border: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+            border: 0.0833em solid $elementsActionBackground;
         }
         th {
-            color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
-            background-color: rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3)); 
+            color: $complementaryColor;
+            background-color: $elementsActionBackground; 
         }
         caption {
-            background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            background-color: $accentColor;
+            color: $negativeColor;
             padding: 0.5em 1em;
             font-size: 125%;
             font-weight: $thickFontWeight;
             text-transform: uppercase;
         }
         tfoot td {
-            background-color: rgbToHsla(nth($elementsBackground2, 1), nth($elementsBackground2, 2), nth($elementsBackground2, 3));
+            background-color: $elementsBackground2;
             border-top: none;
         }
         &.center {
@@ -2468,13 +2468,13 @@ footer {
         }
         .list {
             &:last-child, &.col {
-                border-bottom: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+                border-bottom: 0.0833em solid $elementsActionBackground;
             }
             float: left;
             display: block;
         }
         .item {
-            border: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+            border: 0.0833em solid $elementsActionBackground;
             border-left: none;
             border-bottom: none;
             .title {
@@ -2484,13 +2484,13 @@ footer {
             }
         }
         .col .item, .row .item:first-child, .col .item:first-child {
-            border-left: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+            border-left: 0.0833em solid $elementsActionBackground;
         }
         .col .item {
             border-left: none;
         }
         .row:first-child .item, .col:first-child .item {
-            border-left: 0.0833em solid rgbToHsla(nth($elementsActionBackground, 1), nth($elementsActionBackground, 2), nth($elementsActionBackground, 3));
+            border-left: 0.0833em solid $elementsActionBackground;
         }
         .rows {
             display: table-row-group;
@@ -2503,7 +2503,7 @@ footer {
             }
         }
         .rows.stripes .list:nth-child(even), .cols.stripes .list:nth-child(even) {
-            background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+            background-color: $elementsBackground;
         }
         .list {
             display: block;
@@ -2513,13 +2513,13 @@ footer {
             .item {
                 display: block;
                 &.header {
-                    color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
-                    background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                    color: $complementaryColor;
+                    background-color: $elementsBackground;
                     font-weight: $thickFontWeight;
                 }
                 &.footer {
-                    color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
-                    background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                    color: $complementaryColor;
+                    background-color: $elementsBackground;
                     font-weight: $thickFontWeight;
                 }
             }
@@ -2528,7 +2528,7 @@ footer {
             .list {
                 .item:nth-child(even) {
                     .title {
-                        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                        background-color: $elementsBackground;
                     }
                 }
             }
@@ -2633,7 +2633,7 @@ footer {
         padding: 0 3em;
         height: auto;
         max-height: 1em;
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
     }
     .list {
         .item {
@@ -2656,7 +2656,7 @@ footer {
                 top: 4em;
                 padding: 0.75em;
                 min-height: 3em;
-                background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                background-color: $elementsBackground;
                 width: auto;
                 min-width: 300%;
                 z-index: 996;
@@ -2666,14 +2666,14 @@ footer {
                 top: -0.25em;
                 width: 1.5833em;
                 height: 1.5833em;
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                background-color: $accentColor;
                 cursor: default;
             }
             img.dot {
                 width: 4.7499em;
                 height: 4.7499em;
                 top: -1.75em;
-                border: 0.25em solid rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                border: 0.25em solid $accentColor;
                 @include border-radius(5em);
             }
         }
@@ -2682,7 +2682,7 @@ footer {
                 display: block;
             }
             .dot {
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3), 0.9);
+                background-color: rgba( $accentColor, 0.9);
             }
         }
     }
@@ -2724,8 +2724,8 @@ footer {
                 display: none;
                 padding: 0.5em 0.75em;
                 text-align: left;
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $negativeColor;
+                background-color: $accentColor;
             }
             .content {
                 position: relative;
@@ -2758,7 +2758,7 @@ footer {
     position: relative;
     .content {
         display: block;
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
     }
     .action {
         position: relative;
@@ -2793,10 +2793,10 @@ footer {
         text-transform: uppercase;
         font-weight: $fontWeight;
         font-size: 85%;
-        color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+        color: $negativeColor;
         &:hover, &:active {
-            color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-            background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+            color: $negativeColor;
+            background-color: $complementaryColor;
         }
     }
 }
@@ -2820,7 +2820,7 @@ footer {
     position: relative;
     @include box-shadow(none);
     > .list > .item {
-        background-color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+        background-color: $elementsBackground;
         .comment {
             position: relative;
         }
@@ -2835,7 +2835,7 @@ footer {
                     display: block;
                     position: absolute;
                     left: -1em;
-                    color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3), 0.25);
+                    color: rgba( $complementaryColor, 0.25);
                     @include transform(rotate(180deg));
                 }
                 .replier .comment-block .controls {
@@ -2854,7 +2854,7 @@ footer {
             }
         }
         &:nth-child(even) {
-            background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            background-color: $negativeColor;
         }
         aside {
             margin: 0;
@@ -2868,12 +2868,12 @@ footer {
                     text-align: center;
                     font-weight: $thickFontWeight;
                     text-transform: uppercase;
-                    color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    color: $complementaryColor;
                 }
                 img {
                     width: 100%;
                     max-width: 120px;
-                    border: 0.25em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.1);
+                    border: 0.25em solid rgba( $blackColor,  0.1);
                 }
             }
             &.comment-block {
@@ -2891,14 +2891,14 @@ footer {
                     display: block;
                 }
                 .controls .item .icon {
-                    background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                    color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3), 0.25);
+                    background-color: $negativeColor;
+                    color: rgba( $accentColor, 0.25);
                     display: block;
                     margin-top: 0;
                     padding: 0.5em 0.75em;
                 }
                 .controls .item .icon:hover, .controls .item .icon:active {
-                    color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                    color: $accentColor;
                 }
                 p {
                     margin-top: 0;
@@ -2941,7 +2941,7 @@ footer {
             }
             .avatar {
                 max-width: 100%;
-                border: 0.25em solid rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.1);
+                border: 0.25em solid rgba( $blackColor,  0.1);
             }
             .name {
                 text-align: center;
@@ -2954,13 +2954,13 @@ footer {
             max-width: 75%;
             float: left;
             position: relative;
-            @include box-shadow(0 0.1666em 0 rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.1));
+            @include box-shadow(0 0.1666em 0 rgba( $blackColor,  0.1));
             .icon.main {
                 font-size: 150%;
                 position: absolute;
                 left: -0.5em;
                 margin-top: 0;
-                color: rgbToHsla(nth($elementsBackground, 1), nth($elementsBackground, 2), nth($elementsBackground, 3));
+                color: $elementsBackground;
             }
         }
     }
@@ -2997,7 +2997,7 @@ footer {
             min-width: 2.25em;
             display: block;
             text-align: center;
-            color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+            color: $mainColor;
         }
         &.facebook a:hover, &.facebook a:active {
             color: #3C599B;
@@ -3057,10 +3057,10 @@ footer {
         .item {
             a {
                 min-height: 2.25em;
-                color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3), 0.25);
-                background-color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3), 0.1);
+                color: rgba( $mainColor, 0.25);
+                background-color: rgba( $blackColor,  0.1);
                 &:hover, &:active {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                    color: $negativeColor;
                 }
             }
             &.facebook a:hover, &.facebook a:active {
@@ -3131,29 +3131,29 @@ footer {
         thead {
             font-size: 200%;
             th {
-                background-color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                background-color: $accentColor;
+                color: $negativeColor;
                 border: none;
                 padding: 0;
                 .title {
                     display: block;
                     float: none;
                     padding: 0.5em 1em;
-                    border-right: 0.0833em solid rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                    border-right: 0.0833em solid $negativeColor;
                 }
                 &:last-child .title {
                     border-right: none;
                 }
                 &.features {
                     background-color: transparent;
-                    color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                    color: $accentColor;
                 }
             }
         }
         tbody {
             td {
                 text-align: center;
-                color: rgbToHsla(nth($mainColor, 1), nth($mainColor, 2), nth($mainColor, 3));
+                color: $mainColor;
                 .icon {
                     font-size: 150%;
                     display: inline-block;
@@ -3166,23 +3166,23 @@ footer {
                 background-color: transparent;
                 text-align: center;
                 border: none;
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $accentColor;
                 a {
                     display: block;
                     margin-right: 1px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.75);
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    color: rgba( $negativeColor, 0.75);
+                    background-color: $complementaryColor;
                 }
                 a:hover {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    color: $negativeColor;
+                    background-color: $complementaryColor;
                 }
                 a:active {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    color: rgba( $negativeColor, 0.5 );
+                    background-color: $complementaryColor;
                 }
                 &:last-child a {
                     margin-right: 0;
@@ -3191,7 +3191,7 @@ footer {
                     background-color: transparent;
                 }
                 .price {
-                    color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                    color: $errorColor;
                     font-size: 200%;
                     display: block;
                 }
@@ -3200,21 +3200,21 @@ footer {
         th, td {
             border: none;
             &.featured {
-                background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                background-color: $errorColor;
                 a {
-                    background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                    background-color: $errorColor;
                 }
                 a:hover {
-                    background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3), 0.9);
+                    background-color: rgba( $errorColor, 0.9);
                 }
                 a:active {
-                    background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                    background-color: $errorColor;
                 }
             }
         }
         td.featured {
-            color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
-            background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            color: $errorColor;
+            background-color: $negativeColor;
         }
     }
 }
@@ -3232,27 +3232,27 @@ footer {
                 .title {
                     font-size: 200%;
                     text-transform: uppercase;
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    color: $negativeColor;
+                    background-color: $complementaryColor;
                     margin-right: 1px;
                 }
             }
             &.footer {
                 background-color: transparent;
                 a {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.75);
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    color: rgba( $negativeColor, 0.75);
+                    background-color: $complementaryColor;
                     display: block;
                     margin-right: 0;
                     font-weight: $fontWeight;
                 }
                 a:hover {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    color: $negativeColor;
+                    background-color: $complementaryColor;
                 }
                 a:active {
-                    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.5);
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    color: rgba( $negativeColor, 0.5 );
+                    background-color: $complementaryColor;
                 }
             }
             .title {
@@ -3265,7 +3265,7 @@ footer {
                 }
             }
             .price {
-                color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                color: $errorColor;
                 font-size: 200%;
                 display: block;
             }
@@ -3279,7 +3279,7 @@ footer {
                 padding-top: 0.72em;
                 padding-bottom: 0.73em;
                 background-color: transparent;
-                color: rgbToHsla(nth($accentColor, 1), nth($accentColor, 2), nth($accentColor, 3));
+                color: $accentColor;
             }
         }
         &.features .item.header {
@@ -3300,36 +3300,36 @@ footer {
         }
         &:nth-child(even) {
             .header .title {
-                background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3)) !important;
+                background-color: $complementaryColor !important;
             }
             .footer a {
-                background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                background-color: $complementaryColor;
                &:hover {
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3), 0.9);
+                    background-color: rgba( $complementaryColor, 0.9);
                }
                #{$documentID} &:active {
-                    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
+                    background-color: $complementaryColor;
                }
             }
         }
         &.featured {
-            border: 0.25em solid rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+            border: 0.25em solid $negativeColor;
             margin: -1em 0;
             .item .title {
-                color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
-                background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                color: $errorColor;
+                background-color: $negativeColor;
             }
             .header .title {
-                color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-                background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3)) !important;
+                color: $negativeColor;
+                background-color: $errorColor !important;
             }
             .footer a {
-                background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                background-color: $errorColor;
                &:hover {
-                    background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3), 0.9);
+                    background-color: rgba( $errorColor, 0.9);
                }
                &:active {
-                    background-color: rgbToHsla(nth($errorColor, 1), nth($errorColor, 2), nth($errorColor, 3));
+                    background-color: $errorColor;
                }
             }
         }
@@ -3343,7 +3343,7 @@ footer {
                 z-index: 995;
                 padding: 0.25em;
                 font-size: 125%;
-                background-color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
+                background-color: $negativeColor;
                 @include opacity(1);
             }
             &.features {
@@ -3367,10 +3367,10 @@ footer {
     margin: 0;
     padding: 1em 0;
     text-align: center;
-    background-color: rgbToHsla(nth($complementaryColor, 1), nth($complementaryColor, 2), nth($complementaryColor, 3));
-    color: rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3));
-    border-bottom: 0.5em solid rgbToHsla(nth($negativeColor, 1), nth($negativeColor, 2), nth($negativeColor, 3), 0.15);
-    @include box-shadow(inset 0 -0.5em 1.5em rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3),0.85));
+    background-color: $complementaryColor;
+    color: $negativeColor;
+    border-bottom: 0.5em solid rgba( $negativeColor, 0.15);
+    @include box-shadow(inset 0 -0.5em 1.5em rgba( $blackColor, 0.85));
 }
 
 /*
@@ -3474,7 +3474,7 @@ footer {
 @media print {
     * {
         background: transparent !important;
-        color: rgbToHsla(nth($blackColor, 1), nth($blackColor, 2), nth($blackColor, 3)) !important; /* Black prints faster: h5bp.com/s */
+        color: $blackColor !important; /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -3504,7 +3504,7 @@ footer {
 
     pre,
     blockquote {
-        border: 1px solid rgbToHsla(153,153,153);
+        border: 1px solid rgb(153,153,153);
         page-break-inside: avoid;
     }
 
