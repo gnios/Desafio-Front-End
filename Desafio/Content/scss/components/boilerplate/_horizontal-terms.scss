@@ -1,0 +1,24 @@
+﻿/* Horizontal Terms */
+#{$frameworkClass} .horizontal-terms {
+    dt {
+        float: left;
+        clear: both;
+        min-width: 120px;
+        width: 36.7%;
+        margin-top: 1em;
+    }
+    dd {
+        float: left;
+        margin-left: 3%;
+        width: 60.3%;
+        margin-top: 1em;
+    }
+    dt {
+        &:first-child {
+            margin-top: 0;
+            + dd {
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+﻿
+/* Alerts and Warnings */
+#{$frameworkClass} {
+    .message, .message-thin, .message-warning, .message-error, .message-alert, .message-info, .message-ok, .message-neutral, .message-modal, .message-tooltip, .message-in-box, .uk-notify-message {
+        display: block;
+        padding: 0.75em 1em;
+        text-align: center;
+        border: 0.0833em solid transparent;
+        a {
+            color: inherit;
+            border-bottom: 0.0833em dotted;
+        }
+        .icon.tooltip {
+            margin-top: 0;
+        }
+    }
+    .message-thin {
+        padding: 0 1em;
+        line-height: 2.25;
+    }
+    .message-warning, .message-modal.warning, .uk-notify .uk-notify-message-warning {
+        color: $negativeColor;
+        background-color: $pendingBack;
+        .icon {
+            color: rgba( $negativeColor, 0.35);
+        }
+    }
+    .message-error, .message-alert, .message-modal.error, .message-modal.alert, .uk-notify .uk-notify-message-danger {
+        color: $negativeColor;
+        background-color: $errorBack;
+        .icon {
+            color: rgba( $negativeColor, 0.35);
+            &.tooltip {
+                margin-top: 0.1666em;
+            }
+        }
+    }
+    .message-info, .message-modal.info, .uk-notify .uk-notify-message-info {
+        color: $negativeColor;
+        background-color: $infoBack;
+        .icon {
+            color: rgba( $negativeColor, 0.35);
+        }
+    }
+    .message-ok, .message-modal.ok, .uk-notify .uk-notify-message-success {
+        color: $negativeColor;
+        background-color: $successBack;
+        .icon {
+            color: rgba( $negativeColor, 0.35);
+        }
+    }
+    .message, .message-neutral, .message-modal.neutral {
+        color: $mainColor;
+        background-color: $elementsBackground;
+    }
+    .message-modal {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 996;
+        .icon {
+            cursor: pointer;
+            padding: 0.3333em 0.5em;
+            margin-top: 0;
+            background-color: rgba( $blackColor,  0.05);
+            color: rgba( $negativeColor, 0.35);
+            &:hover {
+                color: $negativeColor;
+                background-color: rgba( $blackColor,  0.15);
+            }
+        }
+    }
+    .message-in-box {
+        @include box-shadow(none);
+    }
+    .message.with-icon .icon, .message-alert.with-icon .icon, .message-error.with-icon .icon, .message-info.with-icon .icon, .message-warning.with-icon .icon, .message-ok.with-icon .icon {
+        font-size: 150%;
+        margin-top: 0;
+    }
+    .tooltip {
+        cursor: default;
+        padding: 0.25em 0.5em;
+    }
+}
+

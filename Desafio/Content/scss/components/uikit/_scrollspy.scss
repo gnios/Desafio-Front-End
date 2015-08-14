@@ -1,0 +1,50 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {// Scrollspy Nav
+	.scrollspy-nav, .dotted-scrollspy-nav {
+		display: block;
+		position: fixed;
+		right: 1em;
+		top: 1em;
+		.item {
+			a {
+				color: $negativeColor;
+				background-color: rgba( $accentColor, 0.9);
+				&:hover, &:active {
+					color: $negativeColor;
+					background-color: $accentColor;
+				}
+			}
+			&.uk-active {
+				a {
+					color: $negativeColor;
+					background-color: $accentColor;
+				}
+			}
+		}
+	}
+	.dotted-scrollspy-nav {
+		.item {
+			margin-bottom: 0.5em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				color: transparent;
+				background-color: rgba( $accentColor, 0.5);
+				width: 1.25em;
+				height: 1.25em;
+				padding: 0;
+				@include border-radius(1em);
+				&:hover, &:active {
+					color: transparent;
+					background-color: $accentColor;
+					@include transform(scale(1.25));
+				}
+			}
+			&.uk-active {
+				a {
+					background-color: $accentColor;
+					@include transform(scale(1.25));
+				}
+			}
+		}
+	}}

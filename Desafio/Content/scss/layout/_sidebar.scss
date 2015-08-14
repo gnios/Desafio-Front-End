@@ -1,0 +1,35 @@
+﻿
+
+
+.sidebar {
+    position: fixed;
+    width: $sidebar-width;
+    height: 100%;
+    background-color: lighten( $accentColor, 20% );
+    left: 0px;
+    padding-top: $height-menu;
+
+    .logo {
+        height: $height-menu;
+        width: $sidebar-width;
+        background-color: $accentColor;
+        position: absolute;
+        top: 0px;
+        background-image: url('../imgs/logo.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 0.75em 0;
+    }
+
+    .menu-list {
+        background-color: none;
+
+        .item {
+            background-color: none;
+
+            a {
+                background-color: none;
+            }
+        }
+    }
+}

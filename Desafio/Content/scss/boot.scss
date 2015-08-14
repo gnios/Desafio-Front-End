@@ -3,8 +3,8 @@
 // =========================================================================
 
 @import 'config/_config.scss';
-@import "base/core.scss";
-@import 'base/normalize.scss';
+@import "base/_mixin.scss";
+@import 'base/_normalize.scss';
 @import 'base/boilerplate.scss';
 
 /* STYLES MODULES BOOT LOADER */
@@ -17,12 +17,9 @@
 /* Helpers */
 @import "utils/helpers.scss";
 
-/* Components */
-// Import your desired components in here
-
 /* Vendors */
 
 /* UIkit */
 @import "vendor/uikit/uikit.scss";
 @import "vendor/uikit/addons/uikit-addons.scss";
-@import "vendor/uikit/custom-uikit.scss";
+@import "components/custom-uikit.scss";

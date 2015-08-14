@@ -1,0 +1,30 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {// Search
+	.uk-search {
+		.uk-search-field {
+			height: auto;
+			width: auto;
+			padding-left: 3em;
+			padding-right: 2em;
+		}
+		.uk-search-close {
+			margin-top: 0;
+			height: auto;
+			position: relative;
+			top: 0.5833em;
+			right: 0.4166em;
+			font-size: 125%;
+			color: $mainColor;
+			background-color: transparent;
+			@include box-shadow(none);
+			&:hover, &:active {
+				color: $accentColor;
+			}
+		}
+		&:after {
+			display: inline-block;
+			position: relative;
+			left: -88.25%;
+			top: 0.1666em;
+			font-size: 125%;
+		}
+	}}

@@ -1,0 +1,55 @@
+﻿
+// Datepicker
+#{$documentID} #{$frameworkClass} .uk-datepicker {
+    margin-top: 0;
+    background-color: $negativeColor;
+
+    .uk-datepicker-nav {
+        margin-bottom: 1em;
+        line-height: $lineHeight;
+
+        .uk-datepicker-heading {
+            font-weight: $thickFontWeight;
+            text-transform: uppercase;
+        }
+    }
+
+    .uk-datepicker-table th, .uk-datepicker-table td {
+        padding: 0;
+
+        > a {
+            display: block;
+            width: 100%;
+            padding: 0.5em 0.75em;
+            color: $mainColor;
+
+            &:hover, &:active {
+                color: $accentColor;
+                background-color: $elementsBackground;
+            }
+
+            &.uk-active {
+                color: $negativeColor;
+                background-color: $accentColor;
+            }
+        }
+    }
+
+    .uk-datepicker-table {
+        a {
+            line-height: $lineHeight;
+        }
+
+        th {
+            font-size: $fontSize;
+            font-weight: $thickFontWeight;
+            padding: 0.7em 0.3em;
+            background-color: $elementsActionBackground;
+        }
+
+        .uk-datepicker-table-muted, .uk-datepicker-table-muted:hover, .uk-datepicker-table-muted:active {
+            color: $mainColor;
+            @include opacity(0.5);
+        }
+    }
+}

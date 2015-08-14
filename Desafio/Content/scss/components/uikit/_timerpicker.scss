@@ -1,0 +1,19 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {// Timepicker
+	.timepicker {
+		+ .uk-dropdown {
+			li {
+				a {
+					&:hover, &:active {
+						color: $mainColor;
+						background-color: $elementsBackground;
+					}
+				}
+				&.uk-active {
+					a {
+						color: $mainColor;
+						background-color: $elementsBackground;
+					}
+				}
+			}
+		}
+	}}

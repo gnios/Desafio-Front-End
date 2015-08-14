@@ -1,0 +1,93 @@
+﻿/*
+   =========================================================================
+*/
+
+
+/*
+   =========================================================================
+*/
+
+/* OTHERS */
+
+/* CSS3 Special Classes */
+#{$frameworkClass} {
+    @include box-shadow(none);
+    @include text-shadow(none);
+    &.no-border-radius, &.no-border-radius * {
+        @include border-radius(0);
+    }
+    &.no-box-shadow, &.no-box-shadow * {
+        @include box-shadow(none);
+    }
+    &.no-transition, &.no-transition * {
+        @include transition(none);
+    }
+    &.no-text-shadow, &.no-text-shadow * {
+        @include text-shadow(none);
+    }
+}
+
+/* Clearfixes */
+.clearfix, p.description, .menu, .menu-list, .submenu, .breadcrumb, .list, .input-wrapper, .message, .message-thin, .message-warning, .message-error, .message-alert, .message-info, .message-ok, .message-neutral, .message-modal, .message-tooltip, .message-in-box, .flyer, .flyer > .content, .box > .content, .container, table, .table, .table .cols, .comment, .reveal, .reveal aside, .feedback, .feedback-right, .table.pricing .packages, .button-group, .pagination, aside.element, .content > p, .controls > .item, .controls-horizontal > .item {
+    @extend %clearfix;
+    &:before, &:after {
+        @extend %clearfix-ba;
+    }
+    &:after {
+        @extend %clearfix-a;
+    }
+}
+
+/* Apply CSS3 Properties from Config to Delegated Elements */
+@import "../../features/css3-elements.scss";
+// @import "../features/minified/css3-elements.min.scss"; - minified version
+
+/*
+   =========================================================================
+*/
+
+
+/* ==========================================================================
+   Boilerplate Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}
+
+#{$frameworkClass} .hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    &.focusable:active, &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+.invisible {
+    visibility: hidden;
+}

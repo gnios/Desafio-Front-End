@@ -1,0 +1,46 @@
+﻿
+/* BEHAVIORS */
+
+/* Sliding Behavior */
+#{$frameworkClass} .slide { /* Action Class */
+    > .content {
+        display: none;
+    }
+    > * > .trigger, > .trigger > .icon {
+        cursor: pointer;
+        margin-left: 0;
+        margin-top: 0;
+        padding: 0.5em;
+    }
+}
+
+/* Content Behavior inside Active State */
+#{$frameworkClass} .active .content {
+    display: block;
+}
+
+/* Icons Behavior */
+#{$frameworkClass} {
+    .icon, .icon-default {
+        float: none;
+        margin-top: 0.1666em;
+    }
+
+    .icon.left, .icon-default.left {
+        float: left;
+        margin-right: 6px;
+    }
+
+    .icon.right, .icon-default.right {
+        float: right;
+        margin-left: 16px;
+    }
+
+    .icon.medium, .medium .icon, .icon-default.medium, .medium .icon-default {
+        margin-top: 0.3333em;
+    }
+
+    .content > .icon, .content > .icon-default {
+        margin-top: 0;
+    }
+}

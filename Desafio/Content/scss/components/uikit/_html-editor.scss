@@ -1,0 +1,23 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {	// HTML Editor
+	.uk-htmleditor {
+		.uk-htmleditor-navbar {
+			background-color: $elementsBackground;
+			border: 0.0833em solid $elementsBackground;
+			.uk-htmleditor-navbar-nav {
+				> li:hover > a, > li > a:focus {
+					color: $mainColor;
+					background-color: $elementsActionBackground;
+				}
+			}
+		}
+		.uk-htmleditor-content {
+			border: 0.0833em solid $elementsBackground;;
+			border-top: none;
+			.uk-htmleditor-code {
+				border-right: 0.0833em solid $elementsBackground;
+			}
+			.uk-htmleditor-preview {
+				padding: 1.5em;
+			}
+		}
+	}}

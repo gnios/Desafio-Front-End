@@ -1,0 +1,39 @@
+﻿
+/* Sections */
+#{$frameworkClass} {
+    .section, .section-freee, .section-padded, .section-vertical, .section-horizontal, .section-left, .section-right, .section-top, .section-bottom {
+        position: relative;
+        margin: 1.5em;
+    }
+    .section-free {
+        margin: 0;
+    }
+    .section-padded {
+        padding: 1em;
+    }
+    .section-vertical {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .section-horizontal {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .section-left {
+        margin-left: 0;
+    }
+    .section-right {
+        margin-right: 0;
+    }
+    .section-top {
+        margin-top: 0;
+    }
+    .section-bottom {
+        margin-bottom: 0;
+    }
+    .section-full {
+        width: 100%;
+        margin: 1.5em 0;
+        padding: 0;
+    }
+}

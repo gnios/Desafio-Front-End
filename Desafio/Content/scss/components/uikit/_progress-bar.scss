@@ -1,0 +1,47 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {// Progress Bar
+	.uk-progress {
+		background-color: rgba( $accentColor, 0.75);
+		position: relative;
+		border: none;
+		height: auto;
+		min-height: 2.75em;
+	}
+	.uk-progress {
+		line-height: 2.75;
+		margin-bottom: 1em;
+	}
+	* + .uk-progress {
+		margin-top: 0.25em;
+	}
+	.uk-progress .uk-progress-bar {
+		background-color: $accentColor;
+		position: absolute;
+		margin: 0;
+		border: 0.1em solid $accentColor;
+	}
+	.uk-progress .uk-progress-bar {
+		color: rgba( $negativeColor, 0.85);
+		font-size: $fontSize;
+		font-weight: $thickFontWeight;
+	}
+	.uk-progress.uk-progress-success {
+		background-color: rgba( $successColor , 0.35);
+	}
+	.uk-progress.uk-progress-success .uk-progress-bar {
+		background-color: $successColor;
+		border-color: $successColor;
+	}
+	.uk-progress.uk-progress-warning {
+		background-color: rgba( $pendingColor, 0.35);
+	}
+	.uk-progress.uk-progress-warning .uk-progress-bar {
+		background-color: $pendingColor;
+		border-color: $pendingColor;
+	}
+	.uk-progress.uk-progress-danger {
+		background-color: rgba( $errorColor, 0.35);
+	}
+	.uk-progress.uk-progress-danger .uk-progress-bar {
+		background-color: $errorColor;
+		border-color: $errorColor;
+	}}

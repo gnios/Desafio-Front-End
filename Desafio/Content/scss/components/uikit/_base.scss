@@ -1,0 +1,106 @@
+﻿#{$frameworkClass} {
+    .uikit-dropdown, .uk-button-group {
+        position: relative;
+        margin-bottom: 0;
+
+        .button {
+            border: none;
+            margin-bottom: 0;
+            top: 0;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+
+            #{$documentID} &:active {
+                margin-bottom: 0;
+                top: 0;
+            }
+
+            .name {
+                margin-right: 0.5em;
+            }
+        }
+
+        &.edge > .menu {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    .visible-element .uikit-dropdown .menu {
+        width: 100%;
+    }
+}
+
+#{$documentID} #{$frameworkClass} .uikit-dropdown .menu .item {
+    float: none;
+}
+
+#{$documentID} #{$frameworkClass} .uikit-dropdown .menu .item .link {
+    display: block;
+    padding: 0.5em 0.75em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba( $negativeColor, 0.85);
+    border-bottom: 0.0833em solid rgba( $blackColor, 0.025);
+    background-color: $accentColor;
+
+    &:hover, &:active {
+        color: $negativeColor;
+        background-color: $buttonColor !important;
+    }
+}
+
+#{$documentID} #{$frameworkClass} .uikit-dropdown .menu .item:last-child .link {
+    border-bottom: none;
+}
+
+#{$documentID} #{$frameworkClass} {
+    .input-wrapper {
+        > a.uk-form-password-toggle {
+            font-size: 100%;
+            top: 0.75em;
+        }
+
+        &.with-icon.uk-form-password {
+            .input {
+                padding-right: 4em;
+            }
+        }
+    }
+}
+
+#{$documentID} #{$frameworkClass} .uikit-component { // Autocomplete
+    position: relative;
+
+    ::-moz-selection {
+        background: $accentColor;
+        color: $negativeColor;
+        @include text-shadow(none);
+    }
+
+    ::selection {
+        background: $accentColor;
+        color: $negativeColor;
+        @include text-shadow(none);
+    }
+
+    .uk-link, .uk-form-file {
+        color: $accentColor;
+
+        &:hover, &:active {
+            color: $mainColor;
+        }
+    }
+
+    .uk-placeholder {
+        color: $mainColor;
+        background-color: $elementsBackground;
+        border-color: $elementsBackground2;
+        margin-bottom: 1em;
+        padding: 1.5em;
+    }
+
+    .uk-form-file {
+        vertical-align: top;
+    }
+}

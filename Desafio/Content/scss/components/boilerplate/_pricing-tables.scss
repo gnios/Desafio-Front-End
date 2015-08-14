@@ -1,0 +1,236 @@
+﻿/* Pricing Tables */
+#{$frameworkClass} {
+    .pricing-table/*, .framework .pricing-table*/ {
+        thead {
+            font-size: 200%;
+            th {
+                background-color: $accentColor;
+                color: $negativeColor;
+                border: none;
+                padding: 0;
+                .title {
+                    display: block;
+                    float: none;
+                    padding: 0.5em 1em;
+                    border-right: 0.0833em solid $negativeColor;
+                }
+                &:last-child .title {
+                    border-right: none;
+                }
+                &.features {
+                    background-color: transparent;
+                    color: $accentColor;
+                }
+            }
+        }
+        tbody {
+            td {
+                text-align: center;
+                color: $mainColor;
+                .icon {
+                    font-size: 150%;
+                    display: inline-block;
+                }
+            }
+        }
+        tfoot {
+            td {
+                padding: 0;
+                background-color: transparent;
+                text-align: center;
+                border: none;
+                color: $accentColor;
+                a {
+                    display: block;
+                    margin-right: 1px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: rgba( $negativeColor, 0.75);
+                    background-color: $complementaryColor;
+                }
+                a:hover {
+                    color: $negativeColor;
+                    background-color: $complementaryColor;
+                }
+                a:active {
+                    color: rgba( $negativeColor, 0.5 );
+                    background-color: $complementaryColor;
+                }
+                &:last-child a {
+                    margin-right: 0;
+                }
+                #{$documentID} &.one, #{$documentID} &.two, #{$documentID} &.three {
+                    background-color: transparent;
+                }
+                .price {
+                    color: $errorColor;
+                    font-size: 200%;
+                    display: block;
+                }
+            }
+        }
+        th, td {
+            border: none;
+            &.featured {
+                background-color: $errorColor;
+                a {
+                    background-color: $errorColor;
+                }
+                a:hover {
+                    background-color: rgba( $errorColor, 0.9);
+                }
+                a:active {
+                    background-color: $errorColor;
+                }
+            }
+        }
+        td.featured {
+            color: $errorColor;
+            background-color: $negativeColor;
+        }
+    }
+}
+
+#{$frameworkClass} .table.pricing {
+    .list {
+        .item {
+            text-align: center;
+            border: none;
+            &.header, &.footer {
+                padding: 0;
+            }
+            &.header {
+                background-color: transparent;
+                .title {
+                    font-size: 200%;
+                    text-transform: uppercase;
+                    color: $negativeColor;
+                    background-color: $complementaryColor;
+                    margin-right: 1px;
+                }
+            }
+            &.footer {
+                background-color: transparent;
+                a {
+                    color: rgba( $negativeColor, 0.75);
+                    background-color: $complementaryColor;
+                    display: block;
+                    margin-right: 0;
+                    font-weight: $fontWeight;
+                }
+                a:hover {
+                    color: $negativeColor;
+                    background-color: $complementaryColor;
+                }
+                a:active {
+                    color: rgba( $negativeColor, 0.5 );
+                    background-color: $complementaryColor;
+                }
+            }
+            .title {
+                display: block;
+                float: none;
+                padding: 0.5em 1em;
+                .icon {
+                    font-size: 150%;
+                    display: inline-block;
+                }
+            }
+            .price {
+                color: $errorColor;
+                font-size: 200%;
+                display: block;
+            }
+        }
+        &.features {
+            display: table-cell;
+        }
+        &.features .item {
+            background-color: transparent;
+            .title {
+                padding-top: 0.72em;
+                padding-bottom: 0.73em;
+                background-color: transparent;
+                color: $accentColor;
+            }
+        }
+        &.features .item.header {
+            .title {
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+        }
+        &.last, &:last-child {
+            .item {
+                &.footer a {
+                    margin-right: 0;
+                }
+                &.header .title {
+                    margin-right: 0;
+                }
+            }
+        }
+        &:nth-child(even) {
+            .header .title {
+                background-color: $complementaryColor !important;
+            }
+            .footer a {
+                background-color: $complementaryColor;
+               &:hover {
+                    background-color: rgba( $complementaryColor, 0.9);
+               }
+               #{$documentID} &:active {
+                    background-color: $complementaryColor;
+               }
+            }
+        }
+        &.featured {
+            border: 0.25em solid $negativeColor;
+            margin: -1em 0;
+            .item .title {
+                color: $errorColor;
+                background-color: $negativeColor;
+            }
+            .header .title {
+                color: $negativeColor;
+                background-color: $errorColor !important;
+            }
+            .footer a {
+                background-color: $errorColor;
+               &:hover {
+                    background-color: rgba( $errorColor, 0.9);
+               }
+               &:active {
+                    background-color: $errorColor;
+               }
+            }
+        }
+    }
+    &.featured-outside {
+        .list {
+            @include opacity(0.5);
+            &:hover {
+                margin: 1em -1em -1em;
+                position: relative;
+                z-index: 995;
+                padding: 0.25em;
+                font-size: 125%;
+                background-color: $negativeColor;
+                @include opacity(1);
+            }
+            &.features {
+                margin: 0;
+                padding: 0;
+                font-size: 100%;
+                background-color: transparent;
+                @include transition(none);
+                @include opacity(1);
+            }
+        }
+    }
+    .packages {
+        display: table-cell;
+        position: relative;
+    }
+}

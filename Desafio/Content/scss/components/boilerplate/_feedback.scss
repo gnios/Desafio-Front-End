@@ -1,0 +1,53 @@
+﻿/* Feedback */
+#{$frameworkClass} {
+    .feedback, .feedback-right {
+        .client {
+            display: block;
+            float: left;
+            max-width: 120px;
+            margin-right: 1.5em;
+            .avatar, .name {
+                display: block;
+            }
+            .avatar {
+                max-width: 100%;
+                border: 0.25em solid rgba( $blackColor,  0.1);
+            }
+            .name {
+                text-align: center;
+                font-weight: $thickFontWeight;
+            }
+        }
+        .quote {
+            width: auto;
+            min-width: 25%;
+            max-width: 75%;
+            float: left;
+            position: relative;
+            @include box-shadow(0 0.1666em 0 rgba( $blackColor,  0.1));
+            .icon.main {
+                font-size: 150%;
+                position: absolute;
+                left: -0.5em;
+                margin-top: 0;
+                color: $elementsBackground;
+            }
+        }
+    }
+    .feedback-right {
+        .client {
+            margin-right: 0;
+            margin-left: 1.5em;
+            float: left;
+        }
+        .quote {
+            border-left: none;
+            border-right: 0.4166em solid transparent;
+            .icon.main {
+                left: auto;
+                right: -0.5em;
+                margin-top: 0;
+            }
+        }
+    }
+}

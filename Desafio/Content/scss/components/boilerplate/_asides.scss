@@ -1,0 +1,11 @@
+﻿/* Asides */
+#{$frameworkClass} {
+    .aside, aside {
+        &.left {
+            margin: 0 1em 1em 0;
+        }
+        &.right {
+            margin: 0 0 1em 1em;
+        }
+    }
+}

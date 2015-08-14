@@ -1,0 +1,26 @@
+﻿/* Horizontal Rules */
+#{$frameworkClass} {
+    .hr, .hr-dotted, .hr-dashed, .hr-thick, .hr-stripes {
+        display: block;
+        border-bottom: 0.0833em solid $elementsBackground2;
+        margin: 0.5em 0;
+    }
+
+    .hr-dotted {
+        border-bottom-style: dotted;
+    }
+
+    .hr-dashed {
+        border-bottom-style: dashed;
+    }
+
+    .hr-thick, .thick {
+        border-bottom-width: 0.25em;
+    }
+
+    .hr-stripes {
+        height: 10px;
+        background: transparent url(../../component-manager/assets/img/base/stripes.png) repeat-x;
+        border-bottom: none;
+    }
+}

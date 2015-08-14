@@ -1,0 +1,24 @@
+﻿/* Tags */
+#{$frameworkClass} .tags {
+    margin: 0;
+    .item {
+        float: left;
+        display: block;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .item:last-child {
+        margin-right: 0;
+    }
+    .item .tag {
+        display: block;
+        text-transform: uppercase;
+        font-weight: $fontWeight;
+        font-size: 85%;
+        color: $negativeColor;
+        &:hover, &:active {
+            color: $negativeColor;
+            background-color: $complementaryColor;
+        }
+    }
+}

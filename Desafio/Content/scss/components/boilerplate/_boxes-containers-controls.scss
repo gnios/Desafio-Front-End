@@ -1,0 +1,262 @@
+﻿#{$frameworkClass} {
+    .modal {
+        display: none;
+    }
+
+    .box {
+        background-color: $elementsBackground;
+        .flyer & {
+            background-color: transparent;
+        }
+        &.modal {
+            display: block;
+        }
+    }
+}
+
+#{$frameworkClass} .pane {
+    background-color: $elementsBackground;
+    position: relative;
+    left: 0;
+    top: 0;
+    &.docking {
+        width: 100%;
+    }
+    &.right {
+        left: inherit;
+        right: 0;
+    }
+    .content {
+        padding: 0;
+        section {
+           padding: 1em; 
+        }
+    }
+}
+
+#{$documentID} #{$frameworkClass} {
+    .controls, .controls-horizontal, .floating-nav {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        margin: 0;
+        > .item {
+            list-style-type: none;
+            text-align: center;
+            &.close {
+                margin: 0;
+                padding: 0;
+                float: none;
+                color: inherit;
+                background-color: transparent;
+            }
+            .icon {
+                margin-top: 0;
+                min-width: 16px;
+            }
+        }
+        .docking .trigger {
+            display: block;
+            padding: 0.1666em 0.1666em 0.2em;
+            margin-top: 0;
+            font-size: 150%;
+            color: $accentColor;
+            background-color: $elementsBackground;
+            &:hover {
+                background-color: $complementaryColor;
+                color: $negativeColor;
+            }
+            .icon {
+                display: block;
+                text-indent: 0;
+                padding: 0.5em;
+                margin-top: 0; 
+            }
+        }
+        > .item {
+            &.close:before {
+                content: " ";
+            }
+        }
+        .docking:hover &, .pane:hover & {
+            display: block;
+        }
+        &.left {
+            right: auto;
+            left: 0;
+        }
+    }
+    .controls-horizontal {
+        right: 0;
+        top: 0;
+        .item {
+            display: inline-block;
+        }
+    }
+    .controls, .controls-horizontal {
+        > .item a {
+            padding: 0.5em 0.75em;
+        }
+        > .item > a {
+            display: block;
+        }
+        &.left {
+            > .item > a {
+                float: left;
+                min-width: 42px;
+            }
+        }
+    }
+    .controls-horizontal {
+        > .item > a {
+            margin-left: -0.3333em;
+        }
+        > .item:first-child > a {
+            margin-left: 0;
+        }
+    }
+    header .controls, header .controls-horizontal {
+        margin-top: 0.3333em;
+        .item a {
+            color: $negativeColor;
+        }
+    }
+}
+
+#{$frameworkClass} .floating-nav {
+    display: none;
+    position: fixed;
+    top: 50%;
+    > * {
+        font-size: 100%;
+        display: block;
+        padding: 0.75em 1em;
+        width: 7.5em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $negativeColor !important;
+        background-color: rgba( $accentColor, 0.5);
+        .description {
+            color: $negativeColor;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: right;
+        }
+        &:hover, &:active {
+            font-size: 150%;
+            width: auto;
+            overflow: visible;
+            white-space: normal;
+            text-overflow: clip;
+            color: $negativeColor;
+            background-color: $accentColor;
+            .description {
+                overflow: visible;
+                white-space: normal;
+                text-overflow: clip;
+            }
+        }
+        .icon {
+            font-size: 200%;
+            margin-left: 0.5em;
+            margin-top: 0.1666em;
+        }
+    }
+    &.left {
+        .description {
+            text-align: left;
+        }
+        .icon {
+            margin-left: 0;
+            margin-right: 0.5em;
+        }
+    }
+}
+
+#{$frameworkClass} {
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0.5em 0.75em;
+        width: auto;
+        background-color: rgba( $negativeColor, 0.75);
+        color: $complementaryColor;
+        font-weight: $thickFontWeight;
+        width: auto;
+    }
+
+    .img {
+        display: inline-block;
+        position: relative;
+        background-color: transparent;
+        .caption {
+            text-transform: uppercase;
+        }
+        &.with-border .caption, &.with-border .overlay {
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+        }
+        &.with-border .overlay {
+            left: 0;
+        }
+    }
+
+    .thumb {
+        max-width: 120px;
+        border: 0.4166em solid rgba( $blackColor,  0.1);
+    }
+
+    a .thumb {
+        display: block;
+    }
+
+    .thumbs {
+        .item {
+            float: left;
+            padding: 0 0.5em 1em 0;
+            a {
+                display: block;
+            }
+            .thumb {
+                max-width: 120px;
+                border: 0.4166em solid rgba( $blackColor,  0.1);
+            }
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $negativeColor;
+        @include opacity(0);
+        a.img:hover & {
+            background-color: rgba( $negativeColor, 0.5 );
+            z-index: 990;
+            @include opacity(1);
+            @include transition(opacity 0.4s linear);
+        }
+        .icon {
+            color: $mainColor;
+            background-color: rgba( $negativeColor, 0.75);
+            font-size: 200%;
+            position: absolute;
+            right: 0.5em;
+            top: 0.5em; 
+            padding: 0.25em 0.3333em;
+            margin-top: 0;
+            &:hover {
+                color: $negativeColor;
+                background-color: $accentColor;
+            }
+        }
+    }
+}

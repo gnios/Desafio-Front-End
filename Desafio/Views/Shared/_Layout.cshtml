@@ -14,38 +14,96 @@
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
-    <div id="framework" class="framework uikit-component">
 
-        <header id="main-header" class="section-free uk-grid">
-                <div class="uk-width-1-2">
-                    <div class="menu-empresa" data-jq-dropdown="#menu-empresa">
+    <div id="framework" class="framework uikit-component">
+        <div class="sidebar">
+            <span class="logo"></span>
+            <ul class="menu-list vertical">
+                <li class="item">
+                    <a title="Menu Item 1" class="link" href="#">Menu Item 1 <span class="icon main left icon-bell-o"></span></a>
+                </li>
+                <li class="item">
+                    <a title="Menu Item 2" class="link" href="#">Menu Item 2 <span class="icon main left"></span></a>
+                </li>
+                <li class="item">
+                    <a title="Menu Item 3" class="link" href="#">Menu Item 3 <span class="icon main left"></span></a>
+                </li>
+                <li class="item">
+                    <a title="Menu Item 4" class="link" href="#">Menu Item 4 <span class="icon main left"></span></a>
+                </li>
+                <li class="item">
+                    <a title="Menu Item 5" class="link" href="#">Menu Item 5 <span class="icon main left"></span></a>
+                </li>
+            </ul>
+        </div>
+   
+
+        <nav class="uk-navbar">
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <li class="uk-parent" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                    <a class="menu-empresa">
                         <span class="icon-stack icon-medium">
                             <i class="icon icon-circle icon-stack-2x"></i>
                             <i class="icon icon-user icon-stack-1x icon-inverse"></i>
                         </span>
+
                         <h1>Fortes Contabilidade</h1>
                         <h2>Empresa de contabilidade</h2>
-                        <div id="menu-empresa" class="jq-dropdown jq-dropdown-tip">
-                            <ul class="jq-dropdown-menu">
-                                <li><a href="#1">Item 1</a></li>
-                                <li><a href="#2">Item 2</a></li>
-                                <li><a href="#3">Item 3</a></li>
-                                <li class="jq-dropdown-divider"></li>
-                                <li><a href="#4">Item 4</a></li>
-                                <li><a href="#5">Item 5</a></li>
-                                <li><a href="#5">Item 6</a></li>
-                            </ul>
-                        </div>
+                    </a>
+
+                    <div class="uk-dropdown uk-dropdown-navbar">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Another item</a></li>
+                            <li class="uk-nav-header">Header</li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Another item</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">Separated item</a></li>
+                        </ul>
                     </div>
+                </li>
+            </ul>
+
+            <a href="#offcanvas-1" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
+
+            <div class="uk-navbar-flip">
+
+                <a href="" class="uk-navbar-toggle uk-navbar-toggle-alt uk-visible-small"></a>
+
+                <ul class="uk-navbar-nav uk-hidden-small">
+                    <li><a href="#" title="sair"><i class="icon icon-bell-o  icon-medium"> <span class="uk-badge uk-badge-notification uk-badge-danger">8</span></i></a></li>
+                    <li><a href="#" title="sair"><i class="icon icon-sign-out icon-medium"></i></a></li>
+                </ul>
+            </div>
+
+        </nav>
+       
+        @*<header id="main-header" class="section-free uk-grid">
+            <div class="uk-width-1-2">
+                <div class="menu-empresa" data-jq-dropdown="#menu-empresa">
+                    <span class="icon-stack icon-medium">
+                        <i class="icon icon-circle icon-stack-2x"></i>
+                        <i class="icon icon-user icon-stack-1x icon-inverse"></i>
+                    </span>
+
+                    <h1>Fortes Contabilidade</h1>
+                    <h2>Empresa de contabilidade</h2>
                 </div>
-                <div class="uk-width-1-2">
-                    <ul class="actions">
-                        <li><input type="text" /> </li>
-                        <li><a href="#" title="sair"><i class="icon icon-bell-o  icon-medium"> <span class="uk-badge uk-badge-notification uk-badge-danger">8</span></i></a></li>
-                        <li><a href="#" title="sair"><i class="icon icon-sign-out icon-medium"></i></a></li>
-                    </ul>
-                </div>
-        </header>
+            </div>
+            <div class="uk-width-1-2">
+                <ul class="actions">
+                    <li>
+                        <span class="input-wrapper with-icon">
+                            <input type="text" class="input text" name="name" placeholder="Buscar" />
+                            <span class="icon icon-bell-o"></span>
+                        </span>
+                    </li>
+                    <li><a href="#" title="sair"><i class="icon icon-bell-o  icon-medium"> <span class="uk-badge uk-badge-notification uk-badge-danger">8</span></i></a></li>
+                    <li><a href="#" title="sair"><i class="icon icon-sign-out icon-medium"></i></a></li>
+                </ul>
+            </div>
+        </header>*@
         <!-- MAIN HEADER ENDS HERE -->
         <section id="main-section" class="section">
             <!-- MAIN SECTION STARTS HERE -->

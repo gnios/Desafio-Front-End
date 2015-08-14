@@ -1,0 +1,38 @@
+
+@import "uikit/_base.scss";
+
+// UIKit Plugin
+@import "uikit/_progress-bar.scss";
+@import "uikit/_dropdown.scss";
+@import "uikit/_modal.scss";
+@import "uikit/_off-canvas.scss";
+@import "uikit/_switcher.scss";
+@import "uikit/_scrollspy.scss";
+@import "uikit/_autocomplete.scss";
+@import "uikit/_search.scss";
+@import "uikit/_navigation.scss";
+@import "uikit/_navbar.scss";
+@import "uikit/_nestable.scss";
+@import "uikit/_sortable.scss";
+@import "uikit/_sticky.scss";
+@import "uikit/_timerpicker.scss";
+@import "uikit/_html-editor.scss";
+
+
+/*#{$documentID} #{$frameworkClass} #main-section .uikit-component {
+    display: inline-block;
+    width: 100%;
+}*/
+
+@import "uikit/_notify.scss";
+@import "uikit/_datepicker.scss";
+
+/*#{$documentID} #{$frameworkClass} {
+    #molecules-32-1 .uikit-component, #molecules-32-2 .uikit-component, #molecules-37 {
+        .scrollspy-nav, .dotted-scrollspy-nav {
+            display: none;
+        }
+    }
+}*/
+
+@import "_rtl-styles.css";

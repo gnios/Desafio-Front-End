@@ -1,0 +1,286 @@
+﻿
+
+/* Menus */
+.menu-plain {
+    min-height: 240px;
+    max-height: 100%;
+    height: auto;
+}
+
+#{$frameworkClass} .menu, #{$frameworkClass} .menu-list {
+    z-index: 998;
+    margin: 0;
+    &.breadcrumb {
+        .item {
+            .link {
+                display: inline;
+                padding: 0;
+                line-height: $lineHeight;
+            }
+            .link, .link:hover, .link:active {
+                background: transparent;
+            }
+            .link:hover, .link:active {
+                color: $errorColor;
+            }
+            .icon {
+                font-size: 65%;
+                margin-left: 1em;
+            }
+            &.active .link, &.active span {
+                color: $errorColor;
+            }
+            &.active span {
+                cursor: default;
+            }
+        }
+        > .item {
+            margin: 0 1em 0 0;
+        }
+    }
+    > .item {
+        float: left;
+    }
+    &.vertical > .item {
+        float: none;
+    }
+    .item {
+        .link {
+            display: block;
+            padding: 0.75em 1em;
+            color: $mainColor;
+            &:hover, &:active {
+                color: $negativeColor;
+                background-color: rgba( $accentColor, 0.9);
+            }
+        }
+    }
+    .separator {
+        .hr {
+            margin: 0;
+            border: none;
+            padding: 0.1666em 0 0;
+            background-color: rgba( $negativeColor, .1 );
+        }
+    }
+    &.list {
+        .item {
+            .link {
+                background-color: transparent;
+                &:hover, &:active {
+                    color: $accentColor;
+                }
+            }
+            &.active .link, &.active .link:hover, &.active .link:active {
+                color: $accentColor;
+            }
+        }
+    }
+    &.plain {
+        .item {
+            .link {
+                padding: 0.25em 1em;
+                background-color: transparent;
+                &:hover, &:active {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    &.vertical {
+        > .item {
+            float: none;
+            max-width: 100%;
+            > .link {
+                max-width: 100%;
+            }
+        }
+        &.docked {
+            > .item {
+                width: 48px;
+                > .link {
+                    text-indent: -999em;
+                    text-transform: uppercase;
+                }
+                > .link .icon {
+                    text-indent: 0;
+                    display: none;
+                }
+                > .link .icon.main {
+                    font-size: 150%;
+                    display: inline-block;
+                    margin-top: 0;
+                }
+                > .link .icon-default {
+                    text-indent: 0;
+                    font-size: 150%;
+                    margin-top: 1px;
+                    margin-right: 0.5em;
+                }
+                > .link .title {
+                    display: inline-block;
+                    text-indent: -999em;
+                    float: none;
+                }
+                &.active {
+                    width: 100%;
+                }
+                &.active > .link {
+                    width: 100%;
+                    text-indent: 0;
+                }
+                &.active > .link .title, &.active > .link .icon {
+                    display: inline-block;
+                    text-indent: 0;
+                }
+                &:hover {
+                    width: 100%;
+                }
+                &:hover > .link {
+                    text-indent: 0;
+                    width: 100%;
+                }
+                &:hover > .link .icon, &:hover > .link .title {
+                    display: inline-block;
+                }
+                &:hover > .link .title {
+                    display: inline-block;
+                    text-indent: 0;
+                }
+            }
+        }
+    }
+    &.vertical.plain {
+        position: relative;
+        > .item {
+            max-width: 100%;
+            > .link {
+                max-width: 100%;
+            }
+        }
+    }
+    &.list.vertical {
+        > .item {
+            max-width: 100%;
+            > .link {
+                max-width: 100%;
+                text-transform: uppercase;
+            }
+            > .link .icon.main {
+                display: none;
+            }
+        }
+    }
+    &.horizontal .submenu {
+        .link {
+            max-width: 100% !important;
+        }
+    }
+}
+
+#{$frameworkClass} .menu-list {
+    .item {
+        .link {
+            background-color: transparent;
+            &:hover, &:active {
+                color: $accentColor;
+                background-color: transparent;
+            }
+        }
+        &.active .link, &.active .link:hover, &.active .link:active {
+            color: $accentColor;
+        }
+        > .link {
+            text-transform: uppercase;
+        }
+    }
+    &.vertical {
+        > .item {
+            max-width: 100%;
+            > .link {
+                max-width: 100%;
+                text-transform: uppercase;
+            }
+            > .link .icon.main {
+                display: none;
+            }
+        }
+    }
+    > .item > .link {
+        font-weight: $thickFontWeight;
+    }
+}
+
+#{$frameworkClass} .breadcrumb {
+    .item {
+        float: left;
+        .link {
+            display: inline;
+            padding: 0;
+            line-height: $lineHeight;
+        }
+        .link, .link:hover, .link:active {
+            background: transparent !important;
+        }
+        .icon {
+            font-size: 65%;
+        }
+        &.active .link, &.active span {
+            color: $errorColor;
+        }
+        &.active span {
+            cursor: default;
+        }
+    }
+    > .item {
+        margin: 0 1em 0 0;
+    }
+}
+
+.submenu {
+    &.vertical {
+        > .item {
+            max-width: 100%;
+            width: 100%;
+            float: none;
+            > .link {
+                max-width: 50%;
+            }
+        }
+    }
+    &.list.vertical {
+        > .item {
+            max-width: 100%;
+        }
+    }
+}
+
+.fixed-nav .menu.vertical.plain {
+    background-color: transparent;
+    color: $negativeColor;
+    padding: 0;
+}
+
+.fixed-nav > .menu, .fixed-nav .submenu {
+    background: none;
+    @include box-shadow(none);
+}
+
+.fixed-nav > .trigger {
+    padding: 0 0.25em;
+}
+
+.fixed-nav > .trigger.active {
+    background-color: $mainColor;
+}
+
+.fixed-nav .menu .item .link {
+    background-color: $mainColor;
+    color: $accentColor;
+}
+
+.fixed .menu .item .link:hover, .fixed .menu .item .link:active {
+    background-color: $accentColor;
+    color: $negativeColor;
+}
+

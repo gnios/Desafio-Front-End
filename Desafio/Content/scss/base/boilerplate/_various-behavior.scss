@@ -1,0 +1,8 @@
+﻿
+/* Various Behavior */
+* > span.title {
+    float: left;
+    + * {
+        clear: none;
+    }
+}

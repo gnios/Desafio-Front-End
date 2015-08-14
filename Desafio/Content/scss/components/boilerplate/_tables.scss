@@ -1,0 +1,132 @@
+﻿/* Tables */
+#{$frameworkClass} {
+    /* Classic Tables */
+    table {
+        &.stripes tbody tr:nth-child(even) {
+            background-color: $elementsBackground;
+        }
+        td, th {
+            padding: 0.5em 1em;
+            border: 0.0833em solid $elementsActionBackground;
+        }
+        th {
+            color: $complementaryColor;
+            background-color: $elementsActionBackground; 
+        }
+        caption {
+            background-color: $accentColor;
+            color: $negativeColor;
+            padding: 0.5em 1em;
+            font-size: 125%;
+            font-weight: $thickFontWeight;
+            text-transform: uppercase;
+        }
+        tfoot td {
+            background-color: $elementsBackground2;
+            border-top: none;
+        }
+        &.center {
+            text-align: center;
+        }
+        &.right {
+            text-align: right;
+        }
+        &.condensed {
+            td, th {
+                padding-top: 0.25em;
+                padding-bottom: 0.25em;
+            }
+        }
+    }
+    /* List Tables*/
+    .table {
+        display: table;
+        width: auto;
+        position: relative;
+        header {
+            width: auto;
+            line-height: 2;
+            display: table-header-group;
+        }
+        footer {
+            width: auto;
+            display: table-footer-group;
+            line-height: 2;
+        }
+        header, footer {
+            .title {
+                display: block;
+                padding-left: 1em;
+                padding-right: 1em;
+                float: none;
+            }
+        }
+        .list {
+            &:last-child, &.col {
+                border-bottom: 0.0833em solid $elementsActionBackground;
+            }
+            float: left;
+            display: block;
+        }
+        .item {
+            border: 0.0833em solid $elementsActionBackground;
+            border-left: none;
+            border-bottom: none;
+            .title {
+                display: block;
+                padding: 0.5em 1em;
+                float: none;
+            }
+        }
+        .col .item, .row .item:first-child, .col .item:first-child {
+            border-left: 0.0833em solid $elementsActionBackground;
+        }
+        .col .item {
+            border-left: none;
+        }
+        .row:first-child .item, .col:first-child .item {
+            border-left: 0.0833em solid $elementsActionBackground;
+        }
+        .rows {
+            display: table-row-group;
+            .list {
+                width: auto;
+                margin: 0;
+                .item {
+                    display: table-cell;
+                }
+            }
+        }
+        .rows.stripes .list:nth-child(even), .cols.stripes .list:nth-child(even) {
+            background-color: $elementsBackground;
+        }
+        .list {
+            display: block;
+            width: auto;
+            float: left;
+            margin: 0;
+            .item {
+                display: block;
+                &.header {
+                    color: $complementaryColor;
+                    background-color: $elementsBackground;
+                    font-weight: $thickFontWeight;
+                }
+                &.footer {
+                    color: $complementaryColor;
+                    background-color: $elementsBackground;
+                    font-weight: $thickFontWeight;
+                }
+            }
+        }
+        &.stripes {
+            .list {
+                .item:nth-child(even) {
+                    .title {
+                        background-color: $elementsBackground;
+                    }
+                }
+            }
+        }
+    }
+}

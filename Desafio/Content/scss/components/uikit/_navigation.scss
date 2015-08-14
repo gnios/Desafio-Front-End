@@ -1,0 +1,77 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {// Navigation
+	.uk-nav {
+		.item > .link, .item > a {
+			max-width: 100%;
+			&:hover, &:active {
+				color: $accentColor;
+				background-color: transparent;
+			}
+		}
+		> .item > .link, > .item > a {
+			text-transform: uppercase;
+			font-weight: $thickFontWeight;
+			background-color: $elementsBackground;
+			&:hover, &:active {
+				background-color: $elementsBackground;
+			}
+		}
+		.uk-parent {
+			&.uk-open {
+				> a, > a:hover, > a:active {
+					color: $negativeColor;
+					background-color: $accentColor;
+				}
+				> div {
+					height: 100% !important;
+				}
+			}
+			> a .icon {
+				margin-left: 5px;
+				margin-top: 5px;
+			}
+			> a .icon.main {
+				margin-left: 0;
+			}
+		}
+		.uk-nav-sub {
+			margin: 0;
+			padding: 0;
+			.item a {
+				padding-left: 2em;
+			}
+			.uk-parent .uk-nav-sub a {
+				padding-left: 3em;
+			}
+		}
+		> li > a {
+			padding: 0.75em 1em;
+			margin-top: 0;
+		}
+		.uk-nav-header {
+			font-size: $fontSize;
+			padding: 0.5em 1em;
+			color: $mainColor;
+		}
+		&.uk-nav-autocomplete, &.uk-nav-search {
+			> li {
+				> a {
+					color: $mainColor;
+					background-color: $negativeColor;
+					&:hover, &:active {
+						color: $mainColor;
+						background-color: $elementsActionBackground;
+					}
+				}
+				&.uk-active {
+					> a {
+						color: $mainColor;
+						background-color: $elementsActionBackground;
+					}
+				}
+				&.uk-nav-divider {
+					border-top-color: $elementsBackground2;
+				}
+			}
+		}
+	}
+    }

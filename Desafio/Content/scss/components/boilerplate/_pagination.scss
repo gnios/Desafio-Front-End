@@ -1,0 +1,44 @@
+﻿/* Pagination */
+#{$frameworkClass} .pagination {
+    .item, li {
+        list-style-type: none;
+        float: left;
+        display: block;
+        .button {
+            border-left: none;
+        }
+        .link, a, span {
+            padding: 0.25em 0.5em;
+        }
+        .button {
+            padding: 0.5em 1em;
+        }
+        &.active {
+            .link, .button {
+                cursor: default;
+                background-color: transparent;
+                border: none;
+                @include box-shadow(none);
+                color: $mainColor;
+            }
+            .button {
+                padding: 0.5833em 1em;
+            }
+        }
+        &.disabled {
+            .button, .button:hover, .button:active {
+                @include opacity(0.75);
+                cursor: default;
+                top: 0;
+                margin-bottom: 0;
+                border-bottom-width: 0.1666em;
+                background-color: $accentColor;
+                color: rgba( $negativeColor, 0.85 );
+            }
+            .link, .link:hover, .link:active {
+                @include opacity(0.75);
+                cursor: default;
+            }
+        }
+    }
+}

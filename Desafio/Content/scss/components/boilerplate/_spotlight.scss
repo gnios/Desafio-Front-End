@@ -1,0 +1,10 @@
+﻿/* Spotlight */
+#{$frameworkClass} .spotlight {
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+    background-color: $complementaryColor;
+    color: $negativeColor;
+    border-bottom: 0.5em solid rgba( $negativeColor, 0.15);
+    @include box-shadow(inset 0 -0.5em 1.5em rgba( $blackColor, 0.85));
+}

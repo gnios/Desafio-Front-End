@@ -1,0 +1,281 @@
+﻿/* ==========================================================================
+   html5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: $mainColor;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: $accentColor;
+    color: $negativeColor;
+    @include text-shadow(none);
+}
+
+::selection {
+    background: $accentColor;
+    color: $negativeColor;
+    @include text-shadow(none);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(204,204,204);
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: rgb(204,204,204);
+    color: $blackColor;
+    padding: 0.2em 0;
+}
+
+
+/* =========================================================================
+   Framework Elements
+   ========================================================================= */
+
+/*
+   =========================================================================
+*/
+
+/* Defaults */
+
+* {
+    @include box-sizing(border-box);
+}
+
+body {
+    font-family: $fontFamily;
+    font-size: $baseFontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    margin: 0;
+    padding: 0;
+    color: $mainColor; // Providing each RGB value for the function
+    background-color: $mainBackground;
+    @include outline(none);
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    margin: 0;
+}
+
+strong {
+    font-weight: $thickFontWeight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headersFontFamily;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: $mainHeaderSize;
+}
+
+h2 {
+    font-size: $headerL2;
+}
+
+h3 {
+    font-size: $headerL3;
+}
+
+h4 {
+    font-size: $headerL4;
+}
+
+h5 {
+    font-size: $headerL5;
+}
+
+h6 {
+    font-size: $headerL6;
+}
+
+p {
+    margin: 1em 0;
+    position: relative;
+    line-height: 1.75;
+    #{$documentID} &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    img {
+        margin: 0.75em;
+    }
+    img.right {
+        margin: 0 0 0.75em 0.75em;
+    }
+    img.left {
+        margin: 0 0.75em 0.75em 0;
+    }
+    .remark {
+        position: relative;
+        display: inline-block;
+        left: -2em;
+        margin: 0 1em 1em 1em;
+        padding: 1em;
+        width: auto;
+        max-width: 320px;
+        font-size: 125%;
+        float: left;
+        background-color: $elementsBackground;
+        &.right {
+            float: right;
+            left: auto;
+            right: -2em;
+        }
+        .title {
+            display: block;
+            font-size: 125%;
+            font-weight: $thickFontWeight;
+            margin-bottom: 0.25em;
+        }
+        .details {
+            display: block;
+            margin: 0.5em 0 1em;
+        }
+        img {
+            margin: 0;
+        }
+    }
+}
+
+span {
+    img {
+        margin: 0.75em;
+    }
+    img.right {
+        margin: 0 0 0.75em 0.75em;
+    }
+    img.left {
+        margin: 0 0.75em 0.75em 0;
+    }
+}
+
+pre {
+    margin: 0.5em 0;
+    font-weight: $thickFontWeight;
+    color: rgb(166,226,46);
+}
+
+small {
+    font-size: 85%;
+}
+
+dd {
+    margin-left: 0;
+    + dt {
+        margin-top: 1em;
+    }
+}
+
+dt {
+    font-weight: 400;
+}
+
+code {
+    color: $complementaryColor;
+    background-color: $elementsActionBackground;
+    border: 0.0833em solid $elementsActionBackground;
+    padding: 0.25em;
+}
+
+img, .img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    &.border {
+        border-color: $negativeColor;
+    }
+}
+
+a {
+    color: $accentColor;
+    text-decoration: none;
+    line-height: $lineHeight;
+    @include outline(none);
+    &.img {
+        display: inline-block;
+    }
+    &.content {
+        display: block;
+        background-color: $elementsBackground;
+        #{$documentID} &:hover, #{$documentID} &:active {
+            color: $mainColor;
+        }
+        #{$documentID} .invert &:hover, #{$documentID} .invert &:active {
+            background-color: $mainColor;
+            color: $negativeColor !important;
+        }
+    }
+    &:focus {
+        @include outline(none);
+    }
+}
+
+ol, ul {
+    padding: 0;
+}
+
+audio, canvas, video {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+canvas {
+    width: auto;
+}
+
+svg, object, embed {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    padding: 0 1em;
+    line-height: 2;
+}
+
+footer {
+    padding: 0.5em 1em;
+    color: rgba( $negativeColor, 0.5 );
+    background-color: $complementaryColor;
+}

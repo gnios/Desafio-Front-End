@@ -1,0 +1,100 @@
+﻿/*
+   =========================================================================
+*/
+
+
+/*
+   =========================================================================
+*/
+
+/* Forms */
+#{$frameworkClass} form {
+    label {
+        display: block;
+        margin-top: 0.75em;
+        &.error {
+            display: inline-block;
+            margin-top: 0;
+            color: $errorColor;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+        + span {
+            margin-left: 1em;
+        }
+        + .username, + .password, + .email {
+            margin-left: 0;
+        }
+    }
+    fieldset {
+        margin-bottom: 1em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.form-validate fieldset {
+        .wrapper {
+            margin-bottom: 0.5em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .checkbox {
+                display: inline-block;
+                margin-left: 0.5em;
+            }
+            label {
+                display: inline-block;
+                &.error {
+                    min-height: inherit;
+                    min-width: inherit;
+                    padding: 0 0.5em 0 0;
+                    cursor: default;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    input[type="submit"], button {
+
+    }
+    input[type="text"], input[type="password"], .input.text, textarea, select {
+        margin-right: 1em;
+        @include outline(none);
+    }
+    input[type="search"] input[type="search"].input, .input.search {
+        padding-left: 3em;
+        padding-right: 3em;
+        margin-right: 0;
+        + .close {
+            margin-top: 0;
+            margin-right: 0;
+        }
+    }
+    .input-wrapper {
+        input[type="text"], input[type="password"], .input.text {
+            margin-right: 0;
+        }
+    }
+    .group {
+        margin-bottom: 0.75em;
+        label {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    a {
+        margin-top: 1em;
+    }
+}
+
+/*
+   =========================================================================
+*/
+
+
+/*
+   =========================================================================
+*/

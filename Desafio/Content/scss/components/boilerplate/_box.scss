@@ -1,0 +1,37 @@
+﻿/* Box */
+#{$frameworkClass} .box {
+    position: relative;
+    .content {
+        padding: 1em;
+    }
+    > header, > footer {
+        padding: 0.75em 1em;
+        line-height: 2;
+    }
+    > header {
+        font-size: 125%;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        > .trigger {
+            padding: 0.5em;
+        }
+    }
+    > header, &.slide.active > header {
+        color: $negativeColor;
+        background-color: $accentColor;
+    }
+    > footer {
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        color: rgba( $negativeColor, 0.5 );
+        background-color: $complementaryColor;
+    }
+    .scroll {
+        max-height: 10em;
+    }
+    &.slide {
+        header {
+            cursor: default;
+        }
+    }
+}

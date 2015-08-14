@@ -1,0 +1,66 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {// Switcher
+	.uk-tab {
+		border-bottom-color: $elementsBackground2;
+		> li {
+			a:hover, a:active {
+				color: $accentColor;
+				background: transparent;
+				border-color: transparent;
+			}
+			&.uk-active {
+				a, a:hover, a:active {
+					background-color: $negativeColor;
+					color: $mainColor;
+					border-color: $elementsBackground2;
+				}
+			}
+		}
+		> li:not(.uk-active) {
+			> a:hover, > a:focus {
+				margin-bottom: 0;
+			}
+		}
+		&.uk-tab-bottom {
+			border-top-color: $elementsBackground2;
+			> li:not(.uk-active) {
+				> a:hover, > a:focus {
+					margin-top: 0;
+				}
+			}
+		}
+		&.uk-tab-left {
+			border-right-color: $elementsBackground2;
+			> li:not(.uk-active) {
+				> a:hover, > a:focus {
+					margin-right: 0;
+				}
+			}
+		}
+		&.uk-tab-right {
+			border-left-color: $elementsBackground2;
+			> li:not(.uk-active) {
+				> a:hover, > a:focus {
+					margin-left: 0;
+				}
+			}
+		}
+		&.uk-tab-left > li > a, &.uk-tab-right > li > a {
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
+	}
+	.uk-switcher li {
+		> * {
+			padding: 1em;
+
+		}
+	}
+	.switcher-tabs, .switcher-content {
+		margin-bottom: 0;
+	}
+	.switcher-tabs, .switcher-content {
+		margin-right: 0;
+	}
+	.switcher-tabs.right + .switcher-content {
+		margin-left: 0;
+	}}

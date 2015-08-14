@@ -1,0 +1,118 @@
+﻿/* Lists and Menus */
+#{$frameworkClass} .list, #{$frameworkClass} .list-enumerated {
+    margin: 0;
+    .item {
+        list-style-type: none;
+        .link {
+            padding: 0.25em 0.5em;
+            line-height: $lineHeight;
+        }
+    }
+    &.with-bullet {
+        .item {
+            list-style-type: circle;
+            list-style-position: inside;
+        }
+    }
+    .menu & .item .link {
+        padding: 0.25em 0.5em;
+    }
+    &.cols > .item {
+        float: left;
+    }
+    &.pagination {
+        .item {
+            list-style-type: none;
+            float: left;
+            display: block;
+            .button {
+                border-left: none;
+            }
+            &:first-child .button, &.first .button {
+
+            }
+            .link {
+                padding: 0.25em 0.5em;
+            }
+            &.active {
+                .link, .button {
+                    cursor: default;
+                    background-color: transparent;
+                    border: none;
+                    @include box-shadow(none);
+                    color: $mainColor;
+                }
+                .button {
+                    padding: 0.5833em 1em;
+                }
+            }
+            &.disabled {
+                .button, .button:hover, .button:active {
+                    @include opacity(0.75);
+                    cursor: default;
+                    top: 0;
+                    margin-bottom: 0;
+                    border-bottom-width: 0.1666em;
+                    background-color: $accentColor;
+                    color: rgba( $negativeColor, 0.85 );
+                }
+                .link, .link:hover, .link:active {
+                    @include opacity(0.75);
+                    cursor: default;
+                } 
+            }
+        }
+    }
+}
+
+#{$frameworkClass} {
+    .list, .menu, .menu-list {
+        .submenu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            &.with-separator {
+                padding: 0.5em 0;
+                background-color: $elementsBackground;
+                .separator {
+                    margin: 0.5em 0;
+                }
+            }
+            .item {
+                list-style-type: none;
+            }
+        }
+    }
+    .menu, .menu-list, .submenu {
+        &.with-separator {
+            background-color: $accentColor;
+        }
+    }
+    ol.list, ol.list.with-bullet {
+        .item {
+            list-style-type: decimal;
+        }
+    }
+    .list-enumerated, .enumerated {
+        .item {
+            display: inline;
+            margin-right: 0.5em;
+            margin-bottom: 0;
+        }
+    }
+    .list-enumerated {
+        .item {
+            display: inline-block;
+            margin-bottom: 0.5em;
+        }
+    }
+    .submenu {
+        margin: 0;
+        list-style-type: none;
+        position: relative;
+        z-index: 996;
+        .item {
+            float: none;
+        }
+    }
+}

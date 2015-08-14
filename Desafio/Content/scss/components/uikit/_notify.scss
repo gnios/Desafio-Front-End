@@ -1,0 +1,22 @@
+﻿
+// Notify
+.uk-notify {
+    .uk-notify-message {
+        font-size: $fontSize;
+        line-height: $lineHeight;
+        color: $negativeColor;
+        background-color: rgba( $complementaryColor, 0.9);
+
+        a.uk-close {
+            padding: 0.25em 0.5em;
+            margin-top: 0;
+            color: $negativeColor !important;
+            background-color: rgba( $blackColor, 0.05);
+            border-bottom-color: transparent !important;
+
+            &:hover, &:active {
+                color: $negativeColor !important;
+            }
+        }
+    }
+}

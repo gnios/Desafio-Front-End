@@ -1,0 +1,13 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {// Sortable
+	.uk-sortable {
+		.uk-sortable-placeholder {
+			cursor: pointer;
+			@include opacity(0.85);
+		}
+		.uk-sortable-over {
+			@include opacity(0.5);
+		}
+		> * {
+			cursor: pointer;
+		}
+	}}

@@ -1,0 +1,22 @@
+﻿/* Flyer */
+#{$frameworkClass} .flyer {
+    position: relative;
+    .content {
+        display: block;
+        background-color: $elementsBackground;
+    }
+    .action {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: none;
+        font-weight: $thickFontWeight;
+        font-size: 125%;
+        @include box-shadow(none);
+        #{$documentID} &:active {
+            top: 0;
+            margin-bottom: 0;
+        }
+    }
+}

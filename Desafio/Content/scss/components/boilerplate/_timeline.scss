@@ -1,0 +1,128 @@
+﻿
+/* Timeline */
+#{$frameworkClass} .timeline {
+    position: relative;
+    margin: 5em 0;
+    .bar {
+        padding: 0 3em;
+        height: auto;
+        max-height: 1em;
+        background-color: $elementsBackground;
+    }
+    .list {
+        .item {
+            display: block;
+            padding-right: 1em;
+            float: left;
+            width: auto;
+            min-width: 10em;
+            position: relative;
+            span {
+                display: block;
+                position: relative;
+            }
+            .datetime {
+               top: -4em; 
+            }
+            .content {
+                display: none;
+                position: absolute;
+                top: 4em;
+                padding: 0.75em;
+                min-height: 3em;
+                background-color: $elementsBackground;
+                width: auto;
+                min-width: 300%;
+                z-index: 996;
+            }
+            .dot {
+                position: absolute;
+                top: -0.25em;
+                width: 1.5833em;
+                height: 1.5833em;
+                background-color: $accentColor;
+                cursor: default;
+            }
+            img.dot {
+                width: 4.7499em;
+                height: 4.7499em;
+                top: -1.75em;
+                border: 0.25em solid $accentColor;
+                @include border-radius(5em);
+            }
+        }
+        .item:hover {
+            .content {
+                display: block;
+            }
+            .dot {
+                background-color: rgba( $accentColor, 0.9);
+            }
+        }
+    }
+    &.vertical {
+        margin: 0 2em;
+        .bar {
+            max-height: inherit;
+            max-width: 1em;
+            width: auto;
+            padding: 3em 0;
+            margin: 0 auto;
+        }
+        .list .item {
+            padding-right: 0;
+            padding-bottom: 1em;
+            min-height: 10em;
+            min-width: inherit;
+            float: none;
+            .dot {
+                top: 0;
+                left: -0.3em;
+            }
+            img.dot {
+                width: 4.7499em;
+                height: 4.7499em;
+                left: -1.75em;
+                max-width: inherit;
+            }
+            .datetime, .title {
+                top: 0;
+                left: -16.5em;
+                text-align: right;
+                min-width: 180px;
+            }
+            .datetime {
+                top: 1.5em;
+            }
+            .title {
+                display: none;
+                padding: 0.5em 0.75em;
+                text-align: left;
+                color: $negativeColor;
+                background-color: $accentColor;
+            }
+            .content {
+                position: relative;
+                top: -4em;
+                left: 4em;
+                min-width: 480px;
+                display: none;
+            }
+            &:hover .content, &:hover .title {
+                display: inline-block;
+            }
+            &:hover .datetime {
+                top: 0;
+            }
+        }
+    }
+    &.static .list .item .content, &.static .list .item .title {
+        display: inline-block;
+    }
+    &.static .list .item .content {
+        position: relative;
+    }
+    &.static .list .item .datetime {
+        top: 0;
+    }
+}

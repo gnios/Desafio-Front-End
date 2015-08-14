@@ -1,0 +1,13 @@
+﻿/* Elements Revealer */
+#{$frameworkClass} .reveal {
+    .visible-element, .hidden-element {
+        width: 50%;
+        float: left;
+    }
+    .visible-element {
+        width: 100%;
+    }
+    .hidden-element {
+        display: none;
+    }
+}

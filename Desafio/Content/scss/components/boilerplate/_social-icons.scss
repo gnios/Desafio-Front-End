@@ -1,0 +1,142 @@
+﻿/* Social Icons */
+#{$frameworkClass} .social {
+    .item {
+        float: left;
+        display: block;
+        text-align: center;
+        margin: 0 0.25em 0.25em 0;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            padding: 0.25em 0.6666em;
+            min-width: 2.25em;
+            display: block;
+            text-align: center;
+            color: $mainColor;
+        }
+        &.facebook a:hover, &.facebook a:active {
+            color: #3C599B;
+        }
+        &.twitter a:hover, &.twitter a:active {
+            color: #32CCFE;
+        }
+        &.linkedin a:hover, &.linkedin a:active {
+            color: #017EB4;
+        }
+        &.google-plus a:hover, &.google-plus a:active {
+            color: #D95232;
+        }
+        &.github a:hover, &.github a:active {
+            color: #171516;
+        }
+        &.flickr a:hover, &.flickr a:active {
+            color: #FF0084;
+        }
+        &.pinterest a:hover, &.pinterest a:active {
+            color: #CC2127;
+        }
+        &.foursquare a:hover, &.foursquare a:active {
+            color: #156DB5;
+        }
+        &.instagram a:hover, &.instagram a:active {
+            color: #A16F55;
+        }
+        &.vimeo a:hover, &.vimeo a:active {
+            color: #1BB6EC;
+        }
+        &.tumblr a:hover, &.tumblr a:active {
+            color: #2C4762;
+        }
+        &.youtube a:hover, &.youtube a:active {
+            color: #D51D27;
+        }
+        &.stack-overflow a:hover, &.stack-overflow a:active {
+            color: #FE7413;
+        }
+        &.dribbble a:hover, &.dribbble a:active {
+            color: #E04C86;
+        }
+        &.skype a:hover, &.skype a:active {
+            color: #01AEF2;
+        }
+        &.dropbox a:hover, &.dropbox a:active {
+            color: #007EE5;
+        }
+        &.bitbucket a:hover, &.bitbucket a:active {
+            color: #205081;
+        }
+    }
+    &.with-background {
+        background-color: transparent !important;
+        padding: 0;
+        .item {
+            a {
+                min-height: 2.25em;
+                color: rgba( $mainColor, 0.25);
+                background-color: rgba( $blackColor,  0.1);
+                &:hover, &:active {
+                    color: $negativeColor;
+                }
+            }
+            &.facebook a:hover, &.facebook a:active {
+                background-color: #3C599B;
+            }
+            &.twitter a:hover, &.twitter a:active {
+                background-color: #32CCFE;
+            }
+            &.linkedin a:hover, &.linkedin a:active {
+                background-color: #017EB4;
+            }
+            &.google-plus a:hover, &.google-plus a:active {
+                background-color: #D95232;
+            }
+            &.github a:hover, &.github a:active {
+                background-color: #171516;
+            }
+            &.flickr a:hover, &.flickr a:active {
+                background-color: #FF0084;
+            }
+            &.pinterest a:hover, &.pinterest a:active {
+                background-color: #CC2127;
+            }
+            &.foursquare a:hover, &.foursquare a:active {
+                background-color: #156DB5;
+            }
+            &.instagram a:hover, &.instagram a:active {
+                background-color: #A16F55;
+            }
+            &.vimeo a:hover, &.vimeo a:active {
+                background-color: #1BB6EC;
+            }
+            &.tumblr a:hover, &.tumblr a:active {
+                background-color: #2C4762;
+            }
+            &.youtube a:hover, &.youtube a:active {
+                background-color: #D51D27;
+            }
+            &.stack-overflow a:hover, &.stack-overflow a:active {
+                background-color: #FE7413;
+            }
+            &.dribbble a:hover, &.dribbble a:active {
+                background-color: #E04C86;
+            }
+            &.skype a:hover, &.skype a:active {
+                background-color: #01AEF2;
+            }
+            &.dropbox a:hover, &.dropbox a:active {
+                background-color: #007EE5;
+            }
+            &.bitbucket a:hover, &.bitbucket a:active {
+                background-color: #205081;
+            }
+        }
+    }
+    &.transitioning {
+        .item {
+            a {
+
+            }
+        }
+    }
+}

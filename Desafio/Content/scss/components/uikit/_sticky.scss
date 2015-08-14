@@ -1,0 +1,18 @@
+﻿#{$documentID} #{$frameworkClass} .uikit-component {// Sticky
+	.uk-sticky, .uk-sticky-init {
+		z-index: 999;
+		&.uk-active {
+			> * {
+				z-index: 999;
+			}
+		}
+	}
+	.uk-sticky-placeholder {
+		z-index: 998;
+		.uk-active {
+			z-index: 999;
+			> * {
+				z-index: 999;
+			}
+		}
+	}}
