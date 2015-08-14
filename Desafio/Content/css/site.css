@@ -11192,7 +11192,7 @@ body {
   background-color: hsla(220, 33%, 98%, 1);
   border: none; }
   #document .gnio-framework .uikit-component .uk-tab li > a:hover, #document .gnio-framework .uikit-component .uk-tab li > a:active {
-    color: hsla(172, 72%, 43%, 1);
+    color: hsla(0, 0%, 30%, 1);
     background-color: hsla(220, 33%, 98%, 1); }
 
 #document .gnio-framework .uikit-component .uk-tab li.uk-active > a, #document .gnio-framework .uikit-component .uk-tab li.uk-active > a:hover, #document .gnio-framework .uikit-component .uk-tab li.uk-active > a:active {
@@ -11318,7 +11318,7 @@ body {
       background-color: hsla(0, 0%, 100%, 1) !important; }
 
 #document .gnio-framework .uikit-dropdown .menu .item .link:hover, #document .gnio-framework .uikit-dropdown .menu .item .link:active {
-  background-color: hsla(172, 72%, 43%, 1); }
+  background-color: hsla(0, 0%, 30%, 1); }
 
 #document .gnio-framework .uikit-dropdown.dropdown-up.uk-open .uikit-trigger {
   border-radius: 0 0 0.25em 0.25em;
@@ -11496,40 +11496,6 @@ body {
 /* Color Scheme */
 /* Clearfixes */
 /* Default Styles */
-#document .gnio-framework #main-header {
-  background-color: hsla(101, 45%, 51%, 1);
-  padding: 0.75em 0; }
-  #document .gnio-framework #main-header .wrapper {
-    margin: 0 auto;
-    padding: 0 1.5em; }
-  #document .gnio-framework #main-header .logo {
-    display: block;
-    float: left;
-    margin-top: 0;
-    margin-right: 0;
-    width: 100%; }
-    #document .gnio-framework #main-header .logo a, #document .gnio-framework #main-header .logo a:hover, #document .gnio-framework #main-header .logo a:active {
-      display: block;
-      font-size: 125%;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: hsla(172, 72%, 43%, 1); }
-    #document .gnio-framework #main-header .logo .symbol {
-      display: inline-block;
-      margin: 0 0.3333em;
-      line-height: 1;
-      padding: 0.04166em;
-      color: 255, 255, 255;
-      border: 0.0833em dashed hsla(215, 16%, 23%, 0.5);
-      background-color: 50, 58, 69;
-      transform: scale(1.5, 1);
-      -moz-transform: scale(1.5, 1);
-      -webkit-transform: scale(1.5, 1);
-      -ms-transform: scale(1.5, 1);
-      border-radius: 0.4166em;
-      -moz-border-radius: 0.4166em;
-      -webkit-border-radius: 0.4166em; }
-
 #document .gnio-framework #main-content {
   min-height: 800px; }
   #document .gnio-framework #main-content h1 {
@@ -11769,6 +11735,27 @@ body {
 .icon-user:before {
   content: "\f106"; }
 
+/* Default Styles */
+#document .gnio-framework #main-header {
+  background-color: hsla(101, 45%, 51%, 1);
+  padding: 0.75em 0; }
+  #document .gnio-framework #main-header .actions {
+    float: right;
+    margin-top: 0px; }
+    #document .gnio-framework #main-header .actions .icon, #document .gnio-framework #main-header .actions .menu-empresa h1:after, .menu-empresa #document .gnio-framework #main-header .actions h1:after {
+      position: relative; }
+      #document .gnio-framework #main-header .actions .icon .uk-badge, #document .gnio-framework #main-header .actions .menu-empresa h1:after .uk-badge, .menu-empresa #document .gnio-framework #main-header .actions h1:after .uk-badge {
+        position: absolute;
+        top: -8px;
+        right: -5px; }
+    #document .gnio-framework #main-header .actions li {
+      display: inline;
+      list-style-type: none;
+      padding-right: 20px; }
+    #document .gnio-framework #main-header .actions a {
+      text-decoration: none;
+      color: hsla(0, 0%, 30%, 1); }
+
 .menu-empresa {
   color: #4d4d4d;
   cursor: pointer;
@@ -11808,17 +11795,17 @@ body {
 //// MOBILE
 ////
 @media only screen and (max-width: $mobile-break) {
-    .header {
-        height: 63px;
-    }
+	.header {
+		height: 63px;
+	}
 
-    .social {
-        display: none;
-    }
+	.social {
+		display: none;
+	}
 
-    .logo a {
-        width: 120px;
-    }
+	.logo a {
+		width: 120px;
+	}
 }*/
 
 /*# sourceMappingURL=site.css.map */

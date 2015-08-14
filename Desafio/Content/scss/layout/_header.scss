@@ -1,75 +1,105 @@
 ﻿/// <reference path="../config/config.scss" />
 /// <reference path="../typos/icons/icons.scss" /> 
 
+/* Default Styles */
+#{$documentID} #{$frameworkClass} {
+	#main-header {
+		background-color: convertColor($mainColor);
+		padding: 0.75em 0;
+
+		.actions{
+			float:right;
+			margin-top:0px;
+			
+			.icon{
+					position:relative;
+					.uk-badge {
+						position:absolute;
+						top:-8px;
+						right:-5px;
+					}
+				 }
+			li {
+				display: inline;
+				list-style-type: none;
+				padding-right: 20px;
+			}
+			a{
+				text-decoration:none;
+				color: convertColor($accentColor);
+			}
+		}
+	}
+}
+
 .menu-empresa {
-    $width-menu: 235px;
+	$width-menu: 235px;
 
-    color: #4d4d4d;
-    cursor: pointer;
-    padding: 4px;
-    border-radius: 4px;
-    width: $width-menu;
-    margin-left: $default-margin;
+	color: #4d4d4d;
+	cursor: pointer;
+	padding: 4px;
+	border-radius: 4px;
+	width: $width-menu;
+	margin-left: $default-margin;
   
+	.icon-stack {
+		float: left;
+		display:block;
+		margin-top:-5px;
+		margin-right:$default-margin;
+	}
 
-    .icon-stack {
-        float: left;
-        display:block;
-        margin-top:-5px;
-        margin-right:$default-margin;
-    }
+	h1 {
+		margin: 0px;
+		font-size: 12pt;
+		line-height:1;
+		font-weight:800;
+	}
 
-    h1 {
-        margin: 0px;
-        font-size: 12pt;
-        line-height:1;
-        font-weight:800;
-    }
+	h2 {
+		margin: 0px;
+		font-size: 8pt;
+		line-height:1;
+	}
 
-    h2 {
-        margin: 0px;
-        font-size: 8pt;
-        line-height:1;
-    }
+	h1:after {
+		@extend .icon;
+		content: $icon-var-angle-down;
+		margin-left: 5px;
+		font-weight: bold;
+	}
 
-    h1:after {
-        @extend .icon;
-        content: $icon-var-angle-down;
-        margin-left: 5px;
-        font-weight: bold;
-    }
+	&:hover {
+		/*background: darken(convertColor($mainBackground), 8);*/
+	}
 
-    &:hover {
-        /*background: darken(convertColor($mainBackground), 8);*/
-    }
+	jq-dropdown-open {
+		background: #888;
+		color: #fff;
+	}
 
-    jq-dropdown-open {
-        background: #888;
-        color: #fff;
-    }
+	jq-dropdown-open:after {
+		color: #fff;
+	}
 
-    jq-dropdown-open:after {
-        color: #fff;
-    }
-
-    .jq-dropdown {
-        width: $width-menu !important;
-    }
+	.jq-dropdown {
+		width: $width-menu !important;
+	}
 }
 
 /*////
 //// MOBILE
 ////
 @media only screen and (max-width: $mobile-break) {
-    .header {
-        height: 63px;
-    }
+	.header {
+		height: 63px;
+	}
 
-    .social {
-        display: none;
-    }
+	.social {
+		display: none;
+	}
 
-    .logo a {
-        width: 120px;
-    }
+	.logo a {
+		width: 120px;
+	}
 }*/
