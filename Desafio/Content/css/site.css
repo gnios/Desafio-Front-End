@@ -709,7 +709,7 @@ p {
     max-width: 320px;
     font-size: 125%;
     float: left;
-    background-color: #fff; }
+    background-color: #111; }
     p .remark.right {
       float: right;
       left: auto;
@@ -752,8 +752,8 @@ dt {
 
 code {
   color: #323a45;
-  background-color: #f9fafc;
-  border: 0.0833em solid #f9fafc;
+  background-color: #111;
+  border: 0.0833em solid #111;
   padding: 0.25em; }
 
 img, .img {
@@ -774,7 +774,7 @@ a {
     display: inline-block; }
   a.content {
     display: block;
-    background-color: #fff; }
+    background-color: #111; }
     #document a.content:hover, #document a.content:active {
       color: #5b5b6a; }
     #document .invert a.content:hover, #document .invert a.content:active {
@@ -957,7 +957,7 @@ footer {
   padding: 0; }
   .gnio-framework .list .submenu.with-separator, .gnio-framework .menu .submenu.with-separator, .gnio-framework .menu-list .submenu.with-separator {
     padding: 0.5em 0;
-    background-color: #fff; }
+    background-color: #111; }
     .gnio-framework .list .submenu.with-separator .separator, .gnio-framework .menu .submenu.with-separator .separator, .gnio-framework .menu-list .submenu.with-separator .separator {
       margin: 0.5em 0; }
   .gnio-framework .list .submenu .item, .gnio-framework .menu .submenu .item, .gnio-framework .menu-list .submenu .item {
@@ -1052,7 +1052,7 @@ footer {
 /* Horizontal Rules */
 .gnio-framework .hr, .gnio-framework .hr-dotted, .gnio-framework .hr-dashed, .gnio-framework .hr-thick, .gnio-framework .hr-stripes {
   display: block;
-  border-bottom: 0.0833em solid #eaedf1;
+  border-bottom: 0.0833em solid #111;
   margin: 0.5em 0; }
 
 .gnio-framework .hr-dotted {
@@ -1325,7 +1325,7 @@ footer {
 
 #document .gnio-framework .quote, #document .gnio-framework blockquote {
   display: block;
-  background-color: #fff;
+  background-color: #111;
   border-left: 0.4166em solid transparent;
   padding: 1em;
   font-style: italic; }
@@ -1453,7 +1453,7 @@ footer {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; }
 
 #document .gnio-framework .border {
-  border: 0.0833em solid #eaedf1; }
+  border: 0.0833em solid #111; }
 
 #document .gnio-framework .disabled {
   opacity: 0.5;
@@ -2059,7 +2059,7 @@ footer {
   -moz-outline: none;
   -webkit-outline: none;
   background-color: #fff;
-  border: 0.1666em solid #f9fafc;
+  border: 0.1666em solid #111;
   color: #5b5b6a;
   cursor: text;
   transition: all 0.2s linear;
@@ -2081,7 +2081,7 @@ footer {
 
 .gnio-framework select {
   padding: 0.75em 1em;
-  background-color: #fff;
+  background-color: #111;
   border: none;
   -webkit-appearance: none; }
 
@@ -2117,7 +2117,7 @@ footer {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     background-color: #fff;
-    border: 0.1666em solid #f9fafc;
+    border: 0.1666em solid #111;
     color: #5b5b6a;
     cursor: text;
     box-shadow: none;
@@ -2168,7 +2168,7 @@ footer {
   .gnio-framework .input.blocknote {
     background: transparent;
     border: none;
-    border-bottom: 0.1666em solid #f9fafc;
+    border-bottom: 0.1666em solid #111;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -2185,7 +2185,7 @@ footer {
     -o-box-shadow: none;
     cursor: default; }
     .gnio-framework .input.editable:hover {
-      border: 0.1666em solid #f9fafc; }
+      border: 0.1666em solid #111; }
   .gnio-framework .input.expanding {
     width: 240px;
     min-width: 240px;
@@ -2201,7 +2201,7 @@ footer {
       .gnio-framework .input.radio.custom + label {
         display: inline-block;
         padding: 0.5em 0.75em;
-        background-color: #fff;
+        background-color: #111;
         cursor: pointer;
         margin-left: -0.25em;
         min-width: 16px;
@@ -2214,7 +2214,7 @@ footer {
         background-color: #1fbba6;
         color: #fff; }
     .gnio-framework .input.radio.custom.alt + label {
-      background-color: #fff;
+      background-color: #111;
       padding: 0.5em 0.75em;
       border: 0.1666em solid transparent; }
     .gnio-framework .input.radio.custom.alt:checked + label {
@@ -2228,7 +2228,7 @@ footer {
       .gnio-framework .input.checkbox.custom + label {
         display: inline-block;
         padding: 0.5em 1em;
-        background-color: #fff;
+        background-color: #111;
         cursor: pointer;
         min-width: 16px;
         min-height: 16px;
@@ -2244,7 +2244,7 @@ footer {
           margin: 0; }
   .gnio-framework .input.select {
     padding: 0.75em 1em;
-    background-color: #fff;
+    background-color: #111;
     border: none; }
     .gnio-framework .input.select.multiple {
       min-height: 6.75em; }
@@ -2351,7 +2351,7 @@ footer {
 
 .gnio-framework .message, .gnio-framework .message-neutral, .gnio-framework .message-modal.neutral {
   color: #5b5b6a;
-  background-color: #fff; }
+  background-color: #111; }
 
 .gnio-framework .message-modal {
   display: block;
@@ -2390,14 +2390,14 @@ footer {
   display: none; }
 
 .gnio-framework .box {
-  background-color: #fff; }
+  background-color: #111; }
   .flyer .gnio-framework .box {
     background-color: transparent; }
   .gnio-framework .box.modal {
     display: block; }
 
 .gnio-framework .pane {
-  background-color: #fff;
+  background-color: #111;
   position: relative;
   left: 0;
   top: 0; }
@@ -2436,7 +2436,7 @@ footer {
     margin-top: 0;
     font-size: 150%;
     color: #1fbba6;
-    background-color: #fff; }
+    background-color: #111; }
     #document .gnio-framework .controls .docking .trigger:hover, #document .gnio-framework .controls-horizontal .docking .trigger:hover, #document .gnio-framework .floating-nav .docking .trigger:hover {
       background-color: #323a45;
       color: #fff; }
@@ -2646,13 +2646,13 @@ footer {
   /* Classic Tables */
   /* List Tables*/ }
   .gnio-framework table.stripes tbody tr:nth-child(even) {
-    background-color: #fff; }
+    background-color: #111; }
   .gnio-framework table td, .gnio-framework table th {
     padding: 0.5em 1em;
-    border: 0.0833em solid #f9fafc; }
+    border: 0.0833em solid #111; }
   .gnio-framework table th {
     color: #323a45;
-    background-color: #f9fafc; }
+    background-color: #111; }
   .gnio-framework table caption {
     background-color: #1fbba6;
     color: #fff;
@@ -2661,7 +2661,7 @@ footer {
     font-weight: 700;
     text-transform: uppercase; }
   .gnio-framework table tfoot td {
-    background-color: #eaedf1;
+    background-color: #111;
     border-top: none; }
   .gnio-framework table.center {
     text-align: center; }
@@ -2691,9 +2691,9 @@ footer {
       float: left;
       display: block; }
       .gnio-framework .table .list:last-child, .gnio-framework .table .list.col {
-        border-bottom: 0.0833em solid #f9fafc; }
+        border-bottom: 0.0833em solid #111; }
     .gnio-framework .table .item {
-      border: 0.0833em solid #f9fafc;
+      border: 0.0833em solid #111;
       border-left: none;
       border-bottom: none; }
       .gnio-framework .table .item .title {
@@ -2701,11 +2701,11 @@ footer {
         padding: 0.5em 1em;
         float: none; }
     .gnio-framework .table .col .item, .gnio-framework .table .row .item:first-child, .gnio-framework .table .col .item:first-child {
-      border-left: 0.0833em solid #f9fafc; }
+      border-left: 0.0833em solid #111; }
     .gnio-framework .table .col .item {
       border-left: none; }
     .gnio-framework .table .row:first-child .item, .gnio-framework .table .col:first-child .item {
-      border-left: 0.0833em solid #f9fafc; }
+      border-left: 0.0833em solid #111; }
     .gnio-framework .table .rows {
       display: table-row-group; }
       .gnio-framework .table .rows .list {
@@ -2714,7 +2714,7 @@ footer {
         .gnio-framework .table .rows .list .item {
           display: table-cell; }
     .gnio-framework .table .rows.stripes .list:nth-child(even), .gnio-framework .table .cols.stripes .list:nth-child(even) {
-      background-color: #fff; }
+      background-color: #111; }
     .gnio-framework .table .list {
       display: block;
       width: auto;
@@ -2724,14 +2724,14 @@ footer {
         display: block; }
         .gnio-framework .table .list .item.header {
           color: #323a45;
-          background-color: #fff;
+          background-color: #111;
           font-weight: 700; }
         .gnio-framework .table .list .item.footer {
           color: #323a45;
-          background-color: #fff;
+          background-color: #111;
           font-weight: 700; }
     .gnio-framework .table.stripes .list .item:nth-child(even) .title {
-      background-color: #fff; }
+      background-color: #111; }
 
 /* Sections */
 .gnio-framework .section, .gnio-framework .section-freee, .gnio-framework .section-padded, .gnio-framework .section-vertical, .gnio-framework .section-horizontal, .gnio-framework .section-left, .gnio-framework .section-right, .gnio-framework .section-top, .gnio-framework .section-bottom {
@@ -2778,7 +2778,7 @@ footer {
     padding: 0 3em;
     height: auto;
     max-height: 1em;
-    background-color: #fff; }
+    background-color: #111; }
   .gnio-framework .timeline .list .item {
     display: block;
     padding-right: 1em;
@@ -2797,7 +2797,7 @@ footer {
       top: 4em;
       padding: 0.75em;
       min-height: 3em;
-      background-color: #fff;
+      background-color: #111;
       width: auto;
       min-width: 300%;
       z-index: 996; }
@@ -2877,7 +2877,7 @@ footer {
   position: relative; }
   .gnio-framework .flyer .content {
     display: block;
-    background-color: #fff; }
+    background-color: #111; }
   .gnio-framework .flyer .action {
     position: relative;
     bottom: 0;
@@ -2933,7 +2933,7 @@ footer {
   -webkit-box-shadow: none;
   -o-box-shadow: none; }
   #document .gnio-framework .comments > .list > .item {
-    background-color: #fff; }
+    background-color: #111; }
     #document .gnio-framework .comments > .list > .item .comment {
       position: relative; }
     #document .gnio-framework .comments > .list > .item.replied .reply .replier {
@@ -3044,7 +3044,7 @@ footer {
     position: absolute;
     left: -0.5em;
     margin-top: 0;
-    color: #fff; }
+    color: #111; }
 
 .gnio-framework .feedback-right .client {
   margin-right: 0;
@@ -3956,7 +3956,7 @@ footer {
         float: none;
         margin-left: 1.5em; }
       #document .gnio-framework table th:last-child, #document .gnio-framework table td:last-child {
-        border-bottom: 0.0833em solid #f9fafc; }
+        border-bottom: 0.0833em solid #111; }
     #document .gnio-framework table td.gutter, #document .gnio-framework table td.code {
       display: inline-block; }
   /* List Tables */
@@ -4195,7 +4195,7 @@ footer {
         float: none;
         margin-left: 1.5em; }
       #document .gnio-framework table th:last-child, #document .gnio-framework table td:last-child {
-        border-bottom: 0.0833em solid #f9fafc; }
+        border-bottom: 0.0833em solid #111; }
     #document .gnio-framework table td.gutter, #document .gnio-framework table td.code {
       display: inline-block; }
   /* List Tables */
@@ -10414,8 +10414,8 @@ a.uk-datepicker-table-muted {
       color: #5b5b6a; }
   #document .gnio-framework .uikit-component .uk-placeholder {
     color: #5b5b6a;
-    background-color: #fff;
-    border-color: #eaedf1;
+    background-color: #111;
+    border-color: #111;
     margin-bottom: 1em;
     padding: 1.5em; }
   #document .gnio-framework .uikit-component .uk-form-file {
@@ -10529,7 +10529,7 @@ a.uk-datepicker-table-muted {
 
 #document .gnio-framework .uikit-component .uk-offcanvas .uk-offcanvas-bar {
   color: inherit;
-  background-color: #fff;
+  background-color: #111;
   width: auto;
   min-width: 25%;
   max-width: 25%;
@@ -10544,7 +10544,7 @@ a.uk-datepicker-table-muted {
   margin-top: 0 !important; }
 
 #document .gnio-framework .uikit-component .uk-tab {
-  border-bottom-color: #eaedf1; }
+  border-bottom-color: #111; }
   #document .gnio-framework .uikit-component .uk-tab > li a:hover, #document .gnio-framework .uikit-component .uk-tab > li a:active {
     color: #1fbba6;
     background: transparent;
@@ -10552,19 +10552,19 @@ a.uk-datepicker-table-muted {
   #document .gnio-framework .uikit-component .uk-tab > li.uk-active a, #document .gnio-framework .uikit-component .uk-tab > li.uk-active a:hover, #document .gnio-framework .uikit-component .uk-tab > li.uk-active a:active {
     background-color: #fff;
     color: #5b5b6a;
-    border-color: #eaedf1; }
+    border-color: #111; }
   #document .gnio-framework .uikit-component .uk-tab > li:not(.uk-active) > a:hover, #document .gnio-framework .uikit-component .uk-tab > li:not(.uk-active) > a:focus {
     margin-bottom: 0; }
   #document .gnio-framework .uikit-component .uk-tab.uk-tab-bottom {
-    border-top-color: #eaedf1; }
+    border-top-color: #111; }
     #document .gnio-framework .uikit-component .uk-tab.uk-tab-bottom > li:not(.uk-active) > a:hover, #document .gnio-framework .uikit-component .uk-tab.uk-tab-bottom > li:not(.uk-active) > a:focus {
       margin-top: 0; }
   #document .gnio-framework .uikit-component .uk-tab.uk-tab-left {
-    border-right-color: #eaedf1; }
+    border-right-color: #111; }
     #document .gnio-framework .uikit-component .uk-tab.uk-tab-left > li:not(.uk-active) > a:hover, #document .gnio-framework .uikit-component .uk-tab.uk-tab-left > li:not(.uk-active) > a:focus {
       margin-right: 0; }
   #document .gnio-framework .uikit-component .uk-tab.uk-tab-right {
-    border-left-color: #eaedf1; }
+    border-left-color: #111; }
     #document .gnio-framework .uikit-component .uk-tab.uk-tab-right > li:not(.uk-active) > a:hover, #document .gnio-framework .uikit-component .uk-tab.uk-tab-right > li:not(.uk-active) > a:focus {
       margin-left: 0; }
   #document .gnio-framework .uikit-component .uk-tab.uk-tab-left > li > a, #document .gnio-framework .uikit-component .uk-tab.uk-tab-right > li > a {
@@ -10663,9 +10663,9 @@ a.uk-datepicker-table-muted {
 #document .gnio-framework .uikit-component .uk-nav > .item > .link, #document .gnio-framework .uikit-component .uk-nav > .item > a {
   text-transform: uppercase;
   font-weight: 700;
-  background-color: #fff; }
+  background-color: #111; }
   #document .gnio-framework .uikit-component .uk-nav > .item > .link:hover, #document .gnio-framework .uikit-component .uk-nav > .item > .link:active, #document .gnio-framework .uikit-component .uk-nav > .item > a:hover, #document .gnio-framework .uikit-component .uk-nav > .item > a:active {
-    background-color: #fff; }
+    background-color: #111; }
 
 #document .gnio-framework .uikit-component .uk-nav .uk-parent.uk-open > a, #document .gnio-framework .uikit-component .uk-nav .uk-parent.uk-open > a:hover, #document .gnio-framework .uikit-component .uk-nav .uk-parent.uk-open > a:active {
   color: #fff;
@@ -10703,19 +10703,19 @@ a.uk-datepicker-table-muted {
   background-color: #fff; }
   #document .gnio-framework .uikit-component .uk-nav.uk-nav-autocomplete > li > a:hover, #document .gnio-framework .uikit-component .uk-nav.uk-nav-autocomplete > li > a:active, #document .gnio-framework .uikit-component .uk-nav.uk-nav-search > li > a:hover, #document .gnio-framework .uikit-component .uk-nav.uk-nav-search > li > a:active {
     color: #5b5b6a;
-    background-color: #f9fafc; }
+    background-color: #111; }
 
 #document .gnio-framework .uikit-component .uk-nav.uk-nav-autocomplete > li.uk-active > a, #document .gnio-framework .uikit-component .uk-nav.uk-nav-search > li.uk-active > a {
   color: #5b5b6a;
-  background-color: #f9fafc; }
+  background-color: #111; }
 
 #document .gnio-framework .uikit-component .uk-nav.uk-nav-autocomplete > li.uk-nav-divider, #document .gnio-framework .uikit-component .uk-nav.uk-nav-search > li.uk-nav-divider {
-  border-top-color: #eaedf1; }
+  border-top-color: #111; }
 
 #document .gnio-framework .uikit-component .uk-navbar {
-  background-color: #fff; }
+  background-color: #111; }
   #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav .uk-nav-divider {
-    border-top-color: #eaedf1; }
+    border-top-color: #111; }
   #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li > a {
     height: auto;
     line-height: 1.5;
@@ -10741,10 +10741,10 @@ a.uk-datepicker-table-muted {
     color: #1fbba6;
     background-color: rgba(255, 255, 255, 0.75); }
   #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent .uk-dropdown {
-    background-color: #fff; }
+    background-color: #111; }
     #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent .uk-dropdown li a {
       color: #5b5b6a;
-      background-color: #fff;
+      background-color: #111;
       text-transform: none;
       font-weight: 200; }
       #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent .uk-dropdown li a:hover, #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent .uk-dropdown li a:active {
@@ -10752,7 +10752,7 @@ a.uk-datepicker-table-muted {
         background-color: rgba(255, 255, 255, 0.75); }
 
 #document .gnio-framework .uikit-component .uk-nestable .uk-nestable-item {
-  background-color: #fff;
+  background-color: #111;
   padding: 0.5em;
   margin-bottom: 0.5em; }
   #document .gnio-framework .uikit-component .uk-nestable .uk-nestable-item .uk-nestable-handle {
@@ -10774,7 +10774,7 @@ a.uk-datepicker-table-muted {
     padding-bottom: 0; }
 
 #document .gnio-framework .uikit-component .uk-nestable .uk-nestable-placeholder {
-  border: 0.1666em dashed #fff;
+  border: 0.1666em dashed #111;
   margin-bottom: 0.5em; }
 
 #document .gnio-framework .uikit-component .uk-nestable .uk-nestable-list {
@@ -10814,24 +10814,24 @@ a.uk-datepicker-table-muted {
 
 #document .gnio-framework .uikit-component .timepicker + .uk-dropdown li a:hover, #document .gnio-framework .uikit-component .timepicker + .uk-dropdown li a:active {
   color: #5b5b6a;
-  background-color: #fff; }
+  background-color: #111; }
 
 #document .gnio-framework .uikit-component .timepicker + .uk-dropdown li.uk-active a {
   color: #5b5b6a;
-  background-color: #fff; }
+  background-color: #111; }
 
 #document .gnio-framework .uikit-component .uk-htmleditor .uk-htmleditor-navbar {
-  background-color: #fff;
-  border: 0.0833em solid #fff; }
+  background-color: #111;
+  border: 0.0833em solid #111; }
   #document .gnio-framework .uikit-component .uk-htmleditor .uk-htmleditor-navbar .uk-htmleditor-navbar-nav > li:hover > a, #document .gnio-framework .uikit-component .uk-htmleditor .uk-htmleditor-navbar .uk-htmleditor-navbar-nav > li > a:focus {
     color: #5b5b6a;
-    background-color: #f9fafc; }
+    background-color: #111; }
 
 #document .gnio-framework .uikit-component .uk-htmleditor .uk-htmleditor-content {
-  border: 0.0833em solid #fff;
+  border: 0.0833em solid #111;
   border-top: none; }
   #document .gnio-framework .uikit-component .uk-htmleditor .uk-htmleditor-content .uk-htmleditor-code {
-    border-right: 0.0833em solid #fff; }
+    border-right: 0.0833em solid #111; }
   #document .gnio-framework .uikit-component .uk-htmleditor .uk-htmleditor-content .uk-htmleditor-preview {
     padding: 1.5em; }
 
@@ -10871,7 +10871,7 @@ a.uk-datepicker-table-muted {
       color: #5b5b6a; }
       #document .gnio-framework .uk-datepicker .uk-datepicker-table th > a:hover, #document .gnio-framework .uk-datepicker .uk-datepicker-table th > a:active, #document .gnio-framework .uk-datepicker .uk-datepicker-table td > a:hover, #document .gnio-framework .uk-datepicker .uk-datepicker-table td > a:active {
         color: #1fbba6;
-        background-color: #fff; }
+        background-color: #111; }
       #document .gnio-framework .uk-datepicker .uk-datepicker-table th > a.uk-active, #document .gnio-framework .uk-datepicker .uk-datepicker-table td > a.uk-active {
         color: #fff;
         background-color: #1fbba6; }
@@ -10881,7 +10881,7 @@ a.uk-datepicker-table-muted {
     font-size: 1em;
     font-weight: 700;
     padding: 0.7em 0.3em;
-    background-color: #f9fafc; }
+    background-color: #111; }
   #document .gnio-framework .uk-datepicker .uk-datepicker-table .uk-datepicker-table-muted, #document .gnio-framework .uk-datepicker .uk-datepicker-table .uk-datepicker-table-muted:hover, #document .gnio-framework .uk-datepicker .uk-datepicker-table .uk-datepicker-table-muted:active {
     color: #5b5b6a;
     opacity: 0.5;
@@ -10899,22 +10899,22 @@ a.uk-datepicker-table-muted {
     }
 }*/
 /* Default Styles */
-#document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li > a {
+#document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li > a {
   height: 70px;
   line-height: 70px;
   padding: 0px 1em;
   text-transform: uppercase; }
 
-#document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] {
+#document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] {
   cursor: default; }
-  #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .icon, #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa h1:after, .menu-empresa #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after {
+  #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .icon, #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa h1:after, .menu-empresa #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after {
     position: relative; }
-    #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .icon .uk-badge, #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa h1:after .uk-badge, .menu-empresa #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after .uk-badge {
+    #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .icon .uk-badge, #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa h1:after .uk-badge, .menu-empresa #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after .uk-badge {
       position: absolute;
       top: -8px;
       right: -5px;
       margin-top: 5px; }
-  #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon .icon, #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon .menu-empresa h1:after, .menu-empresa #document .gnio-framework #main-header .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon h1:after {
+  #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon .icon, #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon .menu-empresa h1:after, .menu-empresa #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon h1:after {
     position: absolute; }
 
 .menu-empresa {
@@ -10977,11 +10977,11 @@ a.uk-datepicker-table-muted {
     background-position: center center;
     background-repeat: no-repeat;
     padding: 0.75em 0; }
-  .sidebar .menu-list {
+  .sidebar ul.menu-list {
     background-color: none; }
-    .sidebar .menu-list .item {
+    .sidebar ul.menu-list .item {
       background-color: none; }
-      .sidebar .menu-list .item a {
+      .sidebar ul.menu-list .item a {
         background-color: none; }
 
 /* Color Scheme */

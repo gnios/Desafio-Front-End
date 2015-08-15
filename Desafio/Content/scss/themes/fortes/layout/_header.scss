@@ -4,7 +4,7 @@
 /* Default Styles */
 #{$documentID} #{$frameworkClass} {
 
-    #main-header .uk-navbar {
+    #main-header.uk-navbar {
         .uk-navbar-nav {
             > li > a {
                 height: $height-menu;

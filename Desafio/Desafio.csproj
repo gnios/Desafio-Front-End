@@ -131,7 +131,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
-    <Folder Include="Content\scss\vendor\plugins\" />
+    <Folder Include="Content\scss\framework\vendor\plugins\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -150,92 +150,92 @@
     <Content Include="Content\css\fonts\icons.html" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\imgs\logo.png" />
-    <Content Include="Content\scss\boot.css">
+    <Content Include="Content\scss\framework\boot.css">
       <DependentUpon>boot.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\boot.min.css">
+    <Content Include="Content\scss\framework\boot.min.css">
       <DependentUpon>boot.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\blue.css">
+    <Content Include="Content\scss\framework\color-schemes\blue.css">
       <DependentUpon>blue.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\blue.min.css">
+    <Content Include="Content\scss\framework\color-schemes\blue.min.css">
       <DependentUpon>blue.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\brown.css">
+    <Content Include="Content\scss\framework\color-schemes\brown.css">
       <DependentUpon>brown.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\brown.min.css">
+    <Content Include="Content\scss\framework\color-schemes\brown.min.css">
       <DependentUpon>brown.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\green.css">
+    <Content Include="Content\scss\framework\color-schemes\green.css">
       <DependentUpon>green.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\green.min.css">
+    <Content Include="Content\scss\framework\color-schemes\green.min.css">
       <DependentUpon>green.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\orange.css">
+    <Content Include="Content\scss\framework\color-schemes\orange.css">
       <DependentUpon>orange.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\orange.min.css">
+    <Content Include="Content\scss\framework\color-schemes\orange.min.css">
       <DependentUpon>orange.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\pink.css">
+    <Content Include="Content\scss\framework\color-schemes\pink.css">
       <DependentUpon>pink.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\pink.min.css">
+    <Content Include="Content\scss\framework\color-schemes\pink.min.css">
       <DependentUpon>pink.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\purple.css">
+    <Content Include="Content\scss\framework\color-schemes\purple.css">
       <DependentUpon>purple.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\purple.min.css">
+    <Content Include="Content\scss\framework\color-schemes\purple.min.css">
       <DependentUpon>purple.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\red.css">
+    <Content Include="Content\scss\framework\color-schemes\red.css">
       <DependentUpon>red.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\red.min.css">
+    <Content Include="Content\scss\framework\color-schemes\red.min.css">
       <DependentUpon>red.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\yellow.css">
+    <Content Include="Content\scss\framework\color-schemes\yellow.css">
       <DependentUpon>yellow.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\color-schemes\yellow.min.css">
+    <Content Include="Content\scss\framework\color-schemes\yellow.min.css">
       <DependentUpon>yellow.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\base\boilerplate\_base.scss" />
-    <None Include="Content\scss\components\boilerplate\_behaviors.scss" />
-    <Content Include="Content\scss\components\boilerplate\_forms.scss" />
-    <Content Include="Content\scss\base\boilerplate\_various-behavior.scss" />
-    <Content Include="Content\scss\components\boilerplate\_list-menus.scss" />
-    <Content Include="Content\scss\components\boilerplate\_horizontal-terms.scss" />
-    <Content Include="Content\scss\components\boilerplate\_pagination.scss" />
-    <Content Include="Content\scss\components\boilerplate\_horizontal-rules.scss" />
-    <Content Include="Content\scss\components\boilerplate\_helpers.scss" />
-    <Content Include="Content\scss\components\boilerplate\_menu.scss" />
-    <Content Include="Content\scss\components\boilerplate\_inputs.scss" />
-    <Content Include="Content\scss\components\boilerplate\_alerts-warnings.scss" />
-    <Content Include="Content\scss\components\boilerplate\_boxes-containers-controls.scss" />
-    <Content Include="Content\scss\components\boilerplate\_box.scss" />
-    <Content Include="Content\scss\components\boilerplate\_asides.scss" />
-    <Content Include="Content\scss\components\boilerplate\_content-header.scss" />
-    <Content Include="Content\scss\components\boilerplate\_tables.scss" />
-    <Content Include="Content\scss\components\boilerplate\_sections.scss" />
-    <Content Include="Content\scss\components\boilerplate\_timeline.scss" />
-    <Content Include="Content\scss\components\boilerplate\_flyer.scss" />
-    <Content Include="Content\scss\components\boilerplate\_tags.scss" />
-    <Content Include="Content\scss\components\boilerplate\_elements-revealer.scss" />
-    <Content Include="Content\scss\components\boilerplate\_comments.scss" />
-    <Content Include="Content\scss\components\boilerplate\_feedback.scss" />
-    <Content Include="Content\scss\components\boilerplate\_social-icons.scss" />
-    <Content Include="Content\scss\components\boilerplate\_pricing-tables.scss" />
-    <Content Include="Content\scss\components\boilerplate\_spotlight.scss" />
-    <Content Include="Content\scss\components\boilerplate\_others.scss" />
-    <Content Include="Content\scss\components\boilerplate\_print.scss" />
+    <Content Include="Content\scss\framework\base\boilerplate\_base.scss" />
+    <None Include="Content\scss\framework\components\boilerplate\_behaviors.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_forms.scss" />
+    <Content Include="Content\scss\framework\base\boilerplate\_various-behavior.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_list-menus.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_horizontal-terms.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_pagination.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_horizontal-rules.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_helpers.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_menu.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_inputs.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_alerts-warnings.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_boxes-containers-controls.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_box.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_asides.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_content-header.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_tables.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_sections.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_timeline.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_flyer.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_tags.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_elements-revealer.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_comments.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_feedback.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_social-icons.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_pricing-tables.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_spotlight.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_others.scss" />
+    <Content Include="Content\scss\framework\components\boilerplate\_print.scss" />
     <Content Include="Content\css\fonts\icons.ttf" />
     <Content Include="Content\css\fonts\icons.woff" />
-    <None Include="Content\scss\components\uikit\_rtl-styles.scss" />
+    <None Include="Content\scss\framework\components\uikit\_rtl-styles.scss" />
     <Content Include="Content\scss\site.css">
       <DependentUpon>site.scss</DependentUpon>
     </Content>
@@ -250,86 +250,87 @@
     <Content Include="Content\scss\typos\icons\svg\stop.svg" />
     <Content Include="Content\scss\typos\icons\svg\user.svg" />
     <Content Include="Content\scss\typos\icons\templates\icon.css" />
-    <Content Include="Content\scss\vendor\uikit\addons\uikit-addons.css">
+    <Content Include="Content\scss\framework\vendor\uikit\addons\uikit-addons.css">
       <DependentUpon>uikit-addons.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\vendor\uikit\addons\uikit-addons.min.css">
+    <Content Include="Content\scss\framework\vendor\uikit\addons\uikit-addons.min.css">
       <DependentUpon>uikit-addons.css</DependentUpon>
     </Content>
-    <Content Include="Content\scss\vendor\uikit\uikit.css">
+    <Content Include="Content\scss\framework\vendor\uikit\uikit.css">
       <DependentUpon>uikit.scss</DependentUpon>
     </Content>
-    <Content Include="Content\scss\vendor\uikit\uikit.min.css">
+    <Content Include="Content\scss\framework\vendor\uikit\uikit.min.css">
       <DependentUpon>uikit.css</DependentUpon>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\scss\site.scss" />
     <Content Include="Content\css\site.css.map" />
-    <Content Include="Content\scss\layout\_header.scss" />
-    <Content Include="Content\scss\base\_normalize.scss" />
-    <Content Include="Content\scss\layout\_content.scss" />
-    <Content Include="Content\scss\base\boilerplate.scss" />
-    <Content Include="Content\scss\base\_core.scss" />
-    <Content Include="Content\scss\boot.scss" />
-    <Content Include="Content\scss\color-schemes\blue.scss" />
-    <Content Include="Content\scss\color-schemes\brown.scss" />
-    <Content Include="Content\scss\color-schemes\config\_blue-color-scheme.scss" />
-    <Content Include="Content\scss\color-schemes\config\_brown-color-scheme.scss" />
-    <Content Include="Content\scss\color-schemes\config\_green-color-scheme.scss" />
-    <Content Include="Content\scss\color-schemes\config\_orange-color-scheme.scss" />
-    <Content Include="Content\scss\color-schemes\config\_pink-color-scheme.scss" />
-    <Content Include="Content\scss\color-schemes\config\_purple-color-scheme.scss" />
-    <Content Include="Content\scss\color-schemes\config\_red-color-scheme.scss" />
-    <Content Include="Content\scss\color-schemes\config\_yellow-color-scheme.scss" />
-    <Content Include="Content\scss\color-schemes\green.scss" />
-    <Content Include="Content\scss\color-schemes\orange.scss" />
-    <Content Include="Content\scss\color-schemes\pink.scss" />
-    <Content Include="Content\scss\color-schemes\purple.scss" />
-    <Content Include="Content\scss\color-schemes\red.scss" />
-    <Content Include="Content\scss\color-schemes\yellow.scss" />
-    <Content Include="Content\scss\features\animations.scss" />
-    <Content Include="Content\scss\features\css3-elements.scss" />
-    <Content Include="Content\scss\features\responsive.scss" />
-    <Content Include="Content\scss\features\rtl.scss" />
-    <Content Include="Content\scss\layout\main.scss" />
-    <Content Include="Content\scss\themes\fortes.scss" />
-    <Content Include="Content\scss\utils\helpers.scss" />
-    <Content Include="Content\scss\utils\various\_hsla-converter.scss" />
-    <Content Include="Content\scss\vendor\uikit\addons\uikit-addons.scss" />
-    <Content Include="Content\scss\components\custom-uikit.scss" />
-    <Content Include="Content\scss\vendor\uikit\responsive.scss" />
-    <Content Include="Content\scss\vendor\uikit\uikit.scss" />
-    <Content Include="Content\scss\config\_config.scss" />
+    <Content Include="Content\scss\themes\fortes\layout\_header.scss" />
+    <Content Include="Content\scss\framework\base\_normalize.scss" />
+    <Content Include="Content\scss\themes\fortes\layout\_content.scss" />
+    <Content Include="Content\scss\framework\base\boilerplate.scss" />
+    <Content Include="Content\scss\framework\base\_mixin.scss" />
+    <Content Include="Content\scss\framework\boot.scss" />
+    <Content Include="Content\scss\framework\color-schemes\blue.scss" />
+    <Content Include="Content\scss\framework\color-schemes\brown.scss" />
+    <Content Include="Content\scss\framework\color-schemes\config\_blue-color-scheme.scss" />
+    <Content Include="Content\scss\framework\color-schemes\config\_brown-color-scheme.scss" />
+    <Content Include="Content\scss\framework\color-schemes\config\_green-color-scheme.scss" />
+    <Content Include="Content\scss\framework\color-schemes\config\_orange-color-scheme.scss" />
+    <Content Include="Content\scss\framework\color-schemes\config\_pink-color-scheme.scss" />
+    <Content Include="Content\scss\framework\color-schemes\config\_purple-color-scheme.scss" />
+    <Content Include="Content\scss\framework\color-schemes\config\_red-color-scheme.scss" />
+    <Content Include="Content\scss\framework\color-schemes\config\_yellow-color-scheme.scss" />
+    <Content Include="Content\scss\framework\color-schemes\green.scss" />
+    <Content Include="Content\scss\framework\color-schemes\orange.scss" />
+    <Content Include="Content\scss\framework\color-schemes\pink.scss" />
+    <Content Include="Content\scss\framework\color-schemes\purple.scss" />
+    <Content Include="Content\scss\framework\color-schemes\red.scss" />
+    <Content Include="Content\scss\framework\color-schemes\yellow.scss" />
+    <Content Include="Content\scss\framework\features\animations.scss" />
+    <Content Include="Content\scss\framework\features\css3-elements.scss" />
+    <Content Include="Content\scss\framework\features\responsive.scss" />
+    <Content Include="Content\scss\framework\features\rtl.scss" />
+    <Content Include="Content\scss\themes\fortes\layout\_main.scss" />
+    <Content Include="Content\scss\framework\utils\helpers.scss" />
+    <Content Include="Content\scss\framework\utils\various\_hsla-converter.scss" />
+    <Content Include="Content\scss\framework\vendor\uikit\addons\uikit-addons.scss" />
+    <Content Include="Content\scss\framework\components\custom-uikit.scss" />
+    <Content Include="Content\scss\framework\vendor\uikit\responsive.scss" />
+    <Content Include="Content\scss\framework\vendor\uikit\uikit.scss" />
+    <Content Include="Content\scss\framework\config\config.scss" />
     <Content Include="Content\scss\typos\icons\templates\icon.json" />
     <Content Include="Content\scss\typos\icons\_icons.scss" />
-    <Content Include="Content\scss\themes\_colors.scss" />
-    <Content Include="Content\scss\themes\_uikit.scss" />
-    <Content Include="Content\scss\themes\_boilerplate.scss" />
-    <Content Include="Content\scss\themes\_base.scss" />
-    <Content Include="Content\scss\themes\_inputs.scss" />
-    <Content Include="Content\scss\themes\_tables.scss" />
-    <Content Include="Content\scss\layout\_sidebar.scss" />
-    <Content Include="Content\scss\layout\layout.scss" />
-    <Content Include="Content\scss\layout\vars.scss" />
-    <Content Include="Content\scss\components\uikit\_progress-bar.scss" />
-    <Content Include="Content\scss\components\uikit\_dropdown.scss" />
-    <Content Include="Content\scss\components\uikit\_modal.scss" />
-    <Content Include="Content\scss\components\uikit\_off-canvas.scss" />
-    <Content Include="Content\scss\components\uikit\_switcher.scss" />
-    <Content Include="Content\scss\components\uikit\_scrollspy.scss" />
-    <Content Include="Content\scss\components\uikit\_autocomplete.scss" />
-    <Content Include="Content\scss\components\uikit\_search.scss" />
-    <Content Include="Content\scss\components\uikit\_navigation.scss" />
-    <Content Include="Content\scss\components\uikit\_navbar.scss" />
-    <Content Include="Content\scss\components\uikit\_nestable.scss" />
-    <Content Include="Content\scss\components\uikit\_sortable.scss" />
-    <Content Include="Content\scss\components\uikit\_sticky.scss" />
-    <Content Include="Content\scss\components\uikit\_timerpicker.scss" />
-    <Content Include="Content\scss\components\uikit\_html-editor.scss" />
-    <Content Include="Content\scss\components\uikit\_notify.scss" />
-    <Content Include="Content\scss\components\uikit\_datepicker.scss" />
-    <Content Include="Content\scss\components\uikit\_base.scss" />
+    <Content Include="Content\scss\themes\fortes\layout\_sidebar.scss" />
+    <Content Include="Content\scss\themes\fortes\layout\layout.scss" />
+    <Content Include="Content\scss\themes\fortes\layout\_variables.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_progress-bar.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_dropdown.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_modal.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_off-canvas.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_switcher.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_scrollspy.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_autocomplete.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_search.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_navigation.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_navbar.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_nestable.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_sortable.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_sticky.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_timerpicker.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_html-editor.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_notify.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_datepicker.scss" />
+    <Content Include="Content\scss\framework\components\uikit\_base.scss" />
+    <Content Include="Content\scss\framework\config\_css3-properties.scss" />
+    <Content Include="Content\scss\framework\config\_colors.scss" />
+    <Content Include="Content\scss\framework\config\_variables.scss" />
+    <Content Include="Content\scss\themes\fortes\config\_colors.scss" />
+    <Content Include="Content\scss\themes\fortes\config\_css3-properties.scss" />
+    <Content Include="Content\scss\themes\fortes\fortes.scss" />
+    <Content Include="Content\scss\themes\fortes\config\_variables.scss" />
+    <Content Include="Content\scss\themes\fortes\config\config.scss" />
     <None Include="Scripts\jquery\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jq-dropdown\jquery.dropdown.js" />
     <Content Include="Scripts\jq-dropdown\jquery.dropdown.min.js" />

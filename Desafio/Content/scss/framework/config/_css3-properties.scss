@@ -1,0 +1,53 @@
+﻿
+
+// CSS3 PROPERTIES - Storing Variables and Arrays for Your Elements
+
+// Default Variables - change any of values or elements to fit your needs
+// Text Shadow
+$defaultTextShadow: 0 0.1em 0 rgba($negativeColor, 0.2) !default;
+$defaultInvertTextShadow: 0 -0.1em 0 rgba( $negativeColor, 0.2) !default;
+$customInvertTextShadow: 0 0.1em 0 rgba( $blackColor,  0.35) !default;
+// Box Shadow
+$defaultOutsetBoxShadow: 0 0.1666em 0 rgba( $blackColor,  0.1) !default;
+$customOutsetBoxShadow: 0.0833em 0.1666em 0 rgba( $blackColor,  0.1) !default;
+$customOutsetBoxShadow2: 0 0.0833em 0 rgba( $blackColor,  0.1) !default;
+$defaultInsetBoxShadow: inset 0 0 0.1em rgba( $negativeColor, 0.5) !default;
+$customInsetBoxShadow: inset 0 0 0.1em rgba( $negativeColor, 0.5), inset 0.075em 0 0 rgba( $blackColor,  0.25) !default;
+$customInsetBoxShadow2: inset 0 0.1666em 0 rgba( $blackColor,  0.025) !default;
+$customInsetBoxShadow3: inset 0 0 0.5em rgba( $blackColor,  0.25) !default;
+$customInsetBoxShadow4: inset 0 -0.0833em 0 rgba( $negativeColor, 0.1) !default;
+$defaultBorderRadius: 0.25em !default;
+$customBorderRadius: 0.3333em !default;
+$customBorderRadius2: 1em !default;
+$customBorderRadius3: 0 0 0.5em 0.5em !default;
+// Transition
+$defaultTransition: all 0.2s linear !default;
+$customTransition: margin 0.1s linear !default;
+$customTransition2: width 0.2s linear !default;
+$customTransition3: background-color 0.2s linear !default;
+$noTransition: none !default;
+
+// Default Arrays - used as collection of elements for which to apply or not the specific CSS properties - can add or remove from each array, as you please to fit your needs
+// Text Shadow
+$defaultTextShadowElements: ".text-shadow" !default;
+$defaultInvertTextShadowElements: "" !default;
+$customInvertTextShadowElements: "" !default;
+// Box Shadow
+$defaultOutsetBoxShadowElements: ".box-shadow", ".box", ".message", ".message-error", ".message-alert", ".message-warning", ".message-info", ".message-ok", ".message-neutral", ".comments", ".fixed", ".timeline .item .content", ".feedback .quote" !default;
+$customOutsetBoxShadowElements: "uikit-dropdown .menu", ".select .list", ".uk-dropdown" !default;
+$defaultInsetBoxShadowElements: ".button", "button" !default;
+$customInsetBoxShadowElements: "" !default;
+$customInsetBoxShadow2Elements: ".input.text", ".input.editable:focus", "input[type='text'], textarea" !default;
+$customInsetBoxShadow3Elements: "" !default;
+$customInsetBoxShadow4Elements: ".button", "button" !default;
+// Border Radius
+$defaultBorderRadiusElements: ".border-radius", ".border-radius .button", ".border-radius button", ".border-radius .quote", ".border-radius blockquote", ".border-radius .tag", ".border-radius .input.checkbox.custom + label", ".border-radius .input.text", ".border-radius input[type='text'], .border-radius textarea", ".border-radius .comments" !default;
+$customBorderRadiusElements: ".rounded" !default;
+$customBorderRadius2Elements: ".timeline .list .item .dot", ".round" !default;
+$customBorderRadius3Elements: ".flyer.border-radius .action" !default;
+// Transition
+$defaultTransitionElements: "body", "a", ".transition", ".featured-outside .list", ".moving", ".moving-left", ".moving-right" !default;
+$customTransitionElements: ".moving", ".moving.right" !default;
+$customTransition2Elements: ".input.expanding" !default;
+$customTransition3Elements: ".input.text", ".input.editable:focus", "input[type='text']", "textarea" !default;
+$noTransitionElements: ".button", "button" !default;

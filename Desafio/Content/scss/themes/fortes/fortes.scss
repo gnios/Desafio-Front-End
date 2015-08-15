@@ -1,4 +1,7 @@
 // =========================================================================
 // CONFIGURATION
 // =========================================================================
-@import '_colors.scss';
+
+@import "config/config.scss";
+@import '../../framework/boot.scss';
+@import 'layout/layout.scss';
