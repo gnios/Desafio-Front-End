@@ -5,6 +5,8 @@
 #{$documentID} #{$frameworkClass} {
 
     #main-header.uk-navbar {
+        background-color: $accentColor;
+
         .uk-navbar-nav {
             > li > a {
                 height: $height-menu;
@@ -38,12 +40,14 @@
 }
 
 .menu-empresa {
-
-    color: #4d4d4d;
+    color: $mainColor;
     cursor: pointer;
     padding: 4px;
     border-radius: 4px;
     margin-left: $default-margin;
+    width: 350px;
+    height: 70px;
+    line-height: 70px;
 
     .icon-stack {
         float: left;

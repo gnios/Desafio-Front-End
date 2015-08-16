@@ -328,7 +328,7 @@
     <Content Include="Content\scss\framework\config\_variables.scss" />
     <Content Include="Content\scss\themes\fortes\config\_colors.scss" />
     <Content Include="Content\scss\themes\fortes\config\_css3-properties.scss" />
-    <Content Include="Content\scss\themes\fortes\fortes.scss" />
+    <Content Include="Content\scss\themes\fortes.scss" />
     <Content Include="Content\scss\themes\fortes\config\_variables.scss" />
     <Content Include="Content\scss\themes\fortes\config\config.scss" />
     <None Include="Scripts\jquery\jquery-1.10.2.intellisense.js" />
