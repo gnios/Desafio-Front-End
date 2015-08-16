@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(../components/boilerplate/_behaviors..css);
-@import url(_rtl-styles.css);
 @font-face {
   font-family: "icons";
   src: url("../css/fonts/icons.eot");
@@ -14,7 +12,7 @@
 * 4. Correct line-height
 * 5. Better font rendering
 */
-.icon, .menu-empresa h1:after {
+.icon, #document .gnio-framework #main-header .menu-empresa .wrapper h1:after {
   font-family: "icons";
   display: inline-block;
   font-weight: normal;
@@ -201,17 +199,38 @@
 .icon-bell-o:before {
   content: "\f102"; }
 
-.icon-circle:before {
+.icon-circle-o:before {
   content: "\f103"; }
 
-.icon-sign-out:before {
+.icon-circle-thin:before {
   content: "\f104"; }
 
-.icon-stop:before {
+.icon-circle:before {
   content: "\f105"; }
 
-.icon-user:before {
+.icon-comment-o:before {
   content: "\f106"; }
+
+.icon-ellipsis-h:before {
+  content: "\f107"; }
+
+.icon-filter:before {
+  content: "\f108"; }
+
+.icon-question-circle:before {
+  content: "\f109"; }
+
+.icon-question:before {
+  content: "\f10a"; }
+
+.icon-sign-out:before {
+  content: "\f10b"; }
+
+.icon-stop:before {
+  content: "\f10c"; }
+
+.icon-user:before {
+  content: "\f10d"; }
 
 .gnio-framework .button:before, .gnio-framework .button:after, .gnio-framework button:before, .gnio-framework button:after, .clearfix:before, .clearfix:after, p.description:before, p.description:after, .menu:before, .menu:after, .menu-list:before, .menu-list:after, .submenu:before, .submenu:after, .breadcrumb:before, .breadcrumb:after, .list:before, .list:after, .input-wrapper:before, .input-wrapper:after, .message:before, .message:after, .message-thin:before, .message-thin:after, .message-warning:before, .message-warning:after, .message-error:before, .message-error:after, .message-alert:before, .message-alert:after, .message-info:before, .message-info:after, .message-ok:before, .message-ok:after, .message-neutral:before, .message-neutral:after, .message-modal:before, .message-modal:after, .message-tooltip:before, .message-tooltip:after, .message-in-box:before, .message-in-box:after, .flyer:before, .flyer:after, .flyer > .content:before, .flyer > .content:after, .box > .content:before, .box > .content:after, .container:before, .container:after, table:before, table:after, .table:before, .table:after, .table .cols:before, .table .cols:after, .comment:before, .comment:after, .reveal:before, .reveal:after, .reveal aside:before, .reveal aside:after, .feedback:before, .feedback:after, .feedback-right:before, .feedback-right:after, .table.pricing .packages:before, .table.pricing .packages:after, .button-group:before, .button-group:after, .pagination:before, .pagination:after, aside.element:before, aside.element:after, .content > p:before, .content > p:after, .controls > .item:before, .controls > .item:after, .controls-horizontal > .item:before, .controls-horizontal > .item:after, #main-header .wrapper:before, #main-header .wrapper:after, #main-footer .wrapper:before, #main-footer .wrapper:after {
   content: " ";
@@ -1071,14 +1090,14 @@ footer {
 
 /* HELPERS */
 /* Icons and Images */
-#document .gnio-framework .icon.with-background, #document .gnio-framework .menu-empresa h1.with-background:after, .menu-empresa #document .gnio-framework h1.with-background:after, #document .gnio-framework .icon-default.with-background {
+#document .gnio-framework .icon.with-background, #document .gnio-framework #main-header .menu-empresa .wrapper h1.with-background:after, #document .gnio-framework .icon-default.with-background {
   display: inline-block;
   padding: 0.3333em;
   min-width: 1.5em;
   min-height: 1.5em;
   color: #4d4d4d; }
 
-#document .gnio-framework .icon.box-shadow, #document .gnio-framework .menu-empresa h1.box-shadow:after, .menu-empresa #document .gnio-framework h1.box-shadow:after, #document .gnio-framework .icon-default.box-shadow {
+#document .gnio-framework .icon.box-shadow, #document .gnio-framework #main-header .menu-empresa .wrapper h1.box-shadow:after, #document .gnio-framework .icon-default.box-shadow {
   box-shadow: 0 0.0833em 0 rgba(128, 128, 128, 0.1);
   -moz-box-shadow: 0 0.0833em 0 rgba(128, 128, 128, 0.1);
   -webkit-box-shadow: 0 0.0833em 0 rgba(128, 128, 128, 0.1);
@@ -1329,7 +1348,7 @@ footer {
   border-left: 0.4166em solid transparent;
   padding: 1em;
   font-style: italic; }
-  #document .gnio-framework .quote .icon, #document .gnio-framework .quote .menu-empresa h1:after, .menu-empresa #document .gnio-framework .quote h1:after, #document .gnio-framework blockquote .icon, #document .gnio-framework blockquote .menu-empresa h1:after, .menu-empresa #document .gnio-framework blockquote h1:after {
+  #document .gnio-framework .quote .icon, #document .gnio-framework .quote #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .quote h1:after, #document .gnio-framework blockquote .icon, #document .gnio-framework blockquote #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper blockquote h1:after {
     margin-top: 0.25em; }
 
 #document .gnio-framework .eye-popping {
@@ -1597,10 +1616,10 @@ footer {
 #document .gnio-framework .position-right {
   right: 0; }
 
-#document .gnio-framework .red, #document .gnio-framework .red-color, #document .gnio-framework .icon.error, #document .gnio-framework .menu-empresa h1.error:after, .menu-empresa #document .gnio-framework h1.error:after {
+#document .gnio-framework .red, #document .gnio-framework .red-color, #document .gnio-framework .icon.error, #document .gnio-framework #main-header .menu-empresa .wrapper h1.error:after {
   color: #fff; }
 
-#document .gnio-framework .green, #document .gnio-framework .green-color, #document .gnio-framework .icon.ok, #document .gnio-framework .menu-empresa h1.ok:after, .menu-empresa #document .gnio-framework h1.ok:after {
+#document .gnio-framework .green, #document .gnio-framework .green-color, #document .gnio-framework .icon.ok, #document .gnio-framework #main-header .menu-empresa .wrapper h1.ok:after {
   color: #fff; }
 
 #document .gnio-framework .blue, #document .gnio-framework .blue-color {
@@ -1723,7 +1742,7 @@ footer {
   background-color: rgba(128, 128, 128, 0.75);
   z-index: 999;
   text-align: center; }
-  #document .gnio-framework .loading .icon, #document .gnio-framework .loading .menu-empresa h1:after, .menu-empresa #document .gnio-framework .loading h1:after {
+  #document .gnio-framework .loading .icon, #document .gnio-framework .loading #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .loading h1:after {
     position: absolute;
     top: 50%;
     font-size: 500%;
@@ -1794,7 +1813,7 @@ footer {
     transition: none;
     -moz-transition: none;
     -webkit-transition: none; }
-  .gnio-framework .button.only-icon .icon, .gnio-framework .button.only-icon .menu-empresa h1:after, .menu-empresa .gnio-framework .button.only-icon h1:after, .gnio-framework button.only-icon .icon, .gnio-framework button.only-icon .menu-empresa h1:after, .menu-empresa .gnio-framework button.only-icon h1:after {
+  .gnio-framework .button.only-icon .icon, #document .gnio-framework .button.only-icon #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .button.only-icon h1:after, .gnio-framework button.only-icon .icon, #document .gnio-framework button.only-icon #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper button.only-icon h1:after {
     margin: 0; }
   .gnio-framework .button.processing:active, .gnio-framework .button.processing.active, .gnio-framework button.processing:active, .gnio-framework button.processing.active {
     opacity: 0.75;
@@ -1803,12 +1822,12 @@ footer {
     filter: alpha(opacity=75);
     -ms-filter: "alpha(opacity=75)";
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; }
-    .gnio-framework .button.processing:active .icon, .gnio-framework .button.processing:active .menu-empresa h1:after, .menu-empresa .gnio-framework .button.processing:active h1:after, .gnio-framework .button.processing.active .icon, .gnio-framework .button.processing.active .menu-empresa h1:after, .menu-empresa .gnio-framework .button.processing.active h1:after, .gnio-framework button.processing:active .icon, .gnio-framework button.processing:active .menu-empresa h1:after, .menu-empresa .gnio-framework button.processing:active h1:after, .gnio-framework button.processing.active .icon, .gnio-framework button.processing.active .menu-empresa h1:after, .menu-empresa .gnio-framework button.processing.active h1:after {
+    .gnio-framework .button.processing:active .icon, #document .gnio-framework .button.processing:active #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .button.processing:active h1:after, .gnio-framework .button.processing.active .icon, #document .gnio-framework .button.processing.active #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .button.processing.active h1:after, .gnio-framework button.processing:active .icon, #document .gnio-framework button.processing:active #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper button.processing:active h1:after, .gnio-framework button.processing.active .icon, #document .gnio-framework button.processing.active #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper button.processing.active h1:after {
       display: inline-block;
       animation: rotate 0.75s infinite linear;
       -moz-animation: rotate 0.75s infinite linear;
       -webkit-animation: rotate 0.75s infinite linear; }
-  .gnio-framework .button.processing .icon, .gnio-framework .button.processing .menu-empresa h1:after, .menu-empresa .gnio-framework .button.processing h1:after, .gnio-framework button.processing .icon, .gnio-framework button.processing .menu-empresa h1:after, .menu-empresa .gnio-framework button.processing h1:after {
+  .gnio-framework .button.processing .icon, #document .gnio-framework .button.processing #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .button.processing h1:after, .gnio-framework button.processing .icon, #document .gnio-framework button.processing #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper button.processing h1:after {
     display: none;
     font-size: 150%;
     margin-top: 2px; }
@@ -1825,7 +1844,7 @@ footer {
     border-bottom-width: 0.25em;
     background-color: #6eba4a;
     color: rgba(77, 77, 77, 0.85); }
-  .gnio-framework .button .icon, .gnio-framework .button .menu-empresa h1:after, .menu-empresa .gnio-framework .button h1:after, .gnio-framework button .icon, .gnio-framework button .menu-empresa h1:after, .menu-empresa .gnio-framework button h1:after {
+  .gnio-framework .button .icon, #document .gnio-framework .button #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .button h1:after, .gnio-framework button .icon, #document .gnio-framework button #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper button h1:after {
     margin-top: 0.25em;
     margin-left: 0.25em;
     margin-right: 0.25em; }
@@ -1876,7 +1895,7 @@ footer {
     background: transparent; }
   .gnio-framework .menu.breadcrumb .item .link:hover, .gnio-framework .menu.breadcrumb .item .link:active, .gnio-framework .menu-list.breadcrumb .item .link:hover, .gnio-framework .menu-list.breadcrumb .item .link:active {
     color: #fff; }
-  .gnio-framework .menu.breadcrumb .item .icon, .gnio-framework .menu.breadcrumb .item .menu-empresa h1:after, .menu-empresa .gnio-framework .menu.breadcrumb .item h1:after, .gnio-framework .menu-list.breadcrumb .item .icon, .gnio-framework .menu-list.breadcrumb .item .menu-empresa h1:after, .menu-empresa .gnio-framework .menu-list.breadcrumb .item h1:after {
+  .gnio-framework .menu.breadcrumb .item .icon, #document .gnio-framework .menu.breadcrumb .item #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu.breadcrumb .item h1:after, .gnio-framework .menu-list.breadcrumb .item .icon, #document .gnio-framework .menu-list.breadcrumb .item #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.breadcrumb .item h1:after {
     font-size: 65%;
     margin-left: 1em; }
   .gnio-framework .menu.breadcrumb .item.active .link, .gnio-framework .menu.breadcrumb .item.active span, .gnio-framework .menu-list.breadcrumb .item.active .link, .gnio-framework .menu-list.breadcrumb .item.active span {
@@ -1922,10 +1941,10 @@ footer {
     .gnio-framework .menu.vertical.docked > .item > .link, .gnio-framework .menu-list.vertical.docked > .item > .link {
       text-indent: -999em;
       text-transform: uppercase; }
-    .gnio-framework .menu.vertical.docked > .item > .link .icon, .gnio-framework .menu.vertical.docked > .item > .link .menu-empresa h1:after, .menu-empresa .gnio-framework .menu.vertical.docked > .item > .link h1:after, .gnio-framework .menu-list.vertical.docked > .item > .link .icon, .gnio-framework .menu-list.vertical.docked > .item > .link .menu-empresa h1:after, .menu-empresa .gnio-framework .menu-list.vertical.docked > .item > .link h1:after {
+    .gnio-framework .menu.vertical.docked > .item > .link .icon, #document .gnio-framework .menu.vertical.docked > .item > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu.vertical.docked > .item > .link h1:after, .gnio-framework .menu-list.vertical.docked > .item > .link .icon, #document .gnio-framework .menu-list.vertical.docked > .item > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.vertical.docked > .item > .link h1:after {
       text-indent: 0;
       display: none; }
-    .gnio-framework .menu.vertical.docked > .item > .link .icon.main, .gnio-framework .menu.vertical.docked > .item > .link .menu-empresa h1.main:after, .menu-empresa .gnio-framework .menu.vertical.docked > .item > .link h1.main:after, .gnio-framework .menu-list.vertical.docked > .item > .link .icon.main, .gnio-framework .menu-list.vertical.docked > .item > .link .menu-empresa h1.main:after, .menu-empresa .gnio-framework .menu-list.vertical.docked > .item > .link h1.main:after {
+    .gnio-framework .menu.vertical.docked > .item > .link .icon.main, #document .gnio-framework .menu.vertical.docked > .item > .link #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu.vertical.docked > .item > .link h1.main:after, .gnio-framework .menu-list.vertical.docked > .item > .link .icon.main, #document .gnio-framework .menu-list.vertical.docked > .item > .link #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.vertical.docked > .item > .link h1.main:after {
       font-size: 150%;
       display: inline-block;
       margin-top: 0; }
@@ -1943,7 +1962,7 @@ footer {
     .gnio-framework .menu.vertical.docked > .item.active > .link, .gnio-framework .menu-list.vertical.docked > .item.active > .link {
       width: 100%;
       text-indent: 0; }
-    .gnio-framework .menu.vertical.docked > .item.active > .link .title, .gnio-framework .menu.vertical.docked > .item.active > .link .icon, .gnio-framework .menu.vertical.docked > .item.active > .link .menu-empresa h1:after, .menu-empresa .gnio-framework .menu.vertical.docked > .item.active > .link h1:after, .gnio-framework .menu-list.vertical.docked > .item.active > .link .title, .gnio-framework .menu-list.vertical.docked > .item.active > .link .icon, .gnio-framework .menu-list.vertical.docked > .item.active > .link .menu-empresa h1:after, .menu-empresa .gnio-framework .menu-list.vertical.docked > .item.active > .link h1:after {
+    .gnio-framework .menu.vertical.docked > .item.active > .link .title, .gnio-framework .menu.vertical.docked > .item.active > .link .icon, #document .gnio-framework .menu.vertical.docked > .item.active > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu.vertical.docked > .item.active > .link h1:after, .gnio-framework .menu-list.vertical.docked > .item.active > .link .title, .gnio-framework .menu-list.vertical.docked > .item.active > .link .icon, #document .gnio-framework .menu-list.vertical.docked > .item.active > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.vertical.docked > .item.active > .link h1:after {
       display: inline-block;
       text-indent: 0; }
     .gnio-framework .menu.vertical.docked > .item:hover, .gnio-framework .menu-list.vertical.docked > .item:hover {
@@ -1951,7 +1970,7 @@ footer {
     .gnio-framework .menu.vertical.docked > .item:hover > .link, .gnio-framework .menu-list.vertical.docked > .item:hover > .link {
       text-indent: 0;
       width: 100%; }
-    .gnio-framework .menu.vertical.docked > .item:hover > .link .icon, .gnio-framework .menu.vertical.docked > .item:hover > .link .menu-empresa h1:after, .menu-empresa .gnio-framework .menu.vertical.docked > .item:hover > .link h1:after, .gnio-framework .menu.vertical.docked > .item:hover > .link .title, .gnio-framework .menu-list.vertical.docked > .item:hover > .link .icon, .gnio-framework .menu-list.vertical.docked > .item:hover > .link .menu-empresa h1:after, .menu-empresa .gnio-framework .menu-list.vertical.docked > .item:hover > .link h1:after, .gnio-framework .menu-list.vertical.docked > .item:hover > .link .title {
+    .gnio-framework .menu.vertical.docked > .item:hover > .link .icon, #document .gnio-framework .menu.vertical.docked > .item:hover > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu.vertical.docked > .item:hover > .link h1:after, .gnio-framework .menu.vertical.docked > .item:hover > .link .title, .gnio-framework .menu-list.vertical.docked > .item:hover > .link .icon, #document .gnio-framework .menu-list.vertical.docked > .item:hover > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.vertical.docked > .item:hover > .link h1:after, .gnio-framework .menu-list.vertical.docked > .item:hover > .link .title {
       display: inline-block; }
     .gnio-framework .menu.vertical.docked > .item:hover > .link .title, .gnio-framework .menu-list.vertical.docked > .item:hover > .link .title {
       display: inline-block;
@@ -1967,7 +1986,7 @@ footer {
     .gnio-framework .menu.list.vertical > .item > .link, .gnio-framework .menu-list.list.vertical > .item > .link {
       max-width: 100%;
       text-transform: uppercase; }
-    .gnio-framework .menu.list.vertical > .item > .link .icon.main, .gnio-framework .menu.list.vertical > .item > .link .menu-empresa h1.main:after, .menu-empresa .gnio-framework .menu.list.vertical > .item > .link h1.main:after, .gnio-framework .menu-list.list.vertical > .item > .link .icon.main, .gnio-framework .menu-list.list.vertical > .item > .link .menu-empresa h1.main:after, .menu-empresa .gnio-framework .menu-list.list.vertical > .item > .link h1.main:after {
+    .gnio-framework .menu.list.vertical > .item > .link .icon.main, #document .gnio-framework .menu.list.vertical > .item > .link #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu.list.vertical > .item > .link h1.main:after, .gnio-framework .menu-list.list.vertical > .item > .link .icon.main, #document .gnio-framework .menu-list.list.vertical > .item > .link #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.list.vertical > .item > .link h1.main:after {
       display: none; }
   .gnio-framework .menu.horizontal .submenu .link, .gnio-framework .menu-list.horizontal .submenu .link {
     max-width: 100% !important; }
@@ -1989,7 +2008,7 @@ footer {
   .gnio-framework .menu-list.vertical > .item > .link {
     max-width: 100%;
     text-transform: uppercase; }
-  .gnio-framework .menu-list.vertical > .item > .link .icon.main, .gnio-framework .menu-list.vertical > .item > .link .menu-empresa h1.main:after, .menu-empresa .gnio-framework .menu-list.vertical > .item > .link h1.main:after {
+  .gnio-framework .menu-list.vertical > .item > .link .icon.main, #document .gnio-framework .menu-list.vertical > .item > .link #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.vertical > .item > .link h1.main:after {
     display: none; }
 
 .gnio-framework .menu-list > .item > .link {
@@ -2003,7 +2022,7 @@ footer {
     line-height: 1.5; }
   .gnio-framework .breadcrumb .item .link, .gnio-framework .breadcrumb .item .link:hover, .gnio-framework .breadcrumb .item .link:active {
     background: transparent !important; }
-  .gnio-framework .breadcrumb .item .icon, .gnio-framework .breadcrumb .item .menu-empresa h1:after, .menu-empresa .gnio-framework .breadcrumb .item h1:after {
+  .gnio-framework .breadcrumb .item .icon, #document .gnio-framework .breadcrumb .item #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .breadcrumb .item h1:after {
     font-size: 65%; }
   .gnio-framework .breadcrumb .item.active .link, .gnio-framework .breadcrumb .item.active span {
     color: #fff; }
@@ -2145,7 +2164,7 @@ footer {
     background-color: #fff;
     border-color: transparent !important;
     /* Chrome Placeholder Fix */ }
-    .gnio-framework .input.text.error + .icon, .gnio-framework .menu-empresa .input.text.error + h1:after, .menu-empresa .gnio-framework .input.text.error + h1:after {
+    .gnio-framework .input.text.error + .icon, #document .gnio-framework #main-header .menu-empresa .wrapper .input.text.error + h1:after {
       color: rgba(77, 77, 77, 0.35); }
     .gnio-framework .input.text.error::-webkit-input-placeholder {
       color: rgba(77, 77, 77, 0.5); }
@@ -2154,7 +2173,7 @@ footer {
     background-color: #fff;
     border-color: transparent !important;
     /* Chrome Placeholder Fix */ }
-    .gnio-framework .input.text.ok + .icon, .gnio-framework .menu-empresa .input.text.ok + h1:after, .menu-empresa .gnio-framework .input.text.ok + h1:after {
+    .gnio-framework .input.text.ok + .icon, #document .gnio-framework #main-header .menu-empresa .wrapper .input.text.ok + h1:after {
       color: rgba(77, 77, 77, 0.35); }
     .gnio-framework .input.text.ok::-webkit-input-placeholder {
       color: rgba(77, 77, 77, 0.5); }
@@ -2235,12 +2254,12 @@ footer {
         transition: all 0.2s linear;
         -moz-transition: all 0.2s linear;
         -webkit-transition: all 0.2s linear; }
-        .gnio-framework .input.checkbox.custom + label .icon, .gnio-framework .input.checkbox.custom + label .menu-empresa h1:after, .menu-empresa .gnio-framework .input.checkbox.custom + label h1:after {
+        .gnio-framework .input.checkbox.custom + label .icon, #document .gnio-framework .input.checkbox.custom + label #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input.checkbox.custom + label h1:after {
           margin: 0; }
       .gnio-framework .input.checkbox.custom:checked + label {
         background-color: #6eba4a;
         color: #4d4d4d; }
-        .gnio-framework .input.checkbox.custom:checked + label .icon, .gnio-framework .input.checkbox.custom:checked + label .menu-empresa h1:after, .menu-empresa .gnio-framework .input.checkbox.custom:checked + label h1:after {
+        .gnio-framework .input.checkbox.custom:checked + label .icon, #document .gnio-framework .input.checkbox.custom:checked + label #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input.checkbox.custom:checked + label h1:after {
           margin: 0; }
   .gnio-framework .input.select {
     padding: 0.75em 1em;
@@ -2252,22 +2271,22 @@ footer {
 .gnio-framework .input-wrapper {
   position: relative;
   display: inline-block; }
-  .gnio-framework .input-wrapper > .icon, .gnio-framework .menu-empresa .input-wrapper > h1:after, .menu-empresa .gnio-framework .input-wrapper > h1:after, .gnio-framework .input-wrapper > a.uk-form-password-toggle {
+  .gnio-framework .input-wrapper > .icon, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper > h1:after, .gnio-framework .input-wrapper > a.uk-form-password-toggle {
     position: absolute;
     right: 0.62em;
     top: 0.5em;
     margin: 0;
     font-size: 150%;
     color: #6eba4a; }
-  .gnio-framework .input-wrapper > .icon.close, .gnio-framework .menu-empresa .input-wrapper > h1.close:after, .menu-empresa .gnio-framework .input-wrapper > h1.close:after {
+  .gnio-framework .input-wrapper > .icon.close, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper > h1.close:after {
     right: 0.6666em;
     top: 0.5833em;
     font-size: 100%;
     color: #4d4d4d; }
-    .gnio-framework .input-wrapper > .icon.close:hover, .gnio-framework .menu-empresa .input-wrapper > h1.close:hover:after, .menu-empresa .gnio-framework .input-wrapper > h1.close:hover:after, .gnio-framework .input-wrapper > .icon.close:active, .gnio-framework .menu-empresa .input-wrapper > h1.close:active:after, .menu-empresa .gnio-framework .input-wrapper > h1.close:active:after {
+    .gnio-framework .input-wrapper > .icon.close:hover, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper > h1.close:hover:after, .gnio-framework .input-wrapper > .icon.close:active, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper > h1.close:active:after {
       color: #6eba4a;
       background-color: transparent; }
-  .gnio-framework .input-wrapper.date-picker > .icon, .gnio-framework .menu-empresa .input-wrapper.date-picker > h1:after, .menu-empresa .gnio-framework .input-wrapper.date-picker > h1:after {
+  .gnio-framework .input-wrapper.date-picker > .icon, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.date-picker > h1:after {
     font-size: 100%;
     top: 1em;
     right: 1em; }
@@ -2275,9 +2294,9 @@ footer {
     cursor: default; }
   .gnio-framework .input-wrapper.with-icon .input {
     padding-right: 3em; }
-    .gnio-framework .input-wrapper.with-icon .input.error + .icon, .gnio-framework .input-wrapper.with-icon .menu-empresa .input.error + h1:after, .menu-empresa .gnio-framework .input-wrapper.with-icon .input.error + h1:after {
+    .gnio-framework .input-wrapper.with-icon .input.error + .icon, #document .gnio-framework .input-wrapper.with-icon #main-header .menu-empresa .wrapper .input.error + h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.with-icon .input.error + h1:after {
       color: rgba(77, 77, 77, 0.35); }
-    .gnio-framework .input-wrapper.with-icon .input.ok + .icon, .gnio-framework .input-wrapper.with-icon .menu-empresa .input.ok + h1:after, .menu-empresa .gnio-framework .input-wrapper.with-icon .input.ok + h1:after {
+    .gnio-framework .input-wrapper.with-icon .input.ok + .icon, #document .gnio-framework .input-wrapper.with-icon #main-header .menu-empresa .wrapper .input.ok + h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.with-icon .input.ok + h1:after {
       color: rgba(77, 77, 77, 0.35); }
   .gnio-framework .input-wrapper .button, .gnio-framework .input-wrapper button {
     display: block;
@@ -2316,7 +2335,7 @@ footer {
   .gnio-framework .message a, .gnio-framework .message-thin a, .gnio-framework .message-warning a, .gnio-framework .message-error a, .gnio-framework .message-alert a, .gnio-framework .message-info a, .gnio-framework .message-ok a, .gnio-framework .message-neutral a, .gnio-framework .message-modal a, .gnio-framework .message-tooltip a, .gnio-framework .message-in-box a, .gnio-framework .uk-notify-message a {
     color: inherit;
     border-bottom: 0.0833em dotted; }
-  .gnio-framework .message .icon.tooltip, .gnio-framework .message .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message h1.tooltip:after, .gnio-framework .message-thin .icon.tooltip, .gnio-framework .message-thin .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-thin h1.tooltip:after, .gnio-framework .message-warning .icon.tooltip, .gnio-framework .message-warning .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-warning h1.tooltip:after, .gnio-framework .message-error .icon.tooltip, .gnio-framework .message-error .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-error h1.tooltip:after, .gnio-framework .message-alert .icon.tooltip, .gnio-framework .message-alert .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-alert h1.tooltip:after, .gnio-framework .message-info .icon.tooltip, .gnio-framework .message-info .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-info h1.tooltip:after, .gnio-framework .message-ok .icon.tooltip, .gnio-framework .message-ok .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-ok h1.tooltip:after, .gnio-framework .message-neutral .icon.tooltip, .gnio-framework .message-neutral .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-neutral h1.tooltip:after, .gnio-framework .message-modal .icon.tooltip, .gnio-framework .message-modal .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-modal h1.tooltip:after, .gnio-framework .message-tooltip .icon.tooltip, .gnio-framework .message-tooltip .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-tooltip h1.tooltip:after, .gnio-framework .message-in-box .icon.tooltip, .gnio-framework .message-in-box .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-in-box h1.tooltip:after, .gnio-framework .uk-notify-message .icon.tooltip, .gnio-framework .uk-notify-message .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .uk-notify-message h1.tooltip:after {
+  .gnio-framework .message .icon.tooltip, #document .gnio-framework .message #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message h1.tooltip:after, .gnio-framework .message-thin .icon.tooltip, #document .gnio-framework .message-thin #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-thin h1.tooltip:after, .gnio-framework .message-warning .icon.tooltip, #document .gnio-framework .message-warning #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-warning h1.tooltip:after, .gnio-framework .message-error .icon.tooltip, #document .gnio-framework .message-error #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-error h1.tooltip:after, .gnio-framework .message-alert .icon.tooltip, #document .gnio-framework .message-alert #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-alert h1.tooltip:after, .gnio-framework .message-info .icon.tooltip, #document .gnio-framework .message-info #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-info h1.tooltip:after, .gnio-framework .message-ok .icon.tooltip, #document .gnio-framework .message-ok #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-ok h1.tooltip:after, .gnio-framework .message-neutral .icon.tooltip, #document .gnio-framework .message-neutral #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-neutral h1.tooltip:after, .gnio-framework .message-modal .icon.tooltip, #document .gnio-framework .message-modal #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal h1.tooltip:after, .gnio-framework .message-tooltip .icon.tooltip, #document .gnio-framework .message-tooltip #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-tooltip h1.tooltip:after, .gnio-framework .message-in-box .icon.tooltip, #document .gnio-framework .message-in-box #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-in-box h1.tooltip:after, .gnio-framework .uk-notify-message .icon.tooltip, #document .gnio-framework .uk-notify-message #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-notify-message h1.tooltip:after {
     margin-top: 0; }
 
 .gnio-framework .message-thin {
@@ -2326,27 +2345,27 @@ footer {
 .gnio-framework .message-warning, .gnio-framework .message-modal.warning, .gnio-framework .uk-notify .uk-notify-message-warning {
   color: #4d4d4d;
   background-color: #fff; }
-  .gnio-framework .message-warning .icon, .gnio-framework .message-warning .menu-empresa h1:after, .menu-empresa .gnio-framework .message-warning h1:after, .gnio-framework .message-modal.warning .icon, .gnio-framework .message-modal.warning .menu-empresa h1:after, .menu-empresa .gnio-framework .message-modal.warning h1:after, .gnio-framework .uk-notify .uk-notify-message-warning .icon, .gnio-framework .uk-notify .uk-notify-message-warning .menu-empresa h1:after, .menu-empresa .gnio-framework .uk-notify .uk-notify-message-warning h1:after {
+  .gnio-framework .message-warning .icon, #document .gnio-framework .message-warning #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-warning h1:after, .gnio-framework .message-modal.warning .icon, #document .gnio-framework .message-modal.warning #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal.warning h1:after, .gnio-framework .uk-notify .uk-notify-message-warning .icon, #document .gnio-framework .uk-notify .uk-notify-message-warning #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-notify .uk-notify-message-warning h1:after {
     color: rgba(77, 77, 77, 0.35); }
 
 .gnio-framework .message-error, .gnio-framework .message-alert, .gnio-framework .message-modal.error, .gnio-framework .message-modal.alert, .gnio-framework .uk-notify .uk-notify-message-danger {
   color: #4d4d4d;
   background-color: #fff; }
-  .gnio-framework .message-error .icon, .gnio-framework .message-error .menu-empresa h1:after, .menu-empresa .gnio-framework .message-error h1:after, .gnio-framework .message-alert .icon, .gnio-framework .message-alert .menu-empresa h1:after, .menu-empresa .gnio-framework .message-alert h1:after, .gnio-framework .message-modal.error .icon, .gnio-framework .message-modal.error .menu-empresa h1:after, .menu-empresa .gnio-framework .message-modal.error h1:after, .gnio-framework .message-modal.alert .icon, .gnio-framework .message-modal.alert .menu-empresa h1:after, .menu-empresa .gnio-framework .message-modal.alert h1:after, .gnio-framework .uk-notify .uk-notify-message-danger .icon, .gnio-framework .uk-notify .uk-notify-message-danger .menu-empresa h1:after, .menu-empresa .gnio-framework .uk-notify .uk-notify-message-danger h1:after {
+  .gnio-framework .message-error .icon, #document .gnio-framework .message-error #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-error h1:after, .gnio-framework .message-alert .icon, #document .gnio-framework .message-alert #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-alert h1:after, .gnio-framework .message-modal.error .icon, #document .gnio-framework .message-modal.error #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal.error h1:after, .gnio-framework .message-modal.alert .icon, #document .gnio-framework .message-modal.alert #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal.alert h1:after, .gnio-framework .uk-notify .uk-notify-message-danger .icon, #document .gnio-framework .uk-notify .uk-notify-message-danger #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-notify .uk-notify-message-danger h1:after {
     color: rgba(77, 77, 77, 0.35); }
-    .gnio-framework .message-error .icon.tooltip, .gnio-framework .message-error .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-error h1.tooltip:after, .gnio-framework .message-alert .icon.tooltip, .gnio-framework .message-alert .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-alert h1.tooltip:after, .gnio-framework .message-modal.error .icon.tooltip, .gnio-framework .message-modal.error .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-modal.error h1.tooltip:after, .gnio-framework .message-modal.alert .icon.tooltip, .gnio-framework .message-modal.alert .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .message-modal.alert h1.tooltip:after, .gnio-framework .uk-notify .uk-notify-message-danger .icon.tooltip, .gnio-framework .uk-notify .uk-notify-message-danger .menu-empresa h1.tooltip:after, .menu-empresa .gnio-framework .uk-notify .uk-notify-message-danger h1.tooltip:after {
+    .gnio-framework .message-error .icon.tooltip, #document .gnio-framework .message-error #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-error h1.tooltip:after, .gnio-framework .message-alert .icon.tooltip, #document .gnio-framework .message-alert #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-alert h1.tooltip:after, .gnio-framework .message-modal.error .icon.tooltip, #document .gnio-framework .message-modal.error #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal.error h1.tooltip:after, .gnio-framework .message-modal.alert .icon.tooltip, #document .gnio-framework .message-modal.alert #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal.alert h1.tooltip:after, .gnio-framework .uk-notify .uk-notify-message-danger .icon.tooltip, #document .gnio-framework .uk-notify .uk-notify-message-danger #main-header .menu-empresa .wrapper h1.tooltip:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-notify .uk-notify-message-danger h1.tooltip:after {
       margin-top: 0.1666em; }
 
 .gnio-framework .message-info, .gnio-framework .message-modal.info, .gnio-framework .uk-notify .uk-notify-message-info {
   color: #4d4d4d;
   background-color: #fff; }
-  .gnio-framework .message-info .icon, .gnio-framework .message-info .menu-empresa h1:after, .menu-empresa .gnio-framework .message-info h1:after, .gnio-framework .message-modal.info .icon, .gnio-framework .message-modal.info .menu-empresa h1:after, .menu-empresa .gnio-framework .message-modal.info h1:after, .gnio-framework .uk-notify .uk-notify-message-info .icon, .gnio-framework .uk-notify .uk-notify-message-info .menu-empresa h1:after, .menu-empresa .gnio-framework .uk-notify .uk-notify-message-info h1:after {
+  .gnio-framework .message-info .icon, #document .gnio-framework .message-info #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-info h1:after, .gnio-framework .message-modal.info .icon, #document .gnio-framework .message-modal.info #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal.info h1:after, .gnio-framework .uk-notify .uk-notify-message-info .icon, #document .gnio-framework .uk-notify .uk-notify-message-info #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-notify .uk-notify-message-info h1:after {
     color: rgba(77, 77, 77, 0.35); }
 
 .gnio-framework .message-ok, .gnio-framework .message-modal.ok, .gnio-framework .uk-notify .uk-notify-message-success {
   color: #4d4d4d;
   background-color: #fff; }
-  .gnio-framework .message-ok .icon, .gnio-framework .message-ok .menu-empresa h1:after, .menu-empresa .gnio-framework .message-ok h1:after, .gnio-framework .message-modal.ok .icon, .gnio-framework .message-modal.ok .menu-empresa h1:after, .menu-empresa .gnio-framework .message-modal.ok h1:after, .gnio-framework .uk-notify .uk-notify-message-success .icon, .gnio-framework .uk-notify .uk-notify-message-success .menu-empresa h1:after, .menu-empresa .gnio-framework .uk-notify .uk-notify-message-success h1:after {
+  .gnio-framework .message-ok .icon, #document .gnio-framework .message-ok #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-ok h1:after, .gnio-framework .message-modal.ok .icon, #document .gnio-framework .message-modal.ok #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal.ok h1:after, .gnio-framework .uk-notify .uk-notify-message-success .icon, #document .gnio-framework .uk-notify .uk-notify-message-success #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-notify .uk-notify-message-success h1:after {
     color: rgba(77, 77, 77, 0.35); }
 
 .gnio-framework .message, .gnio-framework .message-neutral, .gnio-framework .message-modal.neutral {
@@ -2361,13 +2380,13 @@ footer {
   width: 100%;
   margin: 0;
   z-index: 996; }
-  .gnio-framework .message-modal .icon, .gnio-framework .message-modal .menu-empresa h1:after, .menu-empresa .gnio-framework .message-modal h1:after {
+  .gnio-framework .message-modal .icon, #document .gnio-framework .message-modal #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal h1:after {
     cursor: pointer;
     padding: 0.3333em 0.5em;
     margin-top: 0;
     background-color: rgba(128, 128, 128, 0.05);
     color: rgba(77, 77, 77, 0.35); }
-    .gnio-framework .message-modal .icon:hover, .gnio-framework .message-modal .menu-empresa h1:hover:after, .menu-empresa .gnio-framework .message-modal h1:hover:after {
+    .gnio-framework .message-modal .icon:hover, #document .gnio-framework .message-modal #main-header .menu-empresa .wrapper h1:hover:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-modal h1:hover:after {
       color: #4d4d4d;
       background-color: rgba(128, 128, 128, 0.15); }
 
@@ -2377,7 +2396,7 @@ footer {
   -webkit-box-shadow: none;
   -o-box-shadow: none; }
 
-.gnio-framework .message.with-icon .icon, .gnio-framework .message.with-icon .menu-empresa h1:after, .menu-empresa .gnio-framework .message.with-icon h1:after, .gnio-framework .message-alert.with-icon .icon, .gnio-framework .message-alert.with-icon .menu-empresa h1:after, .menu-empresa .gnio-framework .message-alert.with-icon h1:after, .gnio-framework .message-error.with-icon .icon, .gnio-framework .message-error.with-icon .menu-empresa h1:after, .menu-empresa .gnio-framework .message-error.with-icon h1:after, .gnio-framework .message-info.with-icon .icon, .gnio-framework .message-info.with-icon .menu-empresa h1:after, .menu-empresa .gnio-framework .message-info.with-icon h1:after, .gnio-framework .message-warning.with-icon .icon, .gnio-framework .message-warning.with-icon .menu-empresa h1:after, .menu-empresa .gnio-framework .message-warning.with-icon h1:after, .gnio-framework .message-ok.with-icon .icon, .gnio-framework .message-ok.with-icon .menu-empresa h1:after, .menu-empresa .gnio-framework .message-ok.with-icon h1:after {
+.gnio-framework .message.with-icon .icon, #document .gnio-framework .message.with-icon #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message.with-icon h1:after, .gnio-framework .message-alert.with-icon .icon, #document .gnio-framework .message-alert.with-icon #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-alert.with-icon h1:after, .gnio-framework .message-error.with-icon .icon, #document .gnio-framework .message-error.with-icon #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-error.with-icon h1:after, .gnio-framework .message-info.with-icon .icon, #document .gnio-framework .message-info.with-icon #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-info.with-icon h1:after, .gnio-framework .message-warning.with-icon .icon, #document .gnio-framework .message-warning.with-icon #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-warning.with-icon h1:after, .gnio-framework .message-ok.with-icon .icon, #document .gnio-framework .message-ok.with-icon #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .message-ok.with-icon h1:after {
   font-size: 150%;
   margin-top: 0; }
 
@@ -2427,7 +2446,7 @@ footer {
       float: none;
       color: inherit;
       background-color: transparent; }
-    #document .gnio-framework .controls > .item .icon, #document .gnio-framework .controls > .item .menu-empresa h1:after, .menu-empresa #document .gnio-framework .controls > .item h1:after, #document .gnio-framework .controls-horizontal > .item .icon, #document .gnio-framework .controls-horizontal > .item .menu-empresa h1:after, .menu-empresa #document .gnio-framework .controls-horizontal > .item h1:after, #document .gnio-framework .floating-nav > .item .icon, #document .gnio-framework .floating-nav > .item .menu-empresa h1:after, .menu-empresa #document .gnio-framework .floating-nav > .item h1:after {
+    #document .gnio-framework .controls > .item .icon, #document .gnio-framework .controls > .item #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .controls > .item h1:after, #document .gnio-framework .controls-horizontal > .item .icon, #document .gnio-framework .controls-horizontal > .item #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .controls-horizontal > .item h1:after, #document .gnio-framework .floating-nav > .item .icon, #document .gnio-framework .floating-nav > .item #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .floating-nav > .item h1:after {
       margin-top: 0;
       min-width: 16px; }
   #document .gnio-framework .controls .docking .trigger, #document .gnio-framework .controls-horizontal .docking .trigger, #document .gnio-framework .floating-nav .docking .trigger {
@@ -2440,7 +2459,7 @@ footer {
     #document .gnio-framework .controls .docking .trigger:hover, #document .gnio-framework .controls-horizontal .docking .trigger:hover, #document .gnio-framework .floating-nav .docking .trigger:hover {
       background-color: #fff;
       color: #4d4d4d; }
-    #document .gnio-framework .controls .docking .trigger .icon, #document .gnio-framework .controls .docking .trigger .menu-empresa h1:after, .menu-empresa #document .gnio-framework .controls .docking .trigger h1:after, #document .gnio-framework .controls-horizontal .docking .trigger .icon, #document .gnio-framework .controls-horizontal .docking .trigger .menu-empresa h1:after, .menu-empresa #document .gnio-framework .controls-horizontal .docking .trigger h1:after, #document .gnio-framework .floating-nav .docking .trigger .icon, #document .gnio-framework .floating-nav .docking .trigger .menu-empresa h1:after, .menu-empresa #document .gnio-framework .floating-nav .docking .trigger h1:after {
+    #document .gnio-framework .controls .docking .trigger .icon, #document .gnio-framework .controls .docking .trigger #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .controls .docking .trigger h1:after, #document .gnio-framework .controls-horizontal .docking .trigger .icon, #document .gnio-framework .controls-horizontal .docking .trigger #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .controls-horizontal .docking .trigger h1:after, #document .gnio-framework .floating-nav .docking .trigger .icon, #document .gnio-framework .floating-nav .docking .trigger #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .floating-nav .docking .trigger h1:after {
       display: block;
       text-indent: 0;
       padding: 0.5em;
@@ -2512,13 +2531,13 @@ footer {
         overflow: visible;
         white-space: normal;
         text-overflow: clip; }
-    .gnio-framework .floating-nav > * .icon, .gnio-framework .floating-nav > * .menu-empresa h1:after, .menu-empresa .gnio-framework .floating-nav > * h1:after {
+    .gnio-framework .floating-nav > * .icon, #document .gnio-framework .floating-nav > * #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .floating-nav > * h1:after {
       font-size: 200%;
       margin-left: 0.5em;
       margin-top: 0.1666em; }
   .gnio-framework .floating-nav.left .description {
     text-align: left; }
-  .gnio-framework .floating-nav.left .icon, .gnio-framework .floating-nav.left .menu-empresa h1:after, .menu-empresa .gnio-framework .floating-nav.left h1:after {
+  .gnio-framework .floating-nav.left .icon, #document .gnio-framework .floating-nav.left #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .floating-nav.left h1:after {
     margin-left: 0;
     margin-right: 0.5em; }
 
@@ -2587,7 +2606,7 @@ footer {
     transition: opacity 0.4s linear;
     -moz-transition: opacity 0.4s linear;
     -webkit-transition: opacity 0.4s linear; }
-  .gnio-framework .overlay .icon, .gnio-framework .overlay .menu-empresa h1:after, .menu-empresa .gnio-framework .overlay h1:after {
+  .gnio-framework .overlay .icon, #document .gnio-framework .overlay #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .overlay h1:after {
     color: #4d4d4d;
     background-color: rgba(77, 77, 77, 0.75);
     font-size: 200%;
@@ -2596,7 +2615,7 @@ footer {
     top: 0.5em;
     padding: 0.25em 0.3333em;
     margin-top: 0; }
-    .gnio-framework .overlay .icon:hover, .gnio-framework .overlay .menu-empresa h1:hover:after, .menu-empresa .gnio-framework .overlay h1:hover:after {
+    .gnio-framework .overlay .icon:hover, #document .gnio-framework .overlay #main-header .menu-empresa .wrapper h1:hover:after, #document .gnio-framework #main-header .menu-empresa .wrapper .overlay h1:hover:after {
       color: #4d4d4d;
       background-color: #6eba4a; }
 
@@ -2769,6 +2788,47 @@ footer {
   margin: 1.5em 0;
   padding: 0; }
 
+/* BEHAVIORS */
+/* Sliding Behavior */
+.gnio-framework .slide {
+  /* Action Class */ }
+  .gnio-framework .slide > .content {
+    display: none; }
+  .gnio-framework .slide > * > .trigger, .gnio-framework .slide > .trigger > .icon, #document .gnio-framework #main-header .menu-empresa .wrapper .slide > .trigger > h1:after {
+    cursor: pointer;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0.5em; }
+
+/* Content Behavior inside Active State */
+.gnio-framework .active .content {
+  display: block; }
+
+/* Icons Behavior */
+/*.gnio-framework {
+    .icon, .icon-default {
+        float: none;
+        margin-top: 0.1666em;
+    }
+
+    .icon.left, .icon-default.left {
+        float: left;
+        margin-right: 6px;
+    }
+
+    .icon.right, .icon-default.right {
+        float: right;
+        margin-left: 16px;
+    }
+
+    .icon.medium, .medium .icon, .icon-default.medium, .medium .icon-default {
+        margin-top: 0.3333em;
+    }
+
+    .content > .icon, .content > .icon-default {
+        margin-top: 0;
+    }
+}*/
 /* COMPONENTS */
 /* Timeline */
 .gnio-framework .timeline {
@@ -2939,7 +2999,7 @@ footer {
     #document .gnio-framework .comments > .list > .item.replied .reply .replier {
       margin-left: 4em;
       position: relative; }
-    #document .gnio-framework .comments > .list > .item.replied .reply .replier > .icon, #document .gnio-framework .comments > .list > .item.replied .reply .menu-empresa .replier > h1:after, .menu-empresa #document .gnio-framework .comments > .list > .item.replied .reply .replier > h1:after {
+    #document .gnio-framework .comments > .list > .item.replied .reply .replier > .icon, #document .gnio-framework .comments > .list > .item.replied .reply #main-header .menu-empresa .wrapper .replier > h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .comments > .list > .item.replied .reply .replier > h1:after {
       font-size: 150%;
       display: block;
       position: absolute;
@@ -2988,13 +3048,13 @@ footer {
           display: block; }
         #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .link {
           display: block; }
-        #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .icon, #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .menu-empresa h1:after, .menu-empresa #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item h1:after {
+        #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .icon, #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .comments > .list > .item aside.comment-block .controls .item h1:after {
           background-color: #4d4d4d;
           color: rgba(110, 186, 74, 0.25);
           display: block;
           margin-top: 0;
           padding: 0.5em 0.75em; }
-        #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .icon:hover, #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .menu-empresa h1:hover:after, .menu-empresa #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item h1:hover:after, #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .icon:active, #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .menu-empresa h1:active:after, .menu-empresa #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item h1:active:after {
+        #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .icon:hover, #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item #main-header .menu-empresa .wrapper h1:hover:after, #document .gnio-framework #main-header .menu-empresa .wrapper .comments > .list > .item aside.comment-block .controls .item h1:hover:after, #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item .icon:active, #document .gnio-framework .comments > .list > .item aside.comment-block .controls .item #main-header .menu-empresa .wrapper h1:active:after, #document .gnio-framework #main-header .menu-empresa .wrapper .comments > .list > .item aside.comment-block .controls .item h1:active:after {
           color: #6eba4a; }
         #document .gnio-framework .comments > .list > .item aside.comment-block p {
           margin-top: 0; }
@@ -3039,7 +3099,7 @@ footer {
   -moz-box-shadow: 0 0.1666em 0 rgba(128, 128, 128, 0.1);
   -webkit-box-shadow: 0 0.1666em 0 rgba(128, 128, 128, 0.1);
   -o-box-shadow: 0 0.1666em 0 rgba(128, 128, 128, 0.1); }
-  .gnio-framework .feedback .quote .icon.main, .gnio-framework .feedback .quote .menu-empresa h1.main:after, .menu-empresa .gnio-framework .feedback .quote h1.main:after, .gnio-framework .feedback-right .quote .icon.main, .gnio-framework .feedback-right .quote .menu-empresa h1.main:after, .menu-empresa .gnio-framework .feedback-right .quote h1.main:after {
+  .gnio-framework .feedback .quote .icon.main, #document .gnio-framework .feedback .quote #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .feedback .quote h1.main:after, .gnio-framework .feedback-right .quote .icon.main, #document .gnio-framework .feedback-right .quote #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .feedback-right .quote h1.main:after {
     font-size: 150%;
     position: absolute;
     left: -0.5em;
@@ -3054,7 +3114,7 @@ footer {
 .gnio-framework .feedback-right .quote {
   border-left: none;
   border-right: 0.4166em solid transparent; }
-  .gnio-framework .feedback-right .quote .icon.main, .gnio-framework .feedback-right .quote .menu-empresa h1.main:after, .menu-empresa .gnio-framework .feedback-right .quote h1.main:after {
+  .gnio-framework .feedback-right .quote .icon.main, #document .gnio-framework .feedback-right .quote #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .feedback-right .quote h1.main:after {
     left: auto;
     right: -0.5em;
     margin-top: 0; }
@@ -3174,7 +3234,7 @@ footer {
 .gnio-framework .pricing-table tbody td {
   text-align: center;
   color: #4d4d4d; }
-  .gnio-framework .pricing-table tbody td .icon, .gnio-framework .pricing-table tbody td .menu-empresa h1:after, .menu-empresa .gnio-framework .pricing-table tbody td h1:after {
+  .gnio-framework .pricing-table tbody td .icon, #document .gnio-framework .pricing-table tbody td #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .pricing-table tbody td h1:after {
     font-size: 150%;
     display: inline-block; }
 
@@ -3253,7 +3313,7 @@ footer {
     display: block;
     float: none;
     padding: 0.5em 1em; }
-    .gnio-framework .table.pricing .list .item .title .icon, .gnio-framework .table.pricing .list .item .title .menu-empresa h1:after, .menu-empresa .gnio-framework .table.pricing .list .item .title h1:after {
+    .gnio-framework .table.pricing .list .item .title .icon, #document .gnio-framework .table.pricing .list .item .title #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .table.pricing .list .item .title h1:after {
       font-size: 150%;
       display: inline-block; }
   .gnio-framework .table.pricing .list .item .price {
@@ -3782,7 +3842,7 @@ footer {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; }
-    #document .gnio-framework .input-wrapper.multiple .button .icon, #document .gnio-framework .input-wrapper.multiple .button .menu-empresa h1:after, .menu-empresa #document .gnio-framework .input-wrapper.multiple .button h1:after, #document .gnio-framework .input-wrapper.multiple button .icon, #document .gnio-framework .input-wrapper.multiple button .menu-empresa h1:after, .menu-empresa #document .gnio-framework .input-wrapper.multiple button h1:after {
+    #document .gnio-framework .input-wrapper.multiple .button .icon, #document .gnio-framework .input-wrapper.multiple .button #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.multiple .button h1:after, #document .gnio-framework .input-wrapper.multiple button .icon, #document .gnio-framework .input-wrapper.multiple button #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.multiple button h1:after {
       float: none; }
   #document .gnio-framework .input-wrapper.multiple .input, #document .gnio-framework .input-wrapper.multiple input[type="text"], #document .gnio-framework .input-wrapper.multiple .input:focus, #document .gnio-framework .input-wrapper.multiple input[type="text"]:focus {
     width: 75%; }
@@ -3886,7 +3946,7 @@ footer {
       margin-right: 0; }
     #document .gnio-framework .input-wrapper.multiple .button, #document .gnio-framework .input-wrapper.multiple button {
       width: 25%; }
-      #document .gnio-framework .input-wrapper.multiple .button .icon, #document .gnio-framework .input-wrapper.multiple .button .menu-empresa h1:after, .menu-empresa #document .gnio-framework .input-wrapper.multiple .button h1:after, #document .gnio-framework .input-wrapper.multiple button .icon, #document .gnio-framework .input-wrapper.multiple button .menu-empresa h1:after, .menu-empresa #document .gnio-framework .input-wrapper.multiple button h1:after {
+      #document .gnio-framework .input-wrapper.multiple .button .icon, #document .gnio-framework .input-wrapper.multiple .button #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.multiple .button h1:after, #document .gnio-framework .input-wrapper.multiple button .icon, #document .gnio-framework .input-wrapper.multiple button #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.multiple button h1:after {
         float: none; }
     #document .gnio-framework .input-wrapper.multiple .input, #document .gnio-framework .input-wrapper.multiple input[type="text"], #document .gnio-framework .input-wrapper.multiple .input:focus, #document .gnio-framework .input-wrapper.multiple input[type="text"]:focus {
       width: 75%; }
@@ -3896,7 +3956,7 @@ footer {
       width: 100%; }
       #document .gnio-framework .menu.vertical.docked > .item > .link .title, #document .gnio-framework .menu-list.vertical.docked > .item > .link .title {
         text-indent: 0; }
-      #document .gnio-framework .menu.vertical.docked > .item > .link .icon, #document .gnio-framework .menu.vertical.docked > .item > .link .menu-empresa h1:after, .menu-empresa #document .gnio-framework .menu.vertical.docked > .item > .link h1:after, #document .gnio-framework .menu-list.vertical.docked > .item > .link .icon, #document .gnio-framework .menu-list.vertical.docked > .item > .link .menu-empresa h1:after, .menu-empresa #document .gnio-framework .menu-list.vertical.docked > .item > .link h1:after {
+      #document .gnio-framework .menu.vertical.docked > .item > .link .icon, #document .gnio-framework .menu.vertical.docked > .item > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu.vertical.docked > .item > .link h1:after, #document .gnio-framework .menu-list.vertical.docked > .item > .link .icon, #document .gnio-framework .menu-list.vertical.docked > .item > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.vertical.docked > .item > .link h1:after {
         display: block; }
     #document .gnio-framework .scrollup {
       bottom: 3.5em;
@@ -3973,7 +4033,7 @@ footer {
     font-size: 85%; }
   #document .gnio-framework .pricing-table thead th:last-child .title {
     border-right: 0.0833em solid #4d4d4d; }
-  #document .gnio-framework .pricing-table tbody td .icon, #document .gnio-framework .pricing-table tbody td .menu-empresa h1:after, .menu-empresa #document .gnio-framework .pricing-table tbody td h1:after {
+  #document .gnio-framework .pricing-table tbody td .icon, #document .gnio-framework .pricing-table tbody td #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .pricing-table tbody td h1:after {
     margin-top: 0; }
   #document .gnio-framework .pricing-table td {
     padding-top: 1.4166em;
@@ -4025,7 +4085,7 @@ footer {
     margin-left: 1em; }
   #document .gnio-framework .comments > .list > .item.replied .reply .replier + .reply {
     margin-left: 1em; }
-  #document .gnio-framework .comments > .list > .item.replied .reply .replier .icon, #document .gnio-framework .comments > .list > .item.replied .reply .replier .menu-empresa h1:after, .menu-empresa #document .gnio-framework .comments > .list > .item.replied .reply .replier h1:after {
+  #document .gnio-framework .comments > .list > .item.replied .reply .replier .icon, #document .gnio-framework .comments > .list > .item.replied .reply .replier #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .comments > .list > .item.replied .reply .replier h1:after {
     left: 0;
     top: -1em; }
   #document .gnio-framework .comments > .list > .item aside.commenter {
@@ -4124,7 +4184,7 @@ footer {
       margin-right: 0; }
     #document .gnio-framework .input-wrapper.multiple .button, #document .gnio-framework .input-wrapper.multiple button {
       width: 25%; }
-      #document .gnio-framework .input-wrapper.multiple .button .icon, #document .gnio-framework .input-wrapper.multiple .button .menu-empresa h1:after, .menu-empresa #document .gnio-framework .input-wrapper.multiple .button h1:after, #document .gnio-framework .input-wrapper.multiple button .icon, #document .gnio-framework .input-wrapper.multiple button .menu-empresa h1:after, .menu-empresa #document .gnio-framework .input-wrapper.multiple button h1:after {
+      #document .gnio-framework .input-wrapper.multiple .button .icon, #document .gnio-framework .input-wrapper.multiple .button #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.multiple .button h1:after, #document .gnio-framework .input-wrapper.multiple button .icon, #document .gnio-framework .input-wrapper.multiple button #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .input-wrapper.multiple button h1:after {
         float: none; }
     #document .gnio-framework .input-wrapper.multiple .input, #document .gnio-framework .input-wrapper.multiple input[type="text"], #document .gnio-framework .input-wrapper.multiple .input:focus, #document .gnio-framework .input-wrapper.multiple input[type="text"]:focus {
       width: 75%; }
@@ -4134,7 +4194,7 @@ footer {
       width: 100%; }
       #document .gnio-framework .menu.vertical.docked > .item > .link .title, #document .gnio-framework .menu-list.vertical.docked > .item > .link .title {
         text-indent: 0; }
-      #document .gnio-framework .menu.vertical.docked > .item > .link .icon, #document .gnio-framework .menu.vertical.docked > .item > .link .menu-empresa h1:after, .menu-empresa #document .gnio-framework .menu.vertical.docked > .item > .link h1:after, #document .gnio-framework .menu-list.vertical.docked > .item > .link .icon, #document .gnio-framework .menu-list.vertical.docked > .item > .link .menu-empresa h1:after, .menu-empresa #document .gnio-framework .menu-list.vertical.docked > .item > .link h1:after {
+      #document .gnio-framework .menu.vertical.docked > .item > .link .icon, #document .gnio-framework .menu.vertical.docked > .item > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu.vertical.docked > .item > .link h1:after, #document .gnio-framework .menu-list.vertical.docked > .item > .link .icon, #document .gnio-framework .menu-list.vertical.docked > .item > .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .menu-list.vertical.docked > .item > .link h1:after {
         display: block; }
     #document .gnio-framework .scrollup {
       bottom: 3.5em;
@@ -4269,7 +4329,7 @@ footer {
     font-size: 85%; }
   #document .gnio-framework .pricing-table thead th:last-child .title {
     border-right: 0.0833em solid #4d4d4d; }
-  #document .gnio-framework .pricing-table tbody td .icon, #document .gnio-framework .pricing-table tbody td .menu-empresa h1:after, .menu-empresa #document .gnio-framework .pricing-table tbody td h1:after {
+  #document .gnio-framework .pricing-table tbody td .icon, #document .gnio-framework .pricing-table tbody td #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .pricing-table tbody td h1:after {
     margin-top: 0; }
   #document .gnio-framework .pricing-table td {
     padding-top: 1.4166em;
@@ -4321,7 +4381,7 @@ footer {
     margin-left: 1em; }
   #document .gnio-framework .comments > .list > .item.replied .reply .replier + .reply {
     margin-left: 1em; }
-  #document .gnio-framework .comments > .list > .item.replied .reply .replier .icon, #document .gnio-framework .comments > .list > .item.replied .reply .replier .menu-empresa h1:after, .menu-empresa #document .gnio-framework .comments > .list > .item.replied .reply .replier h1:after {
+  #document .gnio-framework .comments > .list > .item.replied .reply .replier .icon, #document .gnio-framework .comments > .list > .item.replied .reply .replier #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .comments > .list > .item.replied .reply .replier h1:after {
     left: 0;
     top: -1em; }
   #document .gnio-framework .comments > .list > .item aside.commenter {
@@ -10470,7 +10530,7 @@ a.uk-datepicker-table-muted {
 #document .gnio-framework .uikit-component .uikit-dropdown .uk-dropdown-up {
   margin-bottom: 0; }
 
-#document .gnio-framework .uikit-component .uikit-dropdown .uikit-trigger .icon, #document .gnio-framework .uikit-component .uikit-dropdown .uikit-trigger .menu-empresa h1:after, .menu-empresa #document .gnio-framework .uikit-component .uikit-dropdown .uikit-trigger h1:after {
+#document .gnio-framework .uikit-component .uikit-dropdown .uikit-trigger .icon, #document .gnio-framework .uikit-component .uikit-dropdown .uikit-trigger #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uikit-component .uikit-dropdown .uikit-trigger h1:after {
   margin-top: 0.3333em; }
 
 #document .gnio-framework .uikit-component .uk-dropdown {
@@ -10493,7 +10553,7 @@ a.uk-datepicker-table-muted {
   padding-bottom: 0.6em;
   border-left: 0.0833em solid rgba(77, 77, 77, 0.25); }
 
-#document .gnio-framework .uikit-component.uk-button-group .uikit-dropdown .uikit-trigger .icon, #document .gnio-framework .uikit-component.uk-button-group .uikit-dropdown .uikit-trigger .menu-empresa h1:after, .menu-empresa #document .gnio-framework .uikit-component.uk-button-group .uikit-dropdown .uikit-trigger h1:after {
+#document .gnio-framework .uikit-component.uk-button-group .uikit-dropdown .uikit-trigger .icon, #document .gnio-framework .uikit-component.uk-button-group .uikit-dropdown .uikit-trigger #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uikit-component.uk-button-group .uikit-dropdown .uikit-trigger h1:after {
   margin: 0.1666em 0; }
 
 #document .gnio-framework .uikit-component.uk-button-group .uikit-dropdown.uk-open .uikit-trigger {
@@ -10674,11 +10734,11 @@ a.uk-datepicker-table-muted {
 #document .gnio-framework .uikit-component .uk-nav .uk-parent.uk-open > div {
   height: 100% !important; }
 
-#document .gnio-framework .uikit-component .uk-nav .uk-parent > a .icon, #document .gnio-framework .uikit-component .uk-nav .uk-parent > a .menu-empresa h1:after, .menu-empresa #document .gnio-framework .uikit-component .uk-nav .uk-parent > a h1:after {
+#document .gnio-framework .uikit-component .uk-nav .uk-parent > a .icon, #document .gnio-framework .uikit-component .uk-nav .uk-parent > a #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uikit-component .uk-nav .uk-parent > a h1:after {
   margin-left: 5px;
   margin-top: 5px; }
 
-#document .gnio-framework .uikit-component .uk-nav .uk-parent > a .icon.main, #document .gnio-framework .uikit-component .uk-nav .uk-parent > a .menu-empresa h1.main:after, .menu-empresa #document .gnio-framework .uikit-component .uk-nav .uk-parent > a h1.main:after {
+#document .gnio-framework .uikit-component .uk-nav .uk-parent > a .icon.main, #document .gnio-framework .uikit-component .uk-nav .uk-parent > a #main-header .menu-empresa .wrapper h1.main:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uikit-component .uk-nav .uk-parent > a h1.main:after {
   margin-left: 0; }
 
 #document .gnio-framework .uikit-component .uk-nav .uk-nav-sub {
@@ -10732,7 +10792,7 @@ a.uk-datepicker-table-muted {
     cursor: pointer; }
   #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] {
     cursor: default; }
-    #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .icon, #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa h1:after, .menu-empresa #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after {
+    #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .icon, #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uikit-component .uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after {
       margin-top: 5px; }
   #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-active > a, #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-active > a:hover, #document .gnio-framework .uikit-component .uk-navbar .uk-navbar-nav > li.uk-active > a:active {
     color: #6eba4a;
@@ -10898,55 +10958,193 @@ a.uk-datepicker-table-muted {
         }
     }
 }*/
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .input-wrapper.with-icon.uk-form-password .input {
+  padding-right: 3em;
+  padding-left: 4em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .input-wrapper > a.uk-form-password-toggle {
+  right: auto;
+  left: 0.62em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-search:after {
+  left: auto;
+  right: 0.4166em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-search-close {
+  right: auto;
+  left: 0; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-search-field {
+  margin-left: 0; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab > li {
+  float: right; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-left > li, #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-right > li {
+  float: none; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-left {
+  border-right: none;
+  border-left: 0.0833em solid #f4f4f4; }
+  #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-left > li {
+    margin-right: 0;
+    margin-left: -1px; }
+  #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-left > li > a {
+    border-left: none;
+    border-right-width: 0.0833em; }
+  #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-left > li.uk-active > a {
+    border-right: 0.0833em solid #f4f4f4; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-right {
+  border-left: none;
+  border-right: 0.0833em solid #f4f4f4; }
+  #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-right > li {
+    margin-left: 0;
+    margin-right: -1px; }
+  #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-right > li > a {
+    border-right: none;
+    border-left-width: 0.0833em; }
+  #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-tab.uk-tab-right > li.uk-active > a {
+    border-left: 0.0833em solid #f4f4f4; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .switcher-tabs.right {
+  margin-right: 1em;
+  margin-left: 0; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-progress-striped.uk-active .uk-progress-bar {
+  animation: uk-progress-bar-stripes-inverted 2s linear infinite;
+  -moz-animation: uk-progress-bar-stripes-inverted 2s linear infinite;
+  -webkit-animation: uk-progress-bar-stripes-inverted 2s linear infinite; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component.uk-button-group > .button {
+  float: right; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component.uk-button-group .uikit-dropdown .uikit-trigger {
+  border-left: none;
+  border-right: 0.0833em solid rgba(77, 77, 77, 0.25); }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-nestable .uk-nestable-list {
+  padding-left: 0;
+  padding-right: 3em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-nestable .uk-nestable-item .content {
+  padding-left: 1em;
+  padding-right: 0; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-nestable .uk-nestable-item .toggle-nestable {
+  margin-left: 0.3333em;
+  margin-right: 0.5em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-nestable .uk-nestable-item .uk-nestable-handle {
+  margin-left: 0;
+  margin-right: 0.25em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-nav .uk-nav-sub .item a {
+  padding-left: 1em;
+  padding-right: 2em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-nav .uk-nav-sub .uk-parent .uk-nav-sub a {
+  padding-left: 2em;
+  padding-right: 3em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-navbar-nav {
+  float: right; }
+  #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-navbar-nav > li {
+    float: right; }
+    #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-navbar-nav > li.uk-parent .uk-dropdown {
+      left: auto; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-modal .uk-modal-dialog .uk-close {
+  float: left;
+  margin: -1em 0 0 -1em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .scrollspy-nav, #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .dotted-scrollspy-nav {
+  right: auto;
+  left: 1em; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-htmleditor .uk-htmleditor-navbar-nav {
+  float: right; }
+  #document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-htmleditor .uk-htmleditor-navbar-nav > li {
+    float: right; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-htmleditor .uk-htmleditor-navbar-flip {
+  float: left; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-htmleditor .uk-htmleditor-content .uk-htmleditor-code {
+  float: right;
+  border-right: none;
+  border-left: 0.0833em solid #f4f4f4; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uikit-component .uk-htmleditor .uk-htmleditor-content .uk-htmleditor-preview {
+  float: left; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uk-datepicker {
+  right: 0;
+  left: auto !important; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uk-pagination > li {
+  float: right; }
+
+#document .gnio-framework .uikit-component #document .gnio-framework.rtl .uk-notify .uk-notify-message a.uk-close {
+  float: left; }
+
+/*#document .gnio-framework .uikit-component { // Navigation
+    .uk-nav .uk-parent > a .icon {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+}*/
 /* Default Styles */
-#document .gnio-framework #main-header.uk-navbar {
+#document .gnio-framework #main-header {
   background-color: #6eba4a; }
-  #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li > a {
+  #document .gnio-framework #main-header .uk-navbar-nav > li > a {
     height: 70px;
     line-height: 70px;
     padding: 0px 1em;
     text-transform: uppercase; }
-  #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] {
+  #document .gnio-framework #main-header .uk-navbar-nav > li.uk-parent > a[href="#"] {
     cursor: default; }
-    #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .icon, #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa h1:after, .menu-empresa #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after {
+    #document .gnio-framework #main-header .uk-navbar-nav > li.uk-parent > a[href="#"] .icon, #document .gnio-framework #main-header .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after {
       position: relative; }
-      #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .icon .uk-badge, #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa h1:after .uk-badge, .menu-empresa #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after .uk-badge {
+      #document .gnio-framework #main-header .uk-navbar-nav > li.uk-parent > a[href="#"] .icon .uk-badge, #document .gnio-framework #main-header .uk-navbar-nav > li.uk-parent > a[href="#"] .menu-empresa .wrapper h1:after .uk-badge, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-navbar-nav > li.uk-parent > a[href="#"] h1:after .uk-badge {
         position: absolute;
         top: -8px;
         right: -5px;
         margin-top: 5px; }
-    #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon .icon, #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon .menu-empresa h1:after, .menu-empresa #document .gnio-framework #main-header.uk-navbar .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon h1:after {
+    #document .gnio-framework #main-header .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon .icon, #document .gnio-framework #main-header .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .uk-navbar-nav > li.uk-parent > a[href="#"] .with-icon h1:after {
       position: absolute; }
-
-.menu-empresa {
-  color: #4d4d4d;
-  cursor: pointer;
-  padding: 4px;
-  border-radius: 4px;
-  margin-left: 10px;
-  width: 350px;
-  height: 70px;
-  line-height: 70px; }
-  .menu-empresa .icon-stack {
-    float: left;
-    display: block;
-    margin-top: -5px;
-    margin-right: 10px; }
-  .menu-empresa h1 {
-    margin: 0px;
-    font-size: 12pt;
-    line-height: 1;
-    font-weight: 800; }
-  .menu-empresa h2 {
-    margin: 0px;
-    font-size: 8pt;
-    line-height: 1; }
-  .menu-empresa h1:after {
-    content: "";
-    margin-left: 5px;
-    font-weight: bold; }
-  .menu-empresa:hover {
-    /*background: darken(convertColor($mainBackground), 8);*/ }
+  #document .gnio-framework #main-header .menu-empresa {
+    color: #4d4d4d;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 10px;
+    width: auto;
+    height: 70px;
+    text-align: left;
+    min-width: 260px; }
+    #document .gnio-framework #main-header .menu-empresa .wrapper {
+      transform: translateY(50%); }
+      #document .gnio-framework #main-header .menu-empresa .wrapper .icon-stack {
+        float: left;
+        display: block;
+        margin-top: -5px;
+        margin-right: 10px; }
+      #document .gnio-framework #main-header .menu-empresa .wrapper h1 {
+        margin: 0px;
+        font-size: 12pt;
+        line-height: 1;
+        font-weight: 800; }
+      #document .gnio-framework #main-header .menu-empresa .wrapper h2 {
+        margin: 0px;
+        font-size: 8pt;
+        line-height: 1; }
+      #document .gnio-framework #main-header .menu-empresa .wrapper h1:after {
+        content: "";
+        margin-left: 5px;
+        font-weight: bold; }
+    #document .gnio-framework #main-header .menu-empresa:hover {
+      background: #5c9f3c; }
 
 /*////
 //// MOBILE
@@ -10964,16 +11162,16 @@ a.uk-datepicker-table-muted {
         width: 120px;
     }
 }*/
-.sidebar {
+#document .gnio-framework .sidebar {
   position: fixed;
-  width: 80px;
+  width: 85px;
   height: 100%;
   background-color: gray;
   left: 0px;
   padding-top: 70px; }
-  .sidebar .logo {
+  #document .gnio-framework .sidebar .logo {
     height: 70px;
-    width: 80px;
+    width: 85px;
     background-color: #4d4d4d;
     position: absolute;
     top: 0px;
@@ -10981,15 +11179,39 @@ a.uk-datepicker-table-muted {
     background-position: center center;
     background-repeat: no-repeat;
     padding: 0.75em 0; }
-  .sidebar ul.menu-list .item a {
-    background-color: none;
-    font-size: 10pt; }
+  #document .gnio-framework .sidebar .menu.vertical.uk-nav {
+    text-align: center; }
+    #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent:hover, #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent.uk-open {
+      background-color: #5a5a5a;
+      border-radius: 8px; }
+    #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub {
+      background-color: #676767; }
+      #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub li:hover, #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub li:active {
+        background-color: #737373; }
+      #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub .item a,
+      #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub .item .link {
+        text-align: left;
+        padding-left: 0px; }
+        #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub .item a .icon,
+        #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub .item a #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub .item a h1:after, #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub .item .link .icon, #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub .item .link #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .sidebar .menu.vertical.uk-nav .uk-parent .uk-nav-sub .item .link h1:after {
+          margin-left: 5px;
+          margin-right: 5px; }
+    #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent > a .icon, #document .gnio-framework .sidebar .menu.vertical.uk-nav .uk-parent > a #main-header .menu-empresa .wrapper h1:after, #document .gnio-framework #main-header .menu-empresa .wrapper .sidebar .menu.vertical.uk-nav .uk-parent > a h1:after {
+      margin: 0px; }
+    #document .gnio-framework .sidebar .menu.vertical.uk-nav .item a {
+      background-color: transparent !important;
+      font-size: 8pt;
+      color: #fff; }
+      #document .gnio-framework .sidebar .menu.vertical.uk-nav .item a:hover, #document .gnio-framework .sidebar .menu.vertical.uk-nav .item a:active {
+        background-color: #676767; }
+      #document .gnio-framework .sidebar .menu.vertical.uk-nav .item a .icon-stack {
+        font-size: 15pt; }
 
 /* Color Scheme */
 /* Clearfixes */
 /* Default Styles */
 #document .gnio-framework {
-  margin-left: 80px; }
+  margin-left: 85px; }
   #document .gnio-framework #main-content {
     min-height: 800px; }
     #document .gnio-framework #main-content h1 {

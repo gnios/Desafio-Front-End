@@ -219,10 +219,17 @@
 // Vars
 $icon-var-angle-down:"\f101";
 $icon-var-bell-o:"\f102";
-$icon-var-circle:"\f103";
-$icon-var-sign-out:"\f104";
-$icon-var-stop:"\f105";
-$icon-var-user:"\f106";
+$icon-var-circle-o:"\f103";
+$icon-var-circle-thin:"\f104";
+$icon-var-circle:"\f105";
+$icon-var-comment-o:"\f106";
+$icon-var-ellipsis-h:"\f107";
+$icon-var-filter:"\f108";
+$icon-var-question-circle:"\f109";
+$icon-var-question:"\f10a";
+$icon-var-sign-out:"\f10b";
+$icon-var-stop:"\f10c";
+$icon-var-user:"\f10d";
 // Icons
 
 
@@ -236,21 +243,56 @@ $icon-var-user:"\f106";
 }
 
 
-.icon-circle:before {
+.icon-circle-o:before {
 	content:"\f103";
 }
 
 
-.icon-sign-out:before {
+.icon-circle-thin:before {
 	content:"\f104";
 }
 
 
-.icon-stop:before {
+.icon-circle:before {
 	content:"\f105";
 }
 
 
-.icon-user:before {
+.icon-comment-o:before {
 	content:"\f106";
+}
+
+
+.icon-ellipsis-h:before {
+	content:"\f107";
+}
+
+
+.icon-filter:before {
+	content:"\f108";
+}
+
+
+.icon-question-circle:before {
+	content:"\f109";
+}
+
+
+.icon-question:before {
+	content:"\f10a";
+}
+
+
+.icon-sign-out:before {
+	content:"\f10b";
+}
+
+
+.icon-stop:before {
+	content:"\f10c";
+}
+
+
+.icon-user:before {
+	content:"\f10d";
 }
