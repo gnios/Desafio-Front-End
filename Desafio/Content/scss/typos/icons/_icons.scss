@@ -36,6 +36,11 @@
 	-moz-osx-font-smoothing:grayscale;
 }
 
+     
+.icon-with-margin-right {
+	margin-right:10px;
+  }
+
 // makes the font 33% larger relative to the icon container
   /* Size modifiers
    ========================================================================== */
@@ -218,18 +223,23 @@
 
 // Vars
 $icon-var-angle-down:"\f101";
-$icon-var-bell-o:"\f102";
-$icon-var-circle-o:"\f103";
-$icon-var-circle-thin:"\f104";
-$icon-var-circle:"\f105";
-$icon-var-comment-o:"\f106";
-$icon-var-ellipsis-h:"\f107";
-$icon-var-filter:"\f108";
-$icon-var-question-circle:"\f109";
-$icon-var-question:"\f10a";
-$icon-var-sign-out:"\f10b";
-$icon-var-stop:"\f10c";
-$icon-var-user:"\f10d";
+$icon-var-angle-right:"\f102";
+$icon-var-arrow-right:"\f103";
+$icon-var-bell-o:"\f104";
+$icon-var-circle-o:"\f105";
+$icon-var-circle-thin:"\f106";
+$icon-var-circle:"\f107";
+$icon-var-comment-o:"\f108";
+$icon-var-ellipsis-h:"\f109";
+$icon-var-filter:"\f10a";
+$icon-var-home:"\f10b";
+$icon-var-info-circle:"\f10c";
+$icon-var-info:"\f10d";
+$icon-var-question-circle:"\f10e";
+$icon-var-question:"\f10f";
+$icon-var-sign-out:"\f110";
+$icon-var-stop:"\f111";
+$icon-var-user:"\f112";
 // Icons
 
 
@@ -238,61 +248,86 @@ $icon-var-user:"\f10d";
 }
 
 
-.icon-bell-o:before {
+.icon-angle-right:before {
 	content:"\f102";
 }
 
 
-.icon-circle-o:before {
+.icon-arrow-right:before {
 	content:"\f103";
 }
 
 
-.icon-circle-thin:before {
+.icon-bell-o:before {
 	content:"\f104";
 }
 
 
-.icon-circle:before {
+.icon-circle-o:before {
 	content:"\f105";
 }
 
 
-.icon-comment-o:before {
+.icon-circle-thin:before {
 	content:"\f106";
 }
 
 
-.icon-ellipsis-h:before {
+.icon-circle:before {
 	content:"\f107";
 }
 
 
-.icon-filter:before {
+.icon-comment-o:before {
 	content:"\f108";
 }
 
 
-.icon-question-circle:before {
+.icon-ellipsis-h:before {
 	content:"\f109";
 }
 
 
-.icon-question:before {
+.icon-filter:before {
 	content:"\f10a";
 }
 
 
-.icon-sign-out:before {
+.icon-home:before {
 	content:"\f10b";
 }
 
 
-.icon-stop:before {
+.icon-info-circle:before {
 	content:"\f10c";
 }
 
 
-.icon-user:before {
+.icon-info:before {
 	content:"\f10d";
+}
+
+
+.icon-question-circle:before {
+	content:"\f10e";
+}
+
+
+.icon-question:before {
+	content:"\f10f";
+}
+
+
+.icon-sign-out:before {
+	content:"\f110";
+}
+
+
+.icon-stop:before {
+	content:"\f111";
+}
+
+
+.icon-user:before {
+	content:"\f112";
 }

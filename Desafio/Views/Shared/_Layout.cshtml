@@ -15,160 +15,40 @@
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <div id="framework" class="framework uikit-component">
-        <div class="sidebar">
-            <span class="logo"></span>
-            <ul class="menu vertical uk-nav" data-uk-nav="{multiple: true}">
-                <li class="item uk-parent">
-                    <a title="abrir submenu ajuda" href="#">
-                        <span class="icon-stack icon-large">
-                            <i class="icon icon-circle-thin icon-stack-2x"></i>
-                            <i class="icon icon-question icon-stack-1x"></i>
-                        </span>
-                        Ajuda
-                    </a>
-                    <ul class="uk-nav-sub">
-                        <li class="item">
-                            <a title="Ajuda com a tela" class="link" href="#">
-                                <i class="icon icon-question-circle icon-medium"></i>
-                                Tela
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a title="Ajuda com os filtros" class="link" href="#">
-                                <i class="icon icon-question-circle icon-medium"></i>
-                                Filtros
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a title="Outras ajudas" class="link" href="#">
-                                <i class="icon icon-question-circle icon-medium"></i>
-                                Outros
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="item uk-parent">
-                    <a href="#">
-                        <span class="icon-stack icon-large">
-                            <i class="icon icon-comment-o icon-stack-2x"></i>
-                            <i class="icon icon-ellipsis-h icon-stack-1x"></i>
-                        </span>
-                        <span class="text">Contato</span>
-                    </a>
-                    @*<ul class="uk-nav-sub">
-                        <li class="item">
-                           
-                            <a title="Submenu Item" class="link" href="#"><i class="icon icon-question-circle icon-medium"></i>85 4005.1111</a>
-                        </li>
-                        <li class="item">
-                            <a title="Submenu Item" class="link" href="#"><i class="icon icon-question-circle icon-medium"></i>contato@grupofortes.com.br</a>
-                        </li>
-                    </ul>*@
-                </li>
-            </ul>
-            @*<ul class="menu-list vertical">
-                    <li class="item">
-                        <a title="Ajuda" class="link" href="#">Ajuda</a>
-                    </li>
+    <div id="framework" class="framework">
 
-                    <li class="item">
-                        <h1>
-                            Header with Icon
-                        </h1>
-                        <span class="icon-stack icon-large">
-                            <i class="icon icon-circle icon-stack-2x"></i>
-                            <i class="icon icon-user icon-stack-1x icon-inverse"></i>
-                        </span>
-
-                        <a title="Contato" class="link" href="#">Contato <span class="icon main left"></span></a>
-                    </li>
-                </ul>*@
-        </div>
-
-
-        <header id="main-header" class="uk-navbar">
-            <ul class="uk-navbar-nav uk-hidden-small">
-                <li class="uk-parent" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                    <div class="menu-empresa">
-                        <div class="wrapper">
-                            <span class="icon-stack icon-medium">
-                                <i class="icon icon-circle icon-stack-2x"></i>
-                                <i class="icon icon-user icon-stack-1x icon-inverse"></i>
-                            </span>
-
-                            <h1>Fortes Contabilidade</h1>
-                            <h2>Empresa de contabilidade</h2>
-                        </div>
-                    </div>
-
-                    <div class="uk-dropdown uk-dropdown-navbar">
-                        <ul class="uk-nav uk-nav-navbar">
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Another item</a></li>
-                            <li class="uk-nav-header">Header</li>
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Another item</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <li><a href="#">Separated item</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-
-            <a href="#offcanvas-1" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
-
-            <div class="uk-navbar-flip">
-
-                <a href="" class="uk-navbar-toggle uk-navbar-toggle-alt uk-visible-small"></a>
-
-                <ul class="uk-navbar-nav uk-hidden-small">
-                    <li><a href="#" title="sair"><i class="icon icon-bell-o  icon-medium"> <span class="uk-badge uk-badge-notification uk-badge-danger">8</span></i></a></li>
-                    <li><a href="#" title="sair"><i class="icon icon-sign-out icon-medium"></i></a></li>
-                </ul>
-            </div>
-
-        </header>
-        <ul class="menu breadcrumb">
-            <li class="item">
-                <a href="#" class="link" title="Go to Item 1">Item 1 <span class="icon"></span></a>
-            </li>
-            <li class="item">
-                <a href="#" class="link" title="Go to Item 2">Item 2 <span class="icon"></span></a>
-            </li>
-            <li class="item">
-                <a href="#" class="link" title="Go to Item 3">Item 3 <span class="icon"></span></a>
-            </li>
-            <li class="item active">
-                <span>Item 4</span>
-            </li>
-        </ul>]
-        <!-- MAIN HEADER ENDS HERE -->
+        @Html.Partial("_Sidebar")
+        @Html.Partial("_Header")
 
         <section id="main-section" class="section">
-            <!-- MAIN SECTION STARTS HERE -->
-            <div id="main-content" class="section-free">
-                @RenderBody()
+            <ul class="menu breadcrumb">
+                <li class="item">
+                    <a href="#" class="link" title="Go to Item 1"><i class="icon icon-home"></i> Inicio <i class="icon icon-angle-right"></i></a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link" title="Go to Item 2">Movimentacoes <i class="icon icon-angle-right"></i></a>
+                </li>
+                <li class="item active">
+                    <span>Contas a receber </span>
+                </li>
+            </ul>
+
+            <div class="uikit-component">
+                <div class="uk-button-group with-four-elements">
+                    <a class="uk-button" href="#"><i class="icon icon-home"></i> CADASTROS</a>
+                    <span class="divider"></span>
+                    <a class="uk-button" href="#"><i class="icon icon-home"></i> MOVIMENTACOES</a>
+                    <span class="divider"></span>
+                    <a class="uk-button" href="#"><i class="icon icon-home"></i> RELATORIOS</a>
+                    <span class="divider"></span>
+                    <a class="uk-button" href="#"><i class="icon icon-home"></i> CONFIGURACOES</a>
+
+                </div>
             </div>
+
+            @RenderBody()
         </section>
 
-        <footer id="main-footer" class="section-free">
-            <div class="wrapper">
-                <span class="copyright"><strong>Blackhole</strong> - Developed by <a href="mailto:alin@html5depot.com" title="Contact the Author">Alin Seba</a> and released under <a href="http://opensource.org/licenses/MIT" target="_blank" title="MIT License">MIT</a> license</span>
-                <ul class="list social with-background">
-                    <li class="item twitter">
-                        <a href="https://twitter.com/blackholesass" title="Twitter" data-uk-tooltip><span class="icon"></span></a>
-                    </li>
-                    <li class="item github">
-                        <a href="https://github.com/alinseba/blackhole" title="Github" data-uk-tooltip><span class="icon"></span></a>
-                    </li>
-                </ul>
-                <span class="version">
-                    <span class="name">version:</span>
-                    <strong class="value">1.11</strong>
-                </span>
-            </div>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

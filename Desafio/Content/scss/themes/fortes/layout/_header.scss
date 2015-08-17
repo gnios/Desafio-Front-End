@@ -8,11 +8,25 @@
         background-color: $accentColor;
 
         .uk-navbar-nav {
+            .uk-dropdown {
+            min-width:250px;
+            }
+
             > li > a {
                 height: $height-menu;
                 line-height: $height-menu;
                 padding: 0px 1em;
                 text-transform: uppercase;
+
+                &:hover, &:active {
+                    color: $mainColor;
+                    background: darken($accentColor, 8%);
+                }
+            }
+
+            > li.uk-parent.uk-open > a {
+                color: $mainColor;
+                background: darken($accentColor, 8%);
             }
 
             > li.uk-parent > a[href="#"] {
@@ -20,17 +34,22 @@
 
                 .icon {
                     position: relative;
-
-                    .uk-badge {
-                        position: absolute;
-                        top: -8px;
-                        right: -5px;
-                        margin-top: 5px;
-                    }
                 }
 
                 .with-icon .icon {
                     position: absolute;
+                }
+
+                .uk-badge {
+                    position: absolute;
+                    top: -7px;
+                    right: -6px;
+                    margin-top: 5px;
+                }
+
+                &:hover, &:active, {
+                    color: $mainColor;
+                    background: darken($accentColor, 8%);
                 }
             }
         }
@@ -80,6 +99,7 @@
             }
 
             &:hover {
+                @include transition($defaultTransition);
                 background: darken($accentColor, 8%);
             }
         }

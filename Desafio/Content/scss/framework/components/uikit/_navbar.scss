@@ -1,54 +1,68 @@
-﻿#{$documentID} #{$frameworkClass} .uikit-component {// Navbar
-	.uk-navbar {
-		background-color: $elementsBackground;
-		.uk-navbar-nav {
-			.uk-nav-divider {
-				border-top-color: $elementsBackground2;
-			}
-			> li > a {
-				height: auto;
-				line-height: $lineHeight;
-				font-family: $fontFamily;
-				font-size: $fontSize;
-				font-weight: $thickFontWeight;
-				padding: 0.75em 1em;
-				text-transform: uppercase;
-				color: $mainColor;
-				&:hover, &:active {
-					color: $accentColor;
-					background-color: rgba( $negativeColor, 0.75);
-				}
-			}
-			> li > a[href="#"] {
-				cursor: pointer;
-			}
-			> li.uk-parent > a[href="#"] {
-				cursor: default;
-				.icon {
-					margin-top: 5px;
-				}
-			}
-			> li.uk-active > a, > li.uk-active > a:hover, > li.uk-active > a:active {
-				color: $accentColor;
-				background-color: rgba( $negativeColor, 0.5);
-			}
-			> li.uk-parent.uk-open > a {
-				color: $accentColor;
-				background-color: rgba( $negativeColor, 0.75);
-			}
-			> li.uk-parent .uk-dropdown {
-				background-color: $elementsBackground;
-				li a {
-					color: $mainColor;
-					background-color: $elementsBackground;
-					text-transform: none;
-					font-weight: $fontWeight;
-					&:hover, &:active {
-						color: $accentColor;
-						background-color: rgba( $negativeColor, 0.75);
-					}
-				}
-			}
-		}
-	}
+﻿#{$documentID} #{$frameworkClass} .uikit-component { // Navbar
+    .uk-navbar {
+        background-color: $elementsBackground;
+
+        .uk-navbar-nav {
+            .uk-nav-divider {
+                border-top-color: $elementsBackground2;
+            }
+
+            > li > a {
+                height: auto;
+                line-height: $lineHeight;
+                font-family: $fontFamily;
+                font-size: $fontSize;
+                font-weight: $thickFontWeight;
+                padding: 0.75em 1em;
+                text-transform: uppercase;
+                color: $mainColor;
+
+                &:hover, &:active {
+                    color: $accentColor;
+                    background-color: rgba( $negativeColor, 0.75);
+                }
+            }
+
+            > li > a[href="#"] {
+                cursor: pointer;
+            }
+
+            > li.uk-parent > a[href="#"] {
+                cursor: default;
+
+                .icon {
+                    margin-top: 5px;
+                }
+            }
+
+            > li.uk-active > a, > li.uk-active > a:hover, > li.uk-active > a:active {
+                color: $accentColor;
+                background-color: rgba( $negativeColor, 0.5);
+            }
+
+            > li.uk-parent.uk-open > a {
+                color: $accentColor;
+                background-color: rgba( $negativeColor, 0.75);
+            }
+
+            > li.uk-parent .uk-dropdown {
+                background-color: $elementsBackground;
+                @include border-radius(8px);
+                @include box-shadow(5px 5px 20px lighten( $mainColor, 50% ));
+                border: $borderElements;
+
+                li a {
+                    color: $linkColor;
+                    background-color: $elementsBackground;
+                    text-transform: none;
+                    font-weight: $fontWeight;
+
+                    &:hover, &:active {
+                        color: $linkColor;
+                        background-color: $elementsHoverBackground;
+                    }
+                }
+            }
+        }
     }
+}

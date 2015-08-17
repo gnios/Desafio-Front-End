@@ -19,10 +19,10 @@
 @import "uikit/_html-editor.scss";
 
 
-/*#{$documentID} #{$frameworkClass} #main-section .uikit-component {
+#{$documentID} #{$frameworkClass} #main-section .uikit-component {
     display: inline-block;
     width: 100%;
-}*/
+}
 
 @import "uikit/_notify.scss";
 @import "uikit/_datepicker.scss";

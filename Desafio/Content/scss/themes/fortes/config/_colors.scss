@@ -5,15 +5,19 @@
 $mainColor: #4d4d4d;
 $accentColor: #6eba4a;
 
-$linkColor: #fff;
-$negativeColor: #4d4d4d;
-$blackColor: #808080;
+$linkColor: lighten( $mainColor, 20% );
+$elementsBackground: lighten( $mainColor, 65.5% );
+$elementsHoverBackground: lighten( $mainColor, 60% );
+
+$borderElements:1px solid $elementsHoverBackground;
+
+$negativeColor: #fff;
+$blackColor: #fff;
 $buttonColor: #fff;
 $mainBackground: #fff;
 
 // Secondary Colors
 
-$elementsBackground: #f4f4f4;
 $elementsActionBackground: #f4f4f4;
 $elementsBackground2: #f4f4f4;
 
@@ -32,3 +36,5 @@ $infoBack: #fff;
 $neutralBack: #fff;
 $complementaryColor: #fff;
 
+$height-menu:70px;
+$sidebar-width:85px;

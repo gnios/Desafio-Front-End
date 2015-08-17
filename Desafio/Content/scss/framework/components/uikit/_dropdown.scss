@@ -1,66 +1,66 @@
 ﻿#{$documentID} #{$frameworkClass} .uikit-component {
-    // Dropdown
-    .uikit-dropdown {
-        .uk-dropdown-up {
-            margin-bottom: 0;
-        }
+	// Dropdown
+	.uikit-dropdown {
+		.uk-dropdown-up {
+			margin-bottom: 0;
+		}
 
-        .uikit-trigger {
-            .icon {
-                margin-top: 0.3333em;
-            }
-        }
-    }
+		.uikit-trigger {
+			.icon {
+				margin-top: 0.3333em;
+			}
+		}
+	}
 
-    .uk-dropdown {
-        margin-top: 0;
-        padding: 0;
-        width: 100%;
-        min-width: 200px;
-        font-size: $fontSize;
-        color: $mainColor;
-        background-color: $negativeColor;
+	.uk-dropdown {
+		margin-top: 0;
+		padding: 0;
+		width: 100%;
+		min-width: 200px;
+		font-size: $fontSize;
+		color: $mainColor;
+		background-color: $negativeColor;
 
-        .uk-nav {
-            margin: 0;
-        }
-    }
+		.uk-nav {
+			margin: 0;
+		}
+	}
 
-    > .button + .uikit-dropdown {
-        float: none;
-    }
+	> .button + .uikit-dropdown {
+		float: none;
+	}
 
-    &.uk-button-group {
-        .uikit-dropdown {
-            .uikit-trigger {
-                margin-bottom: -0.4166em;
-                padding-top: 0.5833em;
-                padding-bottom: 0.6em;
-                border-left: 0.0833em solid rgba( $negativeColor, 0.25);
-            }
+	&.uk-button-group {
+		.uikit-dropdown {
+			.uikit-trigger {
+				margin-bottom: -0.4166em;
+				padding-top: 0.5833em;
+				padding-bottom: 0.6em;
+				border-left: 0.0833em solid rgba( $negativeColor, 0.25);
+			}
 
-            .uikit-trigger .icon {
-                margin: 0.1666em 0;
-            }
+			.uikit-trigger .icon {
+				margin: 0.1666em 0;
+			}
 
-            &.uk-open {
-                .uikit-trigger {
-                    margin-bottom: -0.5em;
-                }
-            }
-        }
+			&.uk-open {
+				.uikit-trigger {
+					margin-bottom: -0.5em;
+				}
+			}
+		}
 
-        > .button {
-            float: left;
-            padding-right: 0;
-        }
-    }
+		> .button {
+			float: left;
+			padding-right: 0;
+		}
+	}
 }
 
 // Dropdown
 #{$documentID} #{$frameworkClass} .uk-dropdown {
-    color: $mainColor;
-    background-color: $negativeColor;
+	color: $mainColor;
+	background-color: $negativeColor;
 }
 
 // UIKit Dropdown

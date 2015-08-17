@@ -259,8 +259,10 @@
     <Content Include="Content\scss\themes\fortes\layout\_main.scss" />
     <Content Include="Content\scss\themes\fortes\layout\_sidebar.scss" />
     <Content Include="Content\scss\themes\fortes\layout\_variables.scss" />
-    <Content Include="Content\scss\themes\fortes\components\_vertical-menu.scss" />
     <Content Include="Content\scss\themes\fortes\components\_navigation.scss" />
+    <Content Include="Content\scss\themes\fortes\components\components.scss" />
+    <Content Include="Content\scss\themes\fortes\components\_breadcrumb.scss" />
+    <Content Include="Content\scss\themes\fortes\components\_buttons.scss" />
     <None Include="Scripts\jquery\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jq-dropdown\jquery.dropdown.js" />
     <Content Include="Scripts\jq-dropdown\jquery.dropdown.min.js" />
@@ -298,6 +300,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\_Sidebar.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

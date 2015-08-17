@@ -9,6 +9,7 @@
         background-color: lighten( $mainColor, 20% );
         left: 0px;
         padding-top: $height-menu;
+        font-weight:normal;
 
         .logo {
             height: $height-menu;
@@ -21,20 +22,21 @@
             background-repeat: no-repeat;
             padding: 0.75em 0;
         }
-        
+
         .menu.vertical.uk-nav {
             text-align: center;
 
             .uk-parent {
                 &:hover, &.uk-open {
                     background-color: lighten($mainColor, 5%);
-                     border-radius: 8px;
+                    @include transition($defaultTransition);
                 }
 
                 .uk-nav-sub {
                     background-color: lighten($mainColor, 10%);
 
                     li:hover, li:active {
+                        @include transition($defaultTransition);
                         background-color: lighten($mainColor, 15%);
                     }
 
