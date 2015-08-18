@@ -3,7 +3,7 @@
 
 #{$documentID} #{$frameworkClass} {
     .sidebar {
-        position: fixed;
+        position: absolute;
         width: $sidebar-width;
         height: 100%;
         background-color: lighten( $mainColor, 20% );

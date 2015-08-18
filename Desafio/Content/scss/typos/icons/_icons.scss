@@ -235,11 +235,17 @@ $icon-var-filter:"\f10a";
 $icon-var-home:"\f10b";
 $icon-var-info-circle:"\f10c";
 $icon-var-info:"\f10d";
-$icon-var-question-circle:"\f10e";
-$icon-var-question:"\f10f";
-$icon-var-sign-out:"\f110";
-$icon-var-stop:"\f111";
-$icon-var-user:"\f112";
+$icon-var-pencil-square-o:"\f10e";
+$icon-var-pencil:"\f10f";
+$icon-var-plus:"\f110";
+$icon-var-question-circle:"\f111";
+$icon-var-question:"\f112";
+$icon-var-sign-out:"\f113";
+$icon-var-stop:"\f114";
+$icon-var-trash-o:"\f115";
+$icon-var-trash:"\f116";
+$icon-var-user---Copy:"\f117";
+$icon-var-user:"\f118";
 // Icons
 
 
@@ -308,26 +314,56 @@ $icon-var-user:"\f112";
 }
 
 
-.icon-question-circle:before {
+.icon-pencil-square-o:before {
 	content:"\f10e";
 }
 
 
-.icon-question:before {
+.icon-pencil:before {
 	content:"\f10f";
 }
 
 
-.icon-sign-out:before {
+.icon-plus:before {
 	content:"\f110";
 }
 
 
-.icon-stop:before {
+.icon-question-circle:before {
 	content:"\f111";
 }
 
 
-.icon-user:before {
+.icon-question:before {
 	content:"\f112";
+}
+
+
+.icon-sign-out:before {
+	content:"\f113";
+}
+
+
+.icon-stop:before {
+	content:"\f114";
+}
+
+
+.icon-trash-o:before {
+	content:"\f115";
+}
+
+
+.icon-trash:before {
+	content:"\f116";
+}
+
+
+.icon-user---Copy:before {
+	content:"\f117";
+}
+
+
+.icon-user:before {
+	content:"\f118";
 }

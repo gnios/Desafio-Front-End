@@ -1,0 +1,95 @@
+﻿/// <reference path="../config/config.scss" />
+/// <reference path="../typos/icons/icons.scss" />
+
+
+/* Box */
+#{$frameworkClass} .slide-panel {
+    position: relative;
+
+
+    .slide-content {
+        position: absolute;
+        top: 0px;
+        background-color: $elementsBackground;
+        z-index: 1000;
+        margin-top: 0;
+        padding: 0;
+        width: 100%;
+        min-width: 200px;
+        font-size: $fontSize;
+        color: $mainColor;
+        display: none;
+
+        .box {
+            width: 25%;
+            position: relative;
+            font-size: 10pt;
+
+            .uikit-dropdown {
+                clear:both;
+
+                .uk-dropdown {
+                    top: 35px;
+                }
+            }
+
+            .uk-badge-notification {
+                min-height: 10px;
+                min-width: 10px;
+                font-size: 10px;
+                margin-top: -3px;
+            }
+
+            .content {
+                padding: 1em;
+            }
+
+            > header, > footer {
+                padding: 0.75em 1em;
+                line-height: 2;
+                border-bottom: $borderElements;
+
+                .divider {
+                    border-right: $borderElements;
+                    margin-top: 8px;
+                    height: 15px;
+                    width: 1px;
+                    position: absolute;
+                    right: 0px;
+                }
+            }
+
+            > header {
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+
+                > .trigger {
+                    padding: 0.5em;
+                }
+            }
+
+            > header, &.slide.active > header {
+                font-size: 10pt;
+                color: $textColor;
+                background-color: $elementsBackground;
+            }
+
+            > footer {
+                padding-top: 0.25em;
+                padding-bottom: 0.25em;
+                color: rgba( $negativeColor, 0.5 );
+                background-color: $complementaryColor;
+            }
+
+            .scroll {
+                max-height: 10em;
+            }
+
+            &.slide {
+                header {
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

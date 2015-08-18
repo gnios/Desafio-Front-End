@@ -132,7 +132,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
     <Folder Include="Content\scss\framework\vendor\plugins\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -140,19 +139,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\ContasReceberController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ContasReceber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\ContasReceber\ContasReceberViewModel.js" />
     <Content Include="Content\css\fonts\icons.html" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\imgs\logo.png" />
     <Content Include="Content\css\fonts\icons.ttf" />
     <Content Include="Content\css\fonts\icons.woff" />
     <Content Include="Content\scss\typos\icons\icons.html" />
+    <Content Include="Content\scss\typos\icons\svg\angle-down - Copy.svg" />
     <Content Include="Content\scss\typos\icons\svg\angle-down.svg" />
     <Content Include="Content\scss\typos\icons\svg\bell-o.svg" />
     <Content Include="Content\scss\typos\icons\svg\circle.svg" />
@@ -263,9 +265,14 @@
     <Content Include="Content\scss\themes\fortes\components\components.scss" />
     <Content Include="Content\scss\themes\fortes\components\_breadcrumb.scss" />
     <Content Include="Content\scss\themes\fortes\components\_buttons.scss" />
+    <Content Include="Content\scss\themes\fortes\components\_filter.scss" />
+    <Content Include="Content\scss\themes\fortes\components\_slide-panel.scss" />
     <None Include="Scripts\jquery\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\framework\slide-panel\main.js" />
     <Content Include="Scripts\jq-dropdown\jquery.dropdown.js" />
     <Content Include="Scripts\jq-dropdown\jquery.dropdown.min.js" />
+    <Content Include="Scripts\jquery-slidePanel\jquery-slidePanel.js" />
+    <Content Include="Scripts\jquery-slidePanel\jquery-slidePanel.min.js" />
     <Content Include="Scripts\jquery\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery\jquery-1.10.2.min.js" />
     <Content Include="Scripts\knockout\knockout-3.3.0.debug.js" />
