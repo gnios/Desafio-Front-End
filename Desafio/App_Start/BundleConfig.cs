@@ -21,7 +21,8 @@ namespace Desafio
                       "~/Scripts/jq-dropdown/jquery.dropdown.min.js",
                       "~/Scripts/uikit/uikit.min.js",
                       "~/Scripts/blackhole/main.js",
-                       "~/Scripts/jquery-slidePanel/jquery-slidePanel.min.js"));
+                       "~/Scripts/underscore/underscore.js",
+                       "~/Scripts/framework/main.js"));
 
             bundles.Add(new StyleBundle("~/bundles/css")
                 .Include("~/Content/css/site.css"));

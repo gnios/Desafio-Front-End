@@ -11,60 +11,76 @@
             min-height: 1.5em;
             color: $negativeColor;
         }
+
         &.box-shadow {
             @include box-shadow($customOutsetBoxShadow2);
         }
     }
+
     img.icon {
         margin: 0;
         width: 128px;
         height: 128px;
+
         &.x-small {
             width: 64px;
             height: 64px;
         }
+
         &.small {
             width: 96px;
             height: 96px;
         }
+
         &.medium {
             width: 180px;
             height: 180px;
         }
+
         &.x-medium {
             width: 240px;
             height: 240px;
         }
+
         &.big {
             width: 320px;
             height: 320px;
         }
+
         &.x-big {
             width: 480px;
             height: 480px;
         }
     }
+
     img {
         &.map {
             min-height: inherit;
         }
+
         &.retina {
             height: 115px;
+
             &.x-small {
                 height: 57px;
             }
+
             &.small {
                 height: 85px;
             }
+
             &.medium {
                 height: 160px;
             }
+
             &.x-medium {
                 height: 213px;
             }
+
             &.big {
                 height: 284px;
             }
+
             &.x-big {
                 height: 426px;
             }
@@ -78,66 +94,76 @@
     .left {
         float: left;
     }
+
     .right {
         float: right;
     }
-
     // Spaces
     .spaced {
         margin: 1.5em 0;
+
         .item {
             margin: 1.5em 0;
         }
     }
+
     .no-margin {
         margin: 0;
     }
+
     .no-padding {
         padding: 0;
     }
-
     // Widths
     .full-width {
         width: 100%;
     }
+
     .third-width {
         width: 75%;
     }
+
     .half-width {
         width: 50%;
     }
+
     .quarter-width {
         width: 25%;
     }
+
     .small-width {
         width: 15%;
     }
-
     // Sizes
     .x-small {
         font-size: 50%;
     }
+
     .small {
         font-size: 75%;
     }
+
     .medium {
         font-size: 150%;
     }
+
     .x-medium {
         font-size: 200%;
     }
+
     .big {
         font-size: 300%;
     }
+
     .x-big {
         font-size: 400%;
     }
-
     // Others
     .description {
         display: block;
         font-size: 85%;
     }
+
     .close {
         color: $negativeColor !important;
         float: right;
@@ -145,22 +171,27 @@
         margin: 0.1666em -0.25em 0 0;
         padding: 0.3333em 0.5em;
         background: rgba( $negativeColor, .1 );
+
         &:hover, &:active {
             color: $negativeColor;
             background: $errorColor;
         }
     }
+
     .closed {
         display: none !important;
     }
+
     .message .close {
         color: rgba( $blackColor, 0.25 );
-        background-color: rgba( $blackColor,  0.05);
+        background-color: rgba( $blackColor, 0.05);
+
         &:hover, &:active {
             color: $negativeColor;
-            background-color: rgba( $blackColor,  0.15);
+            background-color: rgba( $blackColor, 0.15);
         }
     }
+
     .collapse {
         color: $negativeColor !important;
         float: right;
@@ -168,28 +199,35 @@
         margin: 0.1666em -0.25em 0 0;
         padding: 0.3333em 0.5em;
     }
+
     .rounded {
         @include border-radius($defaultBorderRadius);
     }
+
     .round {
         @include border-radius(5em);
     }
+
     .indented {
         text-indent: 1em;
     }
+
     .overflowed {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
     .more-content {
         display: block;
         text-align: center;
         font-size: 200%;
         margin: 0;
     }
+
     .with-tag {
         position: relative;
+
         .tag {
             display: block;
             position: absolute;
@@ -204,14 +242,17 @@
             line-height: 1;
             z-index: 998;
             @include border-radius($customBorderRadius2);
+
             &.bottom {
                 top: auto;
                 bottom: -0.75em;
             }
+
             &.left {
                 right: inherit;
                 left: -0.75em;
             }
+
             &.left-bottom {
                 top: auto;
                 bottom: -0.75em;
@@ -220,11 +261,13 @@
             }
         }
     }
+
     .with-background {
         background-color: $accentColor;
         color: $negativeColor;
         padding: 0 0.5em;
     }
+
     .label {
         display: inline-block;
         padding: 0.25em 0.5em;
@@ -232,20 +275,25 @@
         color: $negativeColor;
         background-color: $accentColor;
     }
+
     .with-label {
         display: inline-block;
         margin: 0 1.5em;
+
         &.left {
             margin-left: 0;
         }
+
         &.right {
             margin-right: 0;
         }
+
         img {
             margin: 0;
             padding: 0;
             @include box-shadow(none);
         }
+
         .label {
             display: block;
             margin: 0;
@@ -255,9 +303,11 @@
             font-size: 85%;
         }
     }
+
     .drop-caps {
         min-height: 4.75em;
     }
+
     .drop-caps:first-letter, .drop-caps::first-letter {
         float: left;
         font-size: 500%;
@@ -266,45 +316,55 @@
         padding-right: 0.125em;
         color: $accentColor;
     }
+
     &.chrome, &.webkit {
         .drop-caps:first-letter, .drop-caps::first-letter {
             line-height: 0.75;
         }
     }
+
     .highlighted {
         background-color: $accentColor;
         color: $negativeColor;
     }
+
     .underlined {
         border-bottom: 0.1666em solid $accentColor;
     }
+
     .stroked {
         text-decoration: line-through;
     }
+
     .colored {
         color: $accentColor;
     }
+
     .quote, blockquote {
         display: block;
         background-color: $elementsBackground;
         border-left: 0.4166em solid transparent;
         padding: 1em;
         font-style: italic;
+
         .icon {
             margin-top: 0.25em;
         }
     }
+
     .eye-popping {
         font-size: 150%;
         font-family: $headersFontFamily;
         font-style: italic;
         margin-top: 0.75em;
     }
+
     .tag {
         padding: 0.25em 0.75em;
         color: $negativeColor;
         background-color: $accentColor;
     }
+
     .ribbon, .ribbon-left, .ribbon-right {
         color: rgba( $negativeColor, 0.85 );
         position: absolute;
@@ -314,21 +374,25 @@
         z-index: 990;
         font-weight: $thickFontWeight;
         @include transition($defaultTransition);
+
         &:hover {
             @include opacity(0.15);
             cursor: default;
         }
     }
+
     *:hover > .ribbon, *:hover > .ribbon-left, *:hover > .ribbon-right {
         @include opacity(0.15);
         cursor: default;
     }
+
     .ribbon {
         width: 100%;
         text-align: center;
         margin-left: -0.75em;
         @include box-sizing(content-box);
     }
+
     .ribbon::before {
         display: block;
         width: 1em;
@@ -338,8 +402,9 @@
         left: -1%;
         content: "";
         border-bottom: 0.75em solid transparent;
-        border-right: 0.75em solid rgba( $blackColor,  0.2);
+        border-right: 0.75em solid rgba( $blackColor, 0.2);
     }
+
     .ribbon::after {
         display: block;
         width: 1em;
@@ -350,12 +415,14 @@
         content: "";
         @include transform(rotate(270deg));
         border-bottom: 0.75em solid transparent;
-        border-right: 0.75em solid rgba( $blackColor,  0.2);
+        border-right: 0.75em solid rgba( $blackColor, 0.2);
     }
+
     .ribbon-left {
         margin-left: -0.75em;
         float: left;
     }
+
     .ribbon-left::before {
         display: block;
         width: 1em;
@@ -365,13 +432,15 @@
         left: -1em;
         content: "";
         border-bottom: 0.75em solid transparent;
-        border-right: 0.75em solid rgba( $blackColor,  0.2);
+        border-right: 0.75em solid rgba( $blackColor, 0.2);
     }
+
     .ribbon-right {
         margin-right: -0.75em;
         float: right;
         right: 0;
     }
+
     .ribbon-right::after {
         display: block;
         width: 1em;
@@ -382,101 +451,124 @@
         content: "";
         @include transform(rotate(270deg));
         border-bottom: 0.75em solid transparent;
-        border-right: 0.75em solid rgba( $blackColor,  0.2);
+        border-right: 0.75em solid rgba( $blackColor, 0.2);
     }
+
     .hidden-text {
         text-indent: -999em;
     }
+
     .transparency {
         @include opacity(0.5);
     }
+
     .border {
         border: 0.0833em solid $elementsBackground2;
     }
+
     .disabled {
         @include opacity(0.5);
         cursor: default;
     }
+
     .moving-right, .moving-left { /* Since we mostly all are LTR readers */
         position: relative;
         float: none;
         cursor: default;
     }
+
     .moving-right {
         &:hover {
             margin-left: 1.5em;
         }
     }
+
     .moving-left {
         &:hover {
             margin-left: -1.5em;
         }
     }
+
     .scrollable {
         max-height: 200px;
         overflow: auto;
     }
+
     .invert { // Helps in conjuction with your specific action
-
     }
-
     // Transforms
     .rotate {
         @include transform(rotate(180deg));
     }
+
     .rotate-45 {
         @include transform(rotate(45deg));
     }
+
     .rotate-90 {
         @include transform(rotate(90deg));
     }
+
     .rotate-135 {
         @include transform(rotate(135deg));
     }
+
     .rotate-180 {
         @include transform(rotate(180deg));
     }
+
     .rotate-270 {
         @include transform(rotate(270deg));
     }
+
     .scale-full {
         @include transform(scale(1));
     }
+
     .scale-third {
         @include transform(scale(0.75));
     }
+
     .scale-half {
         @include transform(scale(0.5));
     }
+
     .scale-quarter {
         @include transform(scale(0.25));
     }
+
     .scale-double {
         @include transform(scale(2));
     }
+
     .rotate-horizontal {
         @include transform(scaleX(-1));
     }
+
     .translate-XY {
-        @include transform(translate(50%, 50%));   
+        @include transform(translate(50%, 50%));
     }
+
     .translate-right {
         @include transform(translateX(50%));
     }
+
     .translate-left {
         @include transform(translateX(-50%));
     }
+
     .translate-top {
         @include transform(translateY(-50%));
     }
+
     .translate-bottom {
         @include transform(translateY(50%));
     }
-
     // Positions
     .position-top, .position-bottom, .position-left, .position-right {
         position: absolute;
     }
+
     .position-top {
         top: 0;
     }
@@ -484,13 +576,14 @@
     .position-bottom {
         bottom: 0;
     }
+
     .position-left {
         left: 0;
     }
+
     .position-right {
         right: 0;
     }
-
     // Colors
     .red, .red-color, .icon.error {
         color: $errorColor;
@@ -523,7 +616,6 @@
     .brown, .brown-color {
         color: rgb(135,64,46);
     }
-
     // Background Colors
     .background {
         background-color: $accentColor;
@@ -538,75 +630,83 @@
     .background-grey, .background-grey > .content {
         background-color: $mainColor;
         color: $negativeColor;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
 
     .background-red, .background-red > .content {
         background-color: $errorColor !important;
         color: $negativeColor !important;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
 
     .background-green, .background-green > .content {
         background-color: rgb(0,205,172) !important;
         color: $negativeColor !important;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
 
     .background-blue, .background-blue > .content {
         background-color: rgb(42,143,189) !important;
         color: $negativeColor !important;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
 
     .background-yellow, .background-yellow > .content {
         background-color: rgb(251,184,41) !important;
         color: $negativeColor !important;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
 
     .background-orange, .background-orange > .content {
         background-color: rgb(255,78,80) !important;
         color: $negativeColor !important;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
 
     .background-pink, .background-pink > .content {
         background-color: rgb(215,33,126) !important;
         color: $negativeColor !important;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
 
     .background-purple, .background-purple > .content {
         background-color: rgb(91,77,107) !important;
         color: $negativeColor !important;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
 
     .background-brown, .background-brown > .content {
         background-color: rgb(135,64,46) !important;
         color: $negativeColor !important;
+
         img {
-            border: 0.3333em solid rgba( $blackColor,  0.15);
+            border: 0.3333em solid rgba( $blackColor, 0.15);
         }
     }
-
     // Border Colors
     .hr-neutral, .border-neutral {
         border-color: rgb(250,250,250);
@@ -647,7 +747,6 @@
     .hr-brown, .border-brown {
         border-color: rgb(135,64,46);
     }
-
     // Loading Spinner
     .loading {
         display: block;
@@ -656,9 +755,10 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color:  rgba( $blackColor,  0.75);
+        background-color: rgba( $blackColor, 0.75);
         z-index: 999;
         text-align: center;
+
         .icon {
             position: absolute;
             top: 50%;
@@ -667,6 +767,7 @@
             @include animation(rotate 0.75s infinite linear);
         }
     }
+
     .loading-icon {
         @include animation(rotate 0.75s infinite linear);
     }
@@ -679,10 +780,12 @@
     position: fixed;
     top: 0;
     @include opacity(0.95);
+
     &:hover {
         @include opacity(1);
     }
 }
+
 #{$frameworkClass} .fixed-bottom {
     top: auto;
     bottom: 0;
@@ -695,57 +798,82 @@
         display: inline-block;
         text-decoration: none;
         padding: 0.5em 1em;
-        color: rgba( $negativeColor, 0.75);
-        background-color: rgba( $accentColor, 0.85);
+        color: $linkColor;
+        background-color: $elementsBackground;
         text-align: center;
         border: none;
         position: relative;
+        margin: 10px;
+        @include border-radius(8px);
         @extend %clearfix;
+
         &:before, &:after {
             @extend %clearfix-ba;
         }
+
         &:after {
             @extend %clearfix-a;
         }
+
         @include transition(none);
+
         &.small {
             font-size: 78.6%;
             @include text-shadow(none);
         }
+
         #{$documentID} &.big {
             font-size: 150%;
         }
+
         #{$documentID} &.thin {
             padding-top: 0.25em;
             padding-bottom: 0.25em;
         }
-        &:hover {
-            color: $negativeColor;
+
+        &.withAccent {
+            color: $accentNegativeColor;
             background-color: $accentColor;
+
+            &:hover {
+                 color: $accentNegativeColor;
+                background-color:  darken( $accentColor, 10% );
+            }
         }
+
+        &:hover {
+            color: $linkColor;
+            background-color: $elementsHoverBackground;
+        }
+
         #{$documentID} &:active, #{$documentID} &.uk-active {
-            color: rgba( $negativeColor, 0.5 );
-            background-color: $accentColor;
+            color: $linkColor;
+            background-color: $elementsHoverBackground;
+
             @include transition(none);
         }
+
         &.only-icon .icon {
             margin: 0;
         }
+
         &.processing {
             &:active, &.active {
                 @include opacity(0.75);
+
                 .icon {
                     display: inline-block;
                     @include animation(rotate 0.75s infinite linear);
                 }
             }
+
             .icon {
                 display: none;
                 font-size: 150%;
                 margin-top: 2px;
             }
-
         }
+
         #{$documentID} &.disabled, #{$documentID} &.disabled:hover, #{$documentID} &.disabled:active, #{$documentID} &.processing:active, #{$documentID} &.processing.active {
             @include opacity(0.5);
             cursor: default;
@@ -755,12 +883,14 @@
             background-color: $accentColor;
             color: rgba( $negativeColor, 0.85 );
         }
+
         .icon {
             margin-top: 0.25em;
             margin-left: 0.25em;
             margin-right: 0.25em;
         }
     }
+
     .button-group {
         .item {
             float: left;
@@ -771,13 +901,16 @@
 .show-all {
     position: relative;
     overflow: hidden;
+
     > .trigger {
         position: absolute;
         bottom: 0;
+
         #{$frameworkClass} &:active {
             top: inherit;
         }
     }
+
     &.active > .trigger {
         position: relative;
         margin-top: 1em;
@@ -792,6 +925,7 @@
 
 .tabs {
     list-style-type: none;
+
     .item {
         display: inline-block;
     }
@@ -800,6 +934,7 @@
 #{$frameworkClass} .trigger {
     top: auto;
     margin-bottom: 0;
+
     &:active {
         border: none;
     }

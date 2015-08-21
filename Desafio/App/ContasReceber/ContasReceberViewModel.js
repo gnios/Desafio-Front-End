@@ -56,8 +56,8 @@ function ContasReceberViewModel() {
     //}
 }
 
-$(document).ready(function () {
-    var viewModel = new ContasReceberViewModel();
-    ko.applyBindings(viewModel);
-    viewModel.listar();
-})
+//$(document).ready(function () {
+//    var viewModel = new ContasReceberViewModel();
+//    ko.applyBindings(viewModel);
+//    viewModel.listar();
+//})

@@ -45,7 +45,7 @@
                 background-color: rgba( $negativeColor, 0.75);
             }
 
-            > li.uk-parent .uk-dropdown {
+            /*> li.uk-parent .uk-dropdown {
                 background-color: $elementsBackground;
                 @include border-radius(8px);
                 @include box-shadow(5px 5px 20px lighten( $mainColor, 50% ));
@@ -62,7 +62,7 @@
                         background-color: $elementsHoverBackground;
                     }
                 }
-            }
+            }*/
         }
     }
 }

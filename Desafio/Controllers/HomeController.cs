@@ -14,5 +14,12 @@ namespace Desafio.Controllers
 
             return View();
         }
+
+        public ActionResult Bind()
+        {
+            ViewBag.Title = "Bind";
+
+            return View();
+        }
     }
 }

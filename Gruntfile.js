@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     outputStyle: 'compressed',
-                    sourceMap: true,
+					sourcemap: 'none',
                 },
                 files: {
                     'Desafio/Content/css/site.css': 'Desafio/Content/scss/site.scss'

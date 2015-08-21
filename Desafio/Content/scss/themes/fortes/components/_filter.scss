@@ -21,12 +21,12 @@
         display: none;
 
         .box {
-            width: 25%;
+            min-width: 25%;
             position: relative;
             font-size: 10pt;
 
             .uikit-dropdown {
-                clear:both;
+                clear: both;
 
                 .uk-dropdown {
                     top: 35px;
@@ -41,6 +41,7 @@
             }
 
             .content {
+                min-height:40px;   
                 padding: 1em;
             }
 

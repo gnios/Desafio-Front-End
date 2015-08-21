@@ -5,10 +5,94 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/bundles/css")
-    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'><!-- BODY FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'><!-- HEADINGS FONT -->
+    @*<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'><!-- BODY FONT -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'><!-- HEADINGS FONT -->*@
 
     @Scripts.Render("~/bundles/modernizr")
+
+
+    <script type="text/html" id="filtro">
+        <div class="box left">
+            <header>
+                <span class="uk-badge uk-badge-notification uk-badge-success">1</span>
+                <label data-bind="text: valor"></label>
+
+                <div class="uikit-dropdown right" data-uk-dropdown="{mode:'click'}">
+                    <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
+                    <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
+                    <div class="uk-dropdown">
+                        <ul class="menu">
+                            <li class="item">
+                                <a href="#" class="link" title="Dropdown Item 5">Dropdown Item 5</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="divider"></span>
+            </header>
+            <div class="content">Left Floated Box</div>
+        </div>
+    </script>
+
+    <script type="text/html" id="Caracteres">
+        <div class="box left" data-bind="style:  { width: function(){ return $root.calcularTamanhoBox(); }() }">
+            <header>
+                <span class="uk-badge uk-badge-notification uk-badge-success" data-bind="text:valoresSelecionados().length, visible: valoresSelecionados().length > 0">1</span>
+                <label data-bind="text: nome"></label>
+                <div class="uikit-dropdown right" data-uk-dropdown="{mode:'click'}">
+                    <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
+                    <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
+                    <div class="uk-dropdown">
+                        <ul class="menu" data-bind="foreach: valoresIniciais">
+                            <li class="item">
+                                <span class="link" data-bind="text:$data,click: $root.selecionarFiltro.bind($data,$parent)"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <span class="divider"></span>
+            </header>
+            <div class="content" data-bind="foreach: valoresSelecionados">
+
+                <span class="uk-badge uk-badge-notification uk-badge-success" data-bind="text:$data"></span>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="Periodo">
+        <div class="box left"  data-bind="style:  { width: function(){ return $root.calcularTamanhoBox(); }() }">
+            <header>
+                <span class="uk-badge uk-badge-notification uk-badge-success" ></span>
+
+                <div class="uikit-dropdown right" data-uk-dropdown="{mode:'click'}">
+                    <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
+                    <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
+                    <div class="uk-dropdown">
+                        <ul class="menu">
+                            <li class="item">
+                                <a href="#" class="link" title="Dropdown Item 1">Dropdown Item 1</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="link" title="Dropdown Item 2">Dropdown Item 2</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="link" title="Dropdown Item 3">Dropdown Item 3</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="link" title="Dropdown Item 4">Dropdown Item 4</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="link" title="Dropdown Item 5">Dropdown Item 5</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="divider"></span>
+            </header>
+            <div class="content">Left Floated Box</div>
+        </div>
+    </script>
 </head>
 <body id="gnio-framework" class="gnio-framework no-text-shadow">
     <!--[if lt IE 7]>

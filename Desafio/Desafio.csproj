@@ -143,10 +143,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Campos.cs" />
     <Compile Include="Models\ContasReceber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Componente\Filtro.js" />
+    <Content Include="App\Componente\App.js" />
     <Content Include="App\ContasReceber\ContasReceberViewModel.js" />
     <Content Include="Content\css\fonts\icons.html" />
     <Content Include="Content\css\site.css" />
@@ -261,14 +264,12 @@
     <Content Include="Content\scss\themes\fortes\layout\_main.scss" />
     <Content Include="Content\scss\themes\fortes\layout\_sidebar.scss" />
     <Content Include="Content\scss\themes\fortes\layout\_variables.scss" />
-    <Content Include="Content\scss\themes\fortes\components\_navigation.scss" />
     <Content Include="Content\scss\themes\fortes\components\components.scss" />
     <Content Include="Content\scss\themes\fortes\components\_breadcrumb.scss" />
     <Content Include="Content\scss\themes\fortes\components\_buttons.scss" />
     <Content Include="Content\scss\themes\fortes\components\_filter.scss" />
-    <Content Include="Content\scss\themes\fortes\components\_slide-panel.scss" />
     <None Include="Scripts\jquery\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\framework\slide-panel\main.js" />
+    <Content Include="Scripts\framework\main.js" />
     <Content Include="Scripts\jq-dropdown\jquery.dropdown.js" />
     <Content Include="Scripts\jq-dropdown\jquery.dropdown.min.js" />
     <Content Include="Scripts\jquery-slidePanel\jquery-slidePanel.js" />
@@ -293,6 +294,8 @@
     <Content Include="Scripts\uikit\addons\timepicker.min.js" />
     <Content Include="Scripts\uikit\addons\upload.min.js" />
     <Content Include="Scripts\uikit\uikit.min.js" />
+    <Content Include="Scripts\underscore\underscore-min.js" />
+    <Content Include="Scripts\underscore\underscore.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -309,6 +312,8 @@
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Shared\_Sidebar.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Home\Bind.cshtml" />
+    <Content Include="Scripts\underscore\underscore-min.map" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -4,27 +4,36 @@
         .uk-dropdown-up {
             margin-bottom: 0;
         }
-
-        .uikit-trigger {
-            .icon {
-                margin-top: 0.3333em;
-            }
-        }
     }
 
     .uk-dropdown {
         margin-top: 0;
         padding: 0;
-        width: 100%;
         min-width: 200px;
         font-size: $fontSize;
         color: $mainColor;
-        background-color: $negativeColor;
+        background-color: $elementsBackground;
+        @include border-radius(8px);
+        @include box-shadow(5px 5px 20px lighten( $mainColor, 50% ));
+        border: $borderElements;
+
+        li a {
+            color: $linkColor;
+            background-color: $elementsBackground;
+            text-transform: none;
+            font-weight: $fontWeight;
+
+            &:hover, &:active {
+                color: $linkColor; 
+                background-color: $elementsHoverBackground;
+            } 
+        }
 
         .uk-nav {
             margin: 0;
         }
     }
+
 
     > .button + .uikit-dropdown {
         float: none;
