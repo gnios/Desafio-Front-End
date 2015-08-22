@@ -28,29 +28,38 @@ Filtro.Campo = function (p) {
     self.valoresSelecionados = ko.observableArray();
 };
 
-
-
 Filtro.CampoCaractere = function (p) {
     var self = this;
 
     self.nome = p.nome;
     self.tipo = Filtro.Tipos.CARACTERES;
+    self.valoresSelecionados = ko.observableArray();
 
     self.valoresIniciais = p.valoresIniciais.map(function (valor) {
-        var valorInicial = { texto: valor, selecionado: false };
+        var valorInicial = { texto: valor, selecionado: ko.observable(false) };
         return valorInicial;
     });
 
-    self.valoresSelecionados = ko.observableArray();
-};
+    self.aplicarFiltro = function (filtro, valor) {
+        filtro.valoresSelecionados.removeAll();
+        for (var i = 0; i < filtro.valoresIniciais.length; i++) {
+            if (filtro.valoresIniciais[i].selecionado() === true) {
+                filtro.valoresSelecionados.push(filtro.valoresIniciais[i].texto);
+            }
+        }
+    };
+
+    self.limparFiltros = function (filtro, valor) {
+        for (var i = 0; i < filtro.valoresIniciais.length; i++) {
+            filtro.valoresIniciais[i].selecionado(false);
+        }
+        filtro.valoresSelecionados.removeAll();
+    };
+}
 
 Filtro.Componente = function () {
     var self = this;
     self.filtros = ko.observableArray();
-
-    self.removerFiltro = function (filtro) {
-        self.filtros.remove(filtro);
-    }
 
     self.calcularTamanhoBox = function () {
 
@@ -64,15 +73,11 @@ Filtro.Componente = function () {
     }
 
     self.limparFiltros = function (filtro, valor) {
-        filtro.valoresSelecionados.removeAll();
+        filtro.limparFiltros(filtro, valor);
     }
 
     self.aplicarFiltro = function (filtro, valor) {
-        self.limparFiltros(filtro, valor);
-        var valoresSelecionados = _.where(filtro.valoresIniciais, { selecionado: true });
-        for (var i = 0; i < valoresSelecionados.length; i++) {
-            filtro.valoresSelecionados.push(valoresSelecionados[i].texto);
-        }
+        filtro.aplicarFiltro(filtro, valor);
     }
 
     self.recuperarSelecoes = function () {
@@ -104,7 +109,6 @@ Filtro.criarComponente = function (requisicao) {
 
     return componente;
 };
-
 
 Filtro.Resposta = function () {
     var self = this;

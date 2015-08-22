@@ -42,7 +42,7 @@
                 <label data-bind="text: nome"></label>
 
 
-                <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
+                <a data-bind="click: $root.limparFiltros.bind($data,$parent)" class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
                 <div class="uikit-component right ">
                     <div class="uikit-dropdown" data-uk-dropdown="{mode:'click'}">
                         <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
