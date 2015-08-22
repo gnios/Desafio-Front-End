@@ -84,9 +84,9 @@
 
         var requisicao = new Filtro.Requisicao();
 
-        requisicao.novoFiltro({ nome: "Nome1", tipo: App.Tipos.CARACTERES, valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"] });
-        requisicao.novoFiltro({ nome: "Nome2", tipo: App.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
-        requisicao.novoFiltro({ nome: "Periodo", tipo: App.Tipos.PERIODO, valoresIniciais: "Teste 3" });
+        requisicao.novoFiltro({ nome: "Nome1", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"] });
+        requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
+        requisicao.novoFiltro({ nome: "Periodo", tipo: Filtro.Tipos.PERIODO, valoresIniciais: "Teste 3" });
         var componente = Filtro.criarComponente(requisicao);
 
         ko.applyBindings(componente);

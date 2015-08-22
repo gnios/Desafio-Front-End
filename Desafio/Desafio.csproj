@@ -149,7 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\Componente\Filtro.js" />
-    <Content Include="App\Componente\App.js" />
     <Content Include="App\ContasReceber\ContasReceberViewModel.js" />
     <Content Include="Content\css\fonts\icons.html" />
     <Content Include="Content\css\site.css" />
