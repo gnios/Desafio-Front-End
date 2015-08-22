@@ -37,7 +37,7 @@ Filtro.CampoCaractere = function (p) {
     self.tipo = Filtro.Tipos.CARACTERES;
 
     self.valoresIniciais = p.valoresIniciais.map(function (valor) {
-        var valorInicial = { valor: valor, selecionado: false };
+        var valorInicial = { texto: valor, selecionado: false };
         return valorInicial;
     });
 
@@ -63,12 +63,16 @@ Filtro.Componente = function () {
         return ("100" / quantidadeFiltros) + "%";
     }
 
+    self.limparFiltros = function (filtro, valor) {
+        filtro.valoresSelecionados.removeAll();
+    }
 
     self.aplicarFiltro = function (filtro, valor) {
-        debugger;
-        filtro.valoresSelecionados = _.where(filtro.valoresIniciais, { selecionado: true });
-        // TODO: Nao adicionar valores repetidos.
-        //filtro.valoresSelecionados.push(valor);
+        self.limparFiltros(filtro, valor);
+        var valoresSelecionados = _.where(filtro.valoresIniciais, { selecionado: true });
+        for (var i = 0; i < valoresSelecionados.length; i++) {
+            filtro.valoresSelecionados.push(valoresSelecionados[i].texto);
+        }
     }
 
     self.recuperarSelecoes = function () {

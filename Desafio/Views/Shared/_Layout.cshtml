@@ -52,7 +52,7 @@
                                 <ul data-bind="foreach: valoresIniciais">
                                     <li>
                                         <input class="right" type="checkbox" data-bind="checked: selecionado" />
-                                        <span class="link" data-bind="text:$data.valor"></span>
+                                        <span class="link" data-bind="text:$data.texto"></span>
                                     </li>
                                 </ul>
                                 <a data-bind="click: $root.aplicarFiltro.bind($data,$parent)" class="button withAccent uk-width-large-1-1">APLICAR</a>
