@@ -72,21 +72,6 @@
 
                     </div>
                 </div>
-
-                @* <div class="uikit-dropdown right" data-uk-dropdown="{mode:'click'}">
-                        <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
-                        <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
-                        <div class="uk-dropdown">
-                            <ul class="menu" data-bind="foreach: valoresIniciais">
-                                <li class="item">
-                                    <input type="checkbox" data-bind="checked: selecionado" />
-                                    <span class="link" data-bind="text:$data.valor"></span>
-                                </li>
-                            </ul>
-                            <a class="button withAccent">Aplicar</a>
-                        </div>
-                    </div>*@
-
                 <span class="divider"></span>
             </header>
             <div class="content" data-bind="foreach: valoresSelecionados">
@@ -97,38 +82,36 @@
     </script>
 
     <script type="text/html" id="Periodo">
+
         <div class="box left" data-bind="style:  { width: function(){ return $root.calcularTamanhoBox(); }() }">
             <header>
-                <span class="uk-badge uk-badge-notification uk-badge-success"></span>
+                <span class="uk-badge uk-badge-notification uk-badge-success" data-bind="text:valoresSelecionados().length, visible: valoresSelecionados().length > 0">1</span>
+                <label data-bind="text: nome"></label>
 
-                <div class="uikit-dropdown right" data-uk-dropdown="{mode:'click'}">
-                    <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
-                    <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
-                    <div class="uk-dropdown">
-                        <ul class="menu">
-                            <li class="item">
-                                <a href="#" class="link" title="Dropdown Item 1">Dropdown Item 1</a>
-                            </li>
-                            <li class="item">
-                                <a href="#" class="link" title="Dropdown Item 2">Dropdown Item 2</a>
-                            </li>
-                            <li class="item">
-                                <a href="#" class="link" title="Dropdown Item 3">Dropdown Item 3</a>
-                            </li>
-                            <li class="item">
-                                <a href="#" class="link" title="Dropdown Item 4">Dropdown Item 4</a>
-                            </li>
-                            <li class="item">
-                                <a href="#" class="link" title="Dropdown Item 5">Dropdown Item 5</a>
-                            </li>
-                        </ul>
+                <a data-bind="click: $data.limparFiltros.bind($data,$parent)" class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
+                <div class="uikit-component right ">
+                    <div class="uikit-dropdown" data-uk-dropdown="{mode:'click'}">
+                        <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
+                        <div class="uk-dropdown">
+                            <div class="box-slide">
+
+                                <input class="right" type="date" data-bind="value: dataInicial" />
+                                <input class="right" type="date" data-bind="value: dataFinal" />
+
+                                <a data-bind="click: aplicarFiltro" class="button withAccent uk-width-large-1-1">APLICAR</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <span class="divider"></span>
             </header>
-            <div class="content">Left Floated Box</div>
+            <div class="content" data-bind="foreach: valoresSelecionados">
+
+                <span class="uk-badge uk-badge-notification uk-badge-success" data-bind="text:$data"></span>
+            </div>
         </div>
     </script>
+
 </head>
 <body id="gnio-framework" class="gnio-framework no-text-shadow">
     <!--[if lt IE 7]>

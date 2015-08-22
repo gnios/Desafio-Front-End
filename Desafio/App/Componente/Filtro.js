@@ -74,6 +74,8 @@ Filtro.Tipos.PERIODO = Filtro.Tipos[1];
 Filtro.Criar = function (p) {
     if (p.tipo === Filtro.Tipos.CARACTERES) {
         return new Filtro.Caracteres(p);
+    } if (p.tipo === Filtro.Tipos.PERIODO) {
+        return new Filtro.Periodo(p);
     } else {
         return new Filtro.Generico(p);
     }
@@ -118,6 +120,24 @@ Filtro.Caracteres = function (p) {
             filtro.valoresIniciais[i].selecionado(false);
         }
         filtro.valoresSelecionados.removeAll();
+    };
+}
+
+
+Filtro.Periodo = function (p) {
+    var self = this;
+    Filtro.Generico.call(self, p);
+
+    self.tipo = Filtro.Tipos.PERIODO;
+    self.dataInicial = ko.observable();
+    self.dataFinal = ko.observable();
+    self.periodo = ko.computed(function () {
+        return self.dataInicial() + " " + self.dataFinal();
+    });
+
+    self.aplicarFiltro = function (filtro, valor) {
+        filtro.valoresSelecionados.removeAll();
+        filtro.valoresSelecionados.push(filtro.periodo);
     };
 }
 
