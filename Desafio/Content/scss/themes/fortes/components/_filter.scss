@@ -6,7 +6,6 @@
 #{$frameworkClass} .slide-panel {
     position: relative;
 
-
     .slide-content {
         position: absolute;
         top: 0px;
@@ -19,6 +18,26 @@
         font-size: $fontSize;
         color: $mainColor;
         display: none;
+
+        ul {
+            max-height: 150px;
+            overflow-y: auto;
+            margin: 0px;
+            min-width: 200px;
+            padding-right:10px;
+        }
+
+        .box-slide {
+            background: $accentNegativeColor;
+            margin: 20px;
+            @include border-radius(8px);
+            border: $borderElements;
+            padding: 10px;
+
+            .button {
+                margin: 0px;
+            }
+        }
 
         .box {
             min-width: 25%;
@@ -40,35 +59,6 @@
                 margin-top: -3px;
             }
 
-            .content {
-                min-height:40px;   
-                padding: 1em;
-            }
-
-            > header, > footer {
-                padding: 0.75em 1em;
-                line-height: 2;
-                border-bottom: $borderElements;
-
-                .divider {
-                    border-right: $borderElements;
-                    margin-top: 8px;
-                    height: 15px;
-                    width: 1px;
-                    position: absolute;
-                    right: 0px;
-                }
-            }
-
-            > header {
-                padding-top: 0.5em;
-                padding-bottom: 0.5em;
-
-                > .trigger {
-                    padding: 0.5em;
-                }
-            }
-
             > header, &.slide.active > header {
                 font-size: 10pt;
                 color: $textColor;
@@ -80,16 +70,6 @@
                 padding-bottom: 0.25em;
                 color: rgba( $negativeColor, 0.5 );
                 background-color: $complementaryColor;
-            }
-
-            .scroll {
-                max-height: 10em;
-            }
-
-            &.slide {
-                header {
-                    cursor: default;
-                }
             }
         }
     }

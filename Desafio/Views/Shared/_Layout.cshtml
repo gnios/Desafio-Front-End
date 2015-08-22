@@ -35,21 +35,46 @@
     </script>
 
     <script type="text/html" id="Caracteres">
+
         <div class="box left" data-bind="style:  { width: function(){ return $root.calcularTamanhoBox(); }() }">
             <header>
                 <span class="uk-badge uk-badge-notification uk-badge-success" data-bind="text:valoresSelecionados().length, visible: valoresSelecionados().length > 0">1</span>
                 <label data-bind="text: nome"></label>
-                <div class="uikit-dropdown right" data-uk-dropdown="{mode:'click'}">
-                    <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
-                    <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
-                    <div class="uk-dropdown">
-                        <ul class="menu" data-bind="foreach: valoresIniciais">
-                            <li class="item">
-                                <span class="link" data-bind="text:$data,click: $root.selecionarFiltro.bind($data,$parent)"></span>
-                            </li>
-                        </ul>
+
+
+                <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
+                <div class="uikit-component right ">
+                    <div class="uikit-dropdown" data-uk-dropdown="{mode:'click'}">
+                        <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
+                        <div class="uk-dropdown">
+                            <div class="box-slide">
+
+                                <ul data-bind="foreach: valoresIniciais">
+                                    <li>
+                                        <input class="right" type="checkbox" data-bind="checked: selecionado" />
+                                        <span class="link" data-bind="text:$data.valor"></span>
+                                    </li>
+                                </ul>
+                                <a data-bind="click: $root.aplicarFiltro.bind($data,$parent)" class="button withAccent uk-width-large-1-1">APLICAR</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
+                @* <div class="uikit-dropdown right" data-uk-dropdown="{mode:'click'}">
+                        <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>
+                        <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>
+                        <div class="uk-dropdown">
+                            <ul class="menu" data-bind="foreach: valoresIniciais">
+                                <li class="item">
+                                    <input type="checkbox" data-bind="checked: selecionado" />
+                                    <span class="link" data-bind="text:$data.valor"></span>
+                                </li>
+                            </ul>
+                            <a class="button withAccent">Aplicar</a>
+                        </div>
+                    </div>*@
 
                 <span class="divider"></span>
             </header>
@@ -61,9 +86,9 @@
     </script>
 
     <script type="text/html" id="Periodo">
-        <div class="box left"  data-bind="style:  { width: function(){ return $root.calcularTamanhoBox(); }() }">
+        <div class="box left" data-bind="style:  { width: function(){ return $root.calcularTamanhoBox(); }() }">
             <header>
-                <span class="uk-badge uk-badge-notification uk-badge-success" ></span>
+                <span class="uk-badge uk-badge-notification uk-badge-success"></span>
 
                 <div class="uikit-dropdown right" data-uk-dropdown="{mode:'click'}">
                     <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>

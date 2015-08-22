@@ -804,7 +804,7 @@
         border: none;
         position: relative;
         margin: 10px;
-        @include border-radius(8px);
+        @include border-radius(4px);
         @extend %clearfix;
 
         &:before, &:after {

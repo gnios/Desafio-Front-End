@@ -29,6 +29,21 @@ Filtro.Campo = function (p) {
 };
 
 
+
+Filtro.CampoCaractere = function (p) {
+    var self = this;
+
+    self.nome = p.nome;
+    self.tipo = Filtro.Tipos.CARACTERES;
+
+    self.valoresIniciais = p.valoresIniciais.map(function (valor) {
+        var valorInicial = { valor: valor, selecionado: false };
+        return valorInicial;
+    });
+
+    self.valoresSelecionados = ko.observableArray();
+};
+
 Filtro.Componente = function () {
     var self = this;
     self.filtros = ko.observableArray();
@@ -41,16 +56,19 @@ Filtro.Componente = function () {
 
         var quantidadeMaxima = 4;
         var quantidadeFiltros = self.filtros().length;
-       
+
         if (quantidadeFiltros > quantidadeMaxima) {
             quantidadeFiltros = quantidadeMaxima;
         }
         return ("100" / quantidadeFiltros) + "%";
     }
-       
-    self.selecionarFiltro = function (filtro, valor) {
+
+
+    self.aplicarFiltro = function (filtro, valor) {
+        debugger;
+        filtro.valoresSelecionados = _.where(filtro.valoresIniciais, { selecionado: true });
         // TODO: Nao adicionar valores repetidos.
-        filtro.valoresSelecionados.push(valor);
+        //filtro.valoresSelecionados.push(valor);
     }
 
     self.recuperarSelecoes = function () {
@@ -61,7 +79,14 @@ Filtro.Componente = function () {
     };
 
     self.novoFiltro = function (p) {
-        var filtro = new Filtro.Campo({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
+        if (p.tipo === Filtro.Tipos.CARACTERES) {
+
+            var filtro = new Filtro.CampoCaractere({ nome: p.nome, valoresIniciais: p.valoresIniciais });
+        } else {
+
+            var filtro = new Filtro.Campo({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
+        }
+
         self.filtros.push(filtro);
     };
 };
