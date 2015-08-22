@@ -1,40 +1,104 @@
-﻿
+﻿App = {};
 
-Filtro = {};
-
-Filtro.Tipos = ["Caracteres", "Periodo"];
-Filtro.Tipos.CARACTERES = Filtro.Tipos[0];
-Filtro.Tipos.PERIODO = Filtro.Tipos[1];
-
-Filtro.Requisicao = function () {
+App.Requisicao = function () {
     var self = this;
 
     self.filtros = [];
 
     self.novoFiltro = function (p) {
-        var filtro = new Filtro.Campo(p);
+        var filtro = new App.Campo(p);
         self.filtros.push(filtro);
 
         return self;
     };
 };
 
-Filtro.Campo = function (p) {
+
+App.Campo = function (p) {
     var self = this;
 
     self.nome = p.nome;
     self.tipo = p.tipo;
     self.valoresIniciais = p.valoresIniciais;
-    self.valoresSelecionados = ko.observableArray();
+    self.valoresSelecionados = p.valoresSelecionados;
 };
 
-Filtro.CampoCaractere = function (p) {
-    var self = this;
 
+App.criarComponente = function (requisicao) {
+    var componente = new App.Componente();
+
+    requisicao.filtros.forEach(function (filtro) {
+        componente.novoFiltro(filtro);
+    });
+
+    return componente;
+};
+
+App.Componente = function () {
+    var self = this;
+    self.filtros = ko.observableArray();
+
+    self.calcularTamanhoBox = function () {
+
+        var quantidadeMaxima = 4;
+        var quantidadeFiltros = self.filtros().length;
+
+        if (quantidadeFiltros > quantidadeMaxima) {
+            quantidadeFiltros = quantidadeMaxima;
+        }
+        return ("100" / quantidadeFiltros) + "%";
+    }
+
+    self.recuperarSelecoes = function () {
+
+        var resposta = ko.toJSON(self.filtros);
+        alert(resposta);
+        return resposta;
+    };
+
+    self.novoFiltro = function (p) {
+        var filtro = Filtro.Criar({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
+        self.filtros.push(filtro);
+    };
+};
+
+
+
+Filtro = {};
+
+Filtro.Tipos = ["Caracteres", "Periodo"];
+
+Filtro.Tipos.CARACTERES = Filtro.Tipos[0];
+Filtro.Tipos.PERIODO = Filtro.Tipos[1];
+
+Filtro.Criar = function (p) {
+    if (p.tipo === Filtro.Tipos.CARACTERES) {
+        return new Filtro.Caracteres(p);
+    } else {
+        return new Filtro.Generico(p);
+    }
+}
+
+Filtro.Generico = function (p) {
+    var self = this;
     self.nome = p.nome;
-    self.tipo = Filtro.Tipos.CARACTERES;
+    self.valoresIniciais = p.valoresIniciais;
     self.valoresSelecionados = ko.observableArray();
 
+    self.aplicarFiltro = function (filtro, valor) {
+        filtro.valoresSelecionados.push(valor);
+    }
+
+    self.limparFiltros = function (filtro, valor) {
+        filtro.valoresSelecionados.removeAll();
+    };
+};
+
+Filtro.Caracteres = function (p) {
+    var self = this;
+    Filtro.Generico.call(self, p);
+
+    self.tipo = Filtro.Tipos.CARACTERES;
     self.valoresIniciais = p.valoresIniciais.map(function (valor) {
         var valorInicial = { texto: valor, selecionado: ko.observable(false) };
         return valorInicial;
@@ -56,59 +120,6 @@ Filtro.CampoCaractere = function (p) {
         filtro.valoresSelecionados.removeAll();
     };
 }
-
-Filtro.Componente = function () {
-    var self = this;
-    self.filtros = ko.observableArray();
-
-    self.calcularTamanhoBox = function () {
-
-        var quantidadeMaxima = 4;
-        var quantidadeFiltros = self.filtros().length;
-
-        if (quantidadeFiltros > quantidadeMaxima) {
-            quantidadeFiltros = quantidadeMaxima;
-        }
-        return ("100" / quantidadeFiltros) + "%";
-    }
-
-    self.limparFiltros = function (filtro, valor) {
-        filtro.limparFiltros(filtro, valor);
-    }
-
-    self.aplicarFiltro = function (filtro, valor) {
-        filtro.aplicarFiltro(filtro, valor);
-    }
-
-    self.recuperarSelecoes = function () {
-
-        var resposta = ko.toJSON(self.filtros);
-        alert(resposta);
-        return resposta;
-    };
-
-    self.novoFiltro = function (p) {
-        if (p.tipo === Filtro.Tipos.CARACTERES) {
-
-            var filtro = new Filtro.CampoCaractere({ nome: p.nome, valoresIniciais: p.valoresIniciais });
-        } else {
-
-            var filtro = new Filtro.Campo({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
-        }
-
-        self.filtros.push(filtro);
-    };
-};
-
-Filtro.criarComponente = function (requisicao) {
-    var componente = new Filtro.Componente();
-
-    requisicao.filtros.forEach(function (filtro) {
-        componente.novoFiltro(filtro);
-    });
-
-    return componente;
-};
 
 Filtro.Resposta = function () {
     var self = this;
