@@ -33,7 +33,7 @@
             </div>
             <div class="footer-buttons">
                 <a class="button withAccent" data-bind="click:recuperarSelecoes"><i class="icon icon-filter icon-with-margin-right"></i>Aplicar Filtros</a>
-                <a class="button withAccent"><i class="icon icon-trash icon-with-margin-right"></i>Limpar Todos</a>
+                <a class="button withAccent" data-bind="click:limparTodosFiltros"><i class="icon icon-trash icon-with-margin-right"></i>Limpar Todos</a>
             </div>
         </div>
     </div>
@@ -84,6 +84,12 @@
         var requisicao = new App.Requisicao();
 
         requisicao.novoFiltro({ nome: "Nome1", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"] });
+        requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
+
+        requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
+        requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
+        requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
+        requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
         requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
         //requisicao.novoFiltro({ nome: "Nome2", valoresIniciais: ["TESTE 3", "TESTE 4"] });
         requisicao.novoFiltro({ nome: "Periodo", tipo: Filtro.Tipos.PERIODO, valoresIniciais: "Teste 3" });

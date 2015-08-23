@@ -60,6 +60,12 @@ App.Componente = function () {
         return resposta;
     };
 
+    self.limparTodosFiltros = function(){
+        self.filtros().forEach(function (filtro) {
+            filtro.limparFiltros();
+        });
+    }
+
     self.novoFiltro = function (p) {
         var filtro = Filtro.Criar({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
         self.filtros.push(filtro);
@@ -93,8 +99,8 @@ Filtro.Generico = function (p) {
         filtro.valoresSelecionados.push(valor);
     }
 
-    self.limparFiltros = function (filtro, valor) {
-        filtro.valoresSelecionados.removeAll();
+    self.limparFiltros = function () {
+        self.valoresSelecionados.removeAll();
     };
 };
 
@@ -117,11 +123,11 @@ Filtro.Caracteres = function (p) {
         }
     };
 
-    self.limparFiltros = function (filtro, valor) {
-        for (var i = 0; i < filtro.valoresIniciais.length; i++) {
-            filtro.valoresIniciais[i].selecionado(false);
+    self.limparFiltros = function () {
+        for (var i = 0; i < self.valoresIniciais.length; i++) {
+            self.valoresIniciais[i].selecionado(false);
         }
-        filtro.valoresSelecionados.removeAll();
+        self.valoresSelecionados.removeAll();
     };
 }
 
