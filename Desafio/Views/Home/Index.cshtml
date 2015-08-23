@@ -24,7 +24,6 @@
 </div>
 <div class="uikit-component left ">
 
-
     <a class="btnToggle button" href="#"><i class="icon icon-filter icon-with-margin-right"></i> FILTROS SELECIONADOS</a>
 
     <div class="slide-panel">
@@ -32,9 +31,9 @@
             <div name="filtros" data-bind="foreach: filtros">
                 <div data-bind="template: { name: tipo, data: $data }"></div>
             </div>
-            <div class="center">
-                <a class="uk-button" data-bind="click:recuperarSelecoes">Aplicar Filtros</a>
-                <a class="uk-button">Limpar Todos</a>
+            <div class="footer-buttons">
+                <a class="button withAccent" data-bind="click:recuperarSelecoes"><i class="icon icon-filter icon-with-margin-right"></i>Aplicar Filtros</a>
+                <a class="button withAccent"><i class="icon icon-trash icon-with-margin-right"></i>Limpar Todos</a>
             </div>
         </div>
     </div>

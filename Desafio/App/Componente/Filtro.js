@@ -51,7 +51,11 @@ App.Componente = function () {
 
     self.recuperarSelecoes = function () {
 
-        var resposta = ko.toJSON(self.filtros);
+        var resposta = [];
+        self.filtros().forEach(function (filtro) {
+            resposta.push({ nome: filtro.nome, tipo: filtro.tipo, valoresSelecionados: filtro.valoresSelecionados });
+        });
+        resposta = ko.toJSON(resposta);
         alert(resposta);
         return resposta;
     };
@@ -61,8 +65,6 @@ App.Componente = function () {
         self.filtros.push(filtro);
     };
 };
-
-
 
 Filtro = {};
 
@@ -129,30 +131,16 @@ Filtro.Periodo = function (p) {
     Filtro.Generico.call(self, p);
 
     self.tipo = Filtro.Tipos.PERIODO;
-    self.dataInicial = ko.observable();
-    self.dataFinal = ko.observable();
-    self.periodo = ko.computed(function () {
-        return self.dataInicial() + " " + self.dataFinal();
-    });
+    self.dataInicial = null;
+    self.dataFinal = null;
+    //self.periodo = ko.computed(function () {
+    //    return self.dataInicial() + " " + self.dataFinal();
+    //});
 
     self.aplicarFiltro = function (filtro, valor) {
-        filtro.valoresSelecionados.removeAll();
-        filtro.valoresSelecionados.push(filtro.periodo);
+        filtro.valoresSelecionados.push(filtro.dataInicial + " - " + filtro.dataFinal);
     };
 }
-
-Filtro.Resposta = function () {
-    var self = this;
-
-    self.selecoes = [];
-
-    self.novoFiltro = function (p) {
-        var selecao = new Filtro.Selecao(p);
-        self.selecoes.push(selecao);
-
-        return self;
-    };
-};
 
 //ko.components.register('like-widget', {
 //    viewModel: function (params) {
