@@ -54,22 +54,21 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: ContasReceber">
+        <tbody data-bind="foreach: contasReceber">
             <tr>
-                <td data-bind="text: codigo"></td>
-                <td data-bind="text: numeroRPS"></td>
-                <td data-bind="text: nomeCliente"></td>
-
-                <td data-bind="text: nomeRazaoSocial"></td>
-                <td data-bind="text: nomeUnidadeNegocio"></td>
-                <td data-bind="text: nomeCentroCusto"></td>
-                <td data-bind="text: dataPagamento"></td>
-                <td data-bind="text: valor"></td>
-                <td>
-                    <input type="button" class="btn btn-danger btn-xs" value=" [x] delete " data-bind="click: $parent.excluir" />
-                    <input type="button" class="btn btn-danger btn-xs" value=" incluir " data-bind="click: $parent.incluir" />
-                    <input type="button" class="btn btn-danger btn-xs" value=" incluir " data-bind="click: $parent.editar" />
-                </td>
+                <td><span data-bind="text: codigo"></span></td>
+                <td><span data-bind="text: numeroRPS"></span></td>
+                <td><span data-bind="text: nomeCliente"></span></td>
+                <td><span data-bind="text: nomeRazaoSocial"></span></td>
+                <td><span data-bind="text: nomeUnidadeNegocio"></span></td>
+                <td><span data-bind="text: nomeCentroCusto"></span></td>
+                <td><span data-bind="text: dataPagamento"></span></td>
+                <td> <span data-bind="text: valor"></span></td>
+                @*<td>
+                        <input type="button" class="btn btn-danger btn-xs" value=" [x] delete " data-bind="click: $parent.excluir" />
+                        <input type="button" class="btn btn-danger btn-xs" value=" incluir " data-bind="click: $parent.incluir" />
+                        <input type="button" class="btn btn-danger btn-xs" value=" incluir " data-bind="click: $parent.editar" />
+                    </td>*@
             </tr>
         </tbody>
     </table>

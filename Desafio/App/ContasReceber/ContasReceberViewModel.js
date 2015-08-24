@@ -1,13 +1,13 @@
 ﻿function ContasReceber(contasReceber) {
     var self = this;
-    self.codigo = ko.observable(contasReceber.codigo || '');
-    self.numeroRPS = ko.observable(contasReceber.numeroRPS || '');
-    self.nomeCliente = ko.observable(contasReceber.nomeCliente || '');
-    self.nomeRazaoSocial = ko.observable(contasReceber.nomeRazaoSocial || '');
-    self.nomeUnidadeNegocio = ko.observable(contasReceber.nomeUnidadeNegocio || '');
-    self.nomeCentroCusto = ko.observable(contasReceber.nomeCentroCusto || '');
-    self.dataPagamento = ko.observable(contasReceber.dataPagamento || '');
-    self.valor = ko.observable(contasReceber.valor || '');
+    self.codigo = ko.observable(contasReceber.Codigo || '');
+    self.numeroRPS = ko.observable(contasReceber.NumeroRPS || '');
+    self.nomeCliente = ko.observable(contasReceber.NomeCliente || '');
+    self.nomeRazaoSocial = ko.observable(contasReceber.NomeRazaoSocial || '');
+    self.nomeUnidadeNegocio = ko.observable(contasReceber.NomeUnidadeNegocio || '');
+    self.nomeCentroCusto = ko.observable(contasReceber.NomeCentroCusto || '');
+    self.dataPagamento = ko.observable(contasReceber.DataPagamento || '');
+    self.valor = ko.observable(contasReceber.Valor || '');
 
 }
 
@@ -15,14 +15,14 @@
 function ContasReceberViewModel() {
     var self = this;
     var baseUri = "/api/ContasReceber";
-    self.ContasReceber = ko.observableArray([]);
+    self.contasReceber = ko.observableArray();
 
     self.listar = function () {
-        self.ContasReceber.removeAll();
+        self.contasReceber.removeAll();
 
-        $.getJSON(baseUri, function (allData) {
-            $.each(allData, function (key, contasReceber) {
-                self.ContasReceber.push(new ContasReceber(contasReceber));
+        $.getJSON(baseUri, function (contas) {
+            $.each(contas, function (key, conta) {
+                self.contasReceber.push(new ContasReceber(conta));
             });
         });
     };
@@ -40,9 +40,17 @@ function ContasReceberViewModel() {
 
     self.requisicao = new App.Requisicao();
 
-    self.requisicao.novoFiltro({ nome: "Nome1", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"] });
-     //requisicao.novoFiltro({ nome: "Nome2", valoresIniciais: ["TESTE 3", "TESTE 4"] });
-    self.requisicao.novoFiltro({ nome: "Periodo", tipo: Filtro.Tipos.PERIODO, valoresIniciais: "Teste 3" });
+    self.requisicao.novoFiltro({
+        nome: "Nome1",
+        tipo: Filtro.Tipos.CARACTERES,
+        valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"]
+    });
+
+    self.requisicao.novoFiltro({
+        nome: "Periodo",
+        tipo: Filtro.Tipos.PERIODO,
+        valoresIniciais: "Teste 3"
+    });
 }
 
 $(document).ready(function () {
