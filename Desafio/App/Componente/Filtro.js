@@ -60,7 +60,7 @@ App.Componente = function () {
         return resposta;
     };
 
-    self.limparTodosFiltros = function(){
+    self.limparTodosFiltros = function () {
         self.filtros().forEach(function (filtro) {
             filtro.limparFiltros();
         });
@@ -129,7 +129,7 @@ Filtro.Caracteres = function (p) {
         }
         self.valoresSelecionados.removeAll();
     };
-}
+};
 
 
 Filtro.Periodo = function (p) {
@@ -146,55 +146,38 @@ Filtro.Periodo = function (p) {
     self.aplicarFiltro = function (filtro, valor) {
         filtro.valoresSelecionados.push(filtro.dataInicial + " - " + filtro.dataFinal);
     };
-}
+};
 
-//ko.components.register('like-widget', {
-//    viewModel: function (params) {
+ko.components.register('filtro', {
+    viewModel: function (params) {
+        // Data: value is either null, 'like', or 'dislike'
+        this.filtros = params.value;
 
-//        //var filtro = ko.observable(params.valor || '');
-//        var teste = ko.observable('TESTE');;
-//    },
-//    template:
-//        '<div class="box left">\
-//            <header>\
-//                <span class="uk-badge uk-badge-notification uk-badge-success">1</span>\
-//               <input data-bind="value: teste()" /> \
-//                <div class="uikit-dropdown right" data-uk-dropdown="{mode:"click"}">\
-//                    <a class="uk-button right" href="#"><i class="icon icon-trash"></i></a>\
-//                    <a class="uk-button uikit-trigger right" href="#"><i class="icon icon-plus"></i></a>\
-//                    <div class="uk-dropdown">\
-//                        <ul class="menu">\
-//                            <li class="item">\
-//                                <a href="#" class="link" title="Dropdown Item 1">Dropdown Item 1</a>\
-//                            </li>\
-//                            <li class="item">\
-//                                <a href="#" class="link" title="Dropdown Item 2">Dropdown Item 2</a>\
-//                            </li>\
-//                            <li class="item">\
-//                                <a href="#" class="link" title="Dropdown Item 3">Dropdown Item 3</a>\
-//                            </li>\
-//                            <li class="item">\
-//                                <a href="#" class="link" title="Dropdown Item 4">Dropdown Item 4</a>\
-//                            </li>\
-//                            <li class="item">\
-//                                <a href="#" class="link" title="Dropdown Item 5">Dropdown Item 5</a>\
-//                            </li>\
-//                        </ul>\
-//                    </div>\
-//                </div>\
-//                <span class="divider"></span>\
-//            </header>\
-//            <div class="content">Left Floated Box</div>\
-//        </div>'
-//});
-
-//ko.components.register('filtros', {
-//    viewModel: function (params) {
-//        var self = this;
-//        self.filtro = ko.observable(params.value.filtros);
-//    },
-//    template: '<div name="filtros" data-bind="foreach: filtro">\
-//                       <span>TESTE</span>\
-//                       <div data-bind="template: { name: tipo, data: $data }"></div>\
-//                </div>'
-//});
+        // Behaviors
+        this.like = function () { this.chosenValue('like'); }.bind(this);
+        this.dislike = function () { this.chosenValue('dislike'); }.bind(this);
+        $(".btnToggle").click(function () {
+            $(".slide-content").slideFadeToggle();
+        });
+    },
+    template:
+        //'<div class="like-or-dislike" data-bind="visible: !chosenValue()">\
+        //    <button data-bind="click: like">Like it</button>\
+        //    <button data-bind="click: dislike">Dislike it</button>\
+        //</div>\
+        //<div class="result" data-bind="visible: chosenValue">\
+        //    You <strong data-bind="text: chosenValue"></strong> it\
+        //</div>'
+        '<a class="btnToggle button" href="#"><i class="icon icon-filter icon-with-margin-right"></i> FILTROS SELECIONADOS</a>\
+                <div class="slide-panel">\
+                <div class="slide-content with-four-elements">\
+                    <div name="filtros" data-bind="foreach: filtros">\
+                        <div data-bind="template: { name: tipo, data: $data }"></div>\
+                    </div>\
+                    <div class="footer-buttons">\
+                        <a class="button withAccent" data-bind="click:recuperarSelecoes"><i class="icon icon-filter icon-with-margin-right"></i>Aplicar Filtros</a>\
+                        <a class="button withAccent" data-bind="click:limparTodosFiltros"><i class="icon icon-trash icon-with-margin-right"></i>Limpar Todos</a>\
+                    </div>\
+                </div>\
+            </div>'
+});
