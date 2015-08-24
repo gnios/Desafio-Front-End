@@ -24,53 +24,53 @@ App.Campo = function (p) {
 };
 
 
-App.criarComponente = function (requisicao) {
-    var componente = new App.Componente();
+//App.criarComponente = function (requisicao) {
+//    var componente = new App.Componente();
 
-    requisicao.filtros.forEach(function (filtro) {
-        componente.novoFiltro(filtro);
-    });
+//    requisicao.filtros.forEach(function (filtro) {
+//        componente.novoFiltro(filtro);
+//    });
 
-    return componente;
-};
+//    return componente;
+//};
 
-App.Componente = function () {
-    var self = this;
-    self.filtros = ko.observableArray();
+//App.Componente = function () {
+//    var self = this;
+//    self.filtros = ko.observableArray();
 
-    self.calcularTamanhoBox = function () {
+//    self.calcularTamanhoBox = function () {
 
-        var quantidadeMaxima = 4;
-        var quantidadeFiltros = self.filtros().length;
+//        var quantidadeMaxima = 4;
+//        var quantidadeFiltros = self.filtros().length;
 
-        if (quantidadeFiltros > quantidadeMaxima) {
-            quantidadeFiltros = quantidadeMaxima;
-        }
-        return ("100" / quantidadeFiltros) + "%";
-    }
+//        if (quantidadeFiltros > quantidadeMaxima) {
+//            quantidadeFiltros = quantidadeMaxima;
+//        }
+//        return ("100" / quantidadeFiltros) + "%";
+//    }
 
-    self.recuperarSelecoes = function () {
+//    self.recuperarSelecoes = function () {
 
-        var resposta = [];
-        self.filtros().forEach(function (filtro) {
-            resposta.push({ nome: filtro.nome, tipo: filtro.tipo, valoresSelecionados: filtro.valoresSelecionados });
-        });
-        resposta = ko.toJSON(resposta);
-        alert(resposta);
-        return resposta;
-    };
+//        var resposta = [];
+//        self.filtros().forEach(function (filtro) {
+//            resposta.push({ nome: filtro.nome, tipo: filtro.tipo, valoresSelecionados: filtro.valoresSelecionados });
+//        });
+//        resposta = ko.toJSON(resposta);
+//        alert(resposta);
+//        return resposta;
+//    };
 
-    self.limparTodosFiltros = function () {
-        self.filtros().forEach(function (filtro) {
-            filtro.limparFiltros();
-        });
-    }
+//    self.limparTodosFiltros = function () {
+//        self.filtros().forEach(function (filtro) {
+//            filtro.limparFiltros();
+//        });
+//    }
 
-    self.novoFiltro = function (p) {
-        var filtro = Filtro.Criar({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
-        self.filtros.push(filtro);
-    };
-};
+//    self.novoFiltro = function (p) {
+//        var filtro = Filtro.Criar({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
+//        self.filtros.push(filtro);
+//    };
+//};
 
 Filtro = {};
 
@@ -150,24 +150,54 @@ Filtro.Periodo = function (p) {
 
 ko.components.register('filtro', {
     viewModel: function (params) {
-        // Data: value is either null, 'like', or 'dislike'
-        this.filtros = params.value;
+        var self = this;
+        
+        self.filtros = ko.observableArray();
 
-        // Behaviors
-        this.like = function () { this.chosenValue('like'); }.bind(this);
-        this.dislike = function () { this.chosenValue('dislike'); }.bind(this);
+        self.calcularTamanhoBox = function () {
+
+            var quantidadeMaxima = 4;
+            var quantidadeFiltros = self.filtros().length;
+
+            if (quantidadeFiltros > quantidadeMaxima) {
+                quantidadeFiltros = quantidadeMaxima;
+            }
+            return ("100" / quantidadeFiltros) + "%";
+        }
+
+        self.recuperarSelecoes = function () {
+
+            var resposta = [];
+            self.filtros().forEach(function (filtro) {
+                resposta.push({ nome: filtro.nome, tipo: filtro.tipo, valoresSelecionados: filtro.valoresSelecionados });
+            });
+            resposta = ko.toJSON(resposta);
+            alert(resposta);
+            return resposta;
+        };
+
+        self.limparTodosFiltros = function () {
+            self.filtros().forEach(function (filtro) {
+                filtro.limparFiltros();
+            });
+        }
+
+        self.novoFiltro = function (p) {
+            var filtro = Filtro.Criar({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
+            self.filtros.push(filtro);
+        };
+
+        var requisicao = params.value;
+
+        requisicao.filtros.forEach(function (filtro) {
+            self.novoFiltro(filtro);
+        });
+
         $(".btnToggle").click(function () {
             $(".slide-content").slideFadeToggle();
         });
     },
     template:
-        //'<div class="like-or-dislike" data-bind="visible: !chosenValue()">\
-        //    <button data-bind="click: like">Like it</button>\
-        //    <button data-bind="click: dislike">Dislike it</button>\
-        //</div>\
-        //<div class="result" data-bind="visible: chosenValue">\
-        //    You <strong data-bind="text: chosenValue"></strong> it\
-        //</div>'
         '<a class="btnToggle button" href="#"><i class="icon icon-filter icon-with-margin-right"></i> FILTROS SELECIONADOS</a>\
                 <div class="slide-panel">\
                 <div class="slide-content with-four-elements">\

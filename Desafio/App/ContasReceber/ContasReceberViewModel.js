@@ -8,6 +8,7 @@
     self.nomeCentroCusto = ko.observable(contasReceber.nomeCentroCusto || '');
     self.dataPagamento = ko.observable(contasReceber.dataPagamento || '');
     self.valor = ko.observable(contasReceber.valor || '');
+
 }
 
 
@@ -20,8 +21,8 @@ function ContasReceberViewModel() {
         self.ContasReceber.removeAll();
 
         $.getJSON(baseUri, function (allData) {
-            $.each(allData, function (key, ContasReceber) {
-                self.ContasReceber.push(new ContasReceber(ContasReceber));
+            $.each(allData, function (key, contasReceber) {
+                self.ContasReceber.push(new ContasReceber(contasReceber));
             });
         });
     };
@@ -37,27 +38,15 @@ function ContasReceberViewModel() {
         });
     };
 
-    //self.excluir = function (ContasReceber) {
-    //    $.ajax({
-    //        url: baseUri + ContasReceber.Id(),
-    //        type: 'delete',
-    //        contentType: 'application/json',
-    //        success: function () {
-    //            self.students.remove(ContasReceber);
-    //        }
-    //    });
-    //};
+    self.requisicao = new App.Requisicao();
 
-    //self.incluir = function (formElement) {
-    //    $.post(baseUri, $(formElement).serialize(), null, "json")
-    //        .done(function (ContasReceber) {
-    //            self.ContasReceber.push(ContasReceber);
-    //        });
-    //}
+    self.requisicao.novoFiltro({ nome: "Nome1", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"] });
+     //requisicao.novoFiltro({ nome: "Nome2", valoresIniciais: ["TESTE 3", "TESTE 4"] });
+    self.requisicao.novoFiltro({ nome: "Periodo", tipo: Filtro.Tipos.PERIODO, valoresIniciais: "Teste 3" });
 }
 
-//$(document).ready(function () {
-//    var viewModel = new ContasReceberViewModel();
-//    ko.applyBindings(viewModel);
-//    viewModel.listar();
-//})
+$(document).ready(function () {
+    var viewModel = new ContasReceberViewModel();
+    ko.applyBindings(viewModel);
+    viewModel.listar();
+})
