@@ -275,9 +275,12 @@
     <Content Include="Scripts\jquery-slidePanel\jquery-slidePanel.min.js" />
     <Content Include="Scripts\jquery\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\knockout\knockout.simpleGrid.3.0.js" />
     <Content Include="Scripts\knockout\knockout-3.3.0.debug.js" />
     <Content Include="Scripts\knockout\knockout-3.3.0.js" />
     <Content Include="Scripts\blackhole\main.js" />
+    <Content Include="Content\scss\ko-calendar.min.css" />
+    <Content Include="Scripts\knockout\ko-calendar.min.js" />
     <Content Include="Scripts\modernizr\modernizr-2.6.2.js" />
     <Content Include="Scripts\uikit\addons\autocomplete.min.js" />
     <Content Include="Scripts\uikit\addons\datepicker.min.js" />

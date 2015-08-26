@@ -1,13 +1,4 @@
-﻿@*<input type="checkbox" name="toggle" id="toggle" />
-    <label for="toggle"></label>
-    <div class="message">
-        <h1> hello, I'm a hidden message. You found it.</h1>
-        <h2>Now Click the Heart button in the bottom to support CSS3</h2>
-
-    </div>*@
-@*<a class="btnToggle button" href="#"><i class="icon icon-plus icon-with-margin-right"></i> NOVO RECEBIMENTO</a>
-    <a class="btnToggle button" href="#"> ACOES<i class="icon icon-filter icon-with-margin-right"></i></a>*@
-
+﻿
 <a class="button withAccent left" href="#"><i class="icon icon-plus icon-with-margin-right"></i> NOVO RECEBIMENTO</a>
 <div class="uikit-component left ">
     <div class=" uikit-dropdown" data-uk-dropdown="{mode:'click'}">
@@ -24,22 +15,8 @@
 
 <div class="uikit-component left ">
     <filtro params="value: requisicao"></filtro>
-
-    @*<a class="btnToggle button" href="#"><i class="icon icon-filter icon-with-margin-right"></i> FILTROS SELECIONADOS</a>
-
-        <div class="slide-panel">
-            <div class="slide-content with-four-elements">
-                <div name="filtros" data-bind="foreach: filtros">
-                    <div data-bind="template: { name: tipo, data: $data }"></div>
-                </div>
-                <div class="footer-buttons">
-                    <a class="button withAccent" data-bind="click:recuperarSelecoes"><i class="icon icon-filter icon-with-margin-right"></i>Aplicar Filtros</a>
-                    <a class="button withAccent" data-bind="click:limparTodosFiltros"><i class="icon icon-trash icon-with-margin-right"></i>Limpar Todos</a>
-                </div>
-            </div>
-        </div>*@
-
-    <table class="table" id="table-result" style="width:80%">
+    <div data-bind='simpleGrid: gridViewModel'> </div>
+    @*<table class="table" id="table-result" style="width:80%">
         <thead>
             <tr>
                 <th>codigo</th>
@@ -54,7 +31,7 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: contasReceber">
+        <tbody data-bind="foreach: gridViewModel">
             <tr>
                 <td><span data-bind="text: codigo"></span></td>
                 <td><span data-bind="text: numeroRPS"></span></td>
@@ -64,33 +41,12 @@
                 <td><span data-bind="text: nomeCentroCusto"></span></td>
                 <td><span data-bind="text: dataPagamento"></span></td>
                 <td> <span data-bind="text: valor"></span></td>
-                @*<td>
+                <td>
                         <input type="button" class="btn btn-danger btn-xs" value=" [x] delete " data-bind="click: $parent.excluir" />
                         <input type="button" class="btn btn-danger btn-xs" value=" incluir " data-bind="click: $parent.incluir" />
                         <input type="button" class="btn btn-danger btn-xs" value=" incluir " data-bind="click: $parent.editar" />
-                    </td>*@
+                    </td>
             </tr>
         </tbody>
-    </table>
+    </table>*@
 </div>
-@section Scripts{
-
-    <script type="text/javascript">
-
-        //var requisicao = new App.Requisicao();
-
-        //requisicao.novoFiltro({ nome: "Nome1", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"] });
-        //requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
-        //requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
-        //requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
-        //requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
-        //requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
-        //requisicao.novoFiltro({ nome: "Nome2", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 3", "TESTE 4"] });
-        ////requisicao.novoFiltro({ nome: "Nome2", valoresIniciais: ["TESTE 3", "TESTE 4"] });
-        //requisicao.novoFiltro({ nome: "Periodo", tipo: Filtro.Tipos.PERIODO, valoresIniciais: "Teste 3" });
-
-        //var componente = App.criarComponente(requisicao);
-        //ko.applyBindings(componente);
-
-    </script>
-}

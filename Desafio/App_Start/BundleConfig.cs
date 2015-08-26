@@ -15,7 +15,9 @@ namespace Desafio
                         "~/Scripts/modernizr/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
-                      "~/Scripts/knockout/knockout-*"));
+                      "~/Scripts/knockout/knockout-*",
+                       "~/Scripts/knockout/ko-calendar.min.js", 
+                       "~/Scripts/knockout/knockout.simpleGrid.3.0.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/plugins").Include(
                       "~/Scripts/jq-dropdown/jquery.dropdown.min.js",

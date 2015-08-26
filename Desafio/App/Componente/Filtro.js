@@ -23,55 +23,6 @@ App.Campo = function (p) {
     self.valoresSelecionados = p.valoresSelecionados;
 };
 
-
-//App.criarComponente = function (requisicao) {
-//    var componente = new App.Componente();
-
-//    requisicao.filtros.forEach(function (filtro) {
-//        componente.novoFiltro(filtro);
-//    });
-
-//    return componente;
-//};
-
-//App.Componente = function () {
-//    var self = this;
-//    self.filtros = ko.observableArray();
-
-//    self.calcularTamanhoBox = function () {
-
-//        var quantidadeMaxima = 4;
-//        var quantidadeFiltros = self.filtros().length;
-
-//        if (quantidadeFiltros > quantidadeMaxima) {
-//            quantidadeFiltros = quantidadeMaxima;
-//        }
-//        return ("100" / quantidadeFiltros) + "%";
-//    }
-
-//    self.recuperarSelecoes = function () {
-
-//        var resposta = [];
-//        self.filtros().forEach(function (filtro) {
-//            resposta.push({ nome: filtro.nome, tipo: filtro.tipo, valoresSelecionados: filtro.valoresSelecionados });
-//        });
-//        resposta = ko.toJSON(resposta);
-//        alert(resposta);
-//        return resposta;
-//    };
-
-//    self.limparTodosFiltros = function () {
-//        self.filtros().forEach(function (filtro) {
-//            filtro.limparFiltros();
-//        });
-//    }
-
-//    self.novoFiltro = function (p) {
-//        var filtro = Filtro.Criar({ nome: p.nome, tipo: p.tipo, valoresIniciais: p.valoresIniciais });
-//        self.filtros.push(filtro);
-//    };
-//};
-
 Filtro = {};
 
 Filtro.Tipos = ["Caracteres", "Periodo"];

@@ -17,6 +17,23 @@ function ContasReceberViewModel() {
     var baseUri = "/api/ContasReceber";
     self.contasReceber = ko.observableArray();
 
+
+
+    self.gridViewModel = new ko.simpleGrid.viewModel({
+        data: self.contasReceber,
+        columns: [
+            { headerText: "Codigo", rowText: "codigo" },
+            { headerText: "numeroRPS", rowText: "numeroRPS" },
+            { headerText: "nomeCliente", rowText: "nomeCliente" },
+            { headerText: "nomeRazaoSocial", rowText: "nomeRazaoSocial" },
+            { headerText: "nomeUnidadeNegocio", rowText: "nomeUnidadeNegocio" },
+            { headerText: "nomeCentroCusto", rowText: "nomeCentroCusto" },
+            { headerText: "dataPagamento", rowText: "dataPagamento" },
+            { headerText: "valor", rowText: "valor" }
+        ],
+        pageSize: 4
+    });
+
     self.listar = function () {
         self.contasReceber.removeAll();
 
@@ -39,22 +56,12 @@ function ContasReceberViewModel() {
     };
 
     self.requisicao = new App.Requisicao();
-
-    self.requisicao.novoFiltro({
-        nome: "Nome1",
-        tipo: Filtro.Tipos.CARACTERES,
-        valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"]
-    });
-
-    self.requisicao.novoFiltro({
-        nome: "Periodo",
-        tipo: Filtro.Tipos.PERIODO,
-        valoresIniciais: "Teste 3"
-    });
+    self.requisicao.novoFiltro({ nome: "Nome1", tipo: Filtro.Tipos.CARACTERES, valoresIniciais: ["TESTE 1", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2", "TESTE 2"] });
+    self.requisicao.novoFiltro({ nome: "Periodo", tipo: Filtro.Tipos.PERIODO, valoresIniciais: "Teste 3" });
 }
 
 $(document).ready(function () {
     var viewModel = new ContasReceberViewModel();
     ko.applyBindings(viewModel);
     viewModel.listar();
-})
+});
