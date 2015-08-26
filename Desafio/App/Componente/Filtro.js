@@ -149,7 +149,7 @@ ko.components.register('filtro', {
         });
     },
     template:
-        '<a class="btnToggle button" href="#"><i class="icon icon-filter icon-with-margin-right"></i> FILTROS SELECIONADOS</a>\
+        '<a class="btnToggle button no-background" href="#"><i class="icon icon-filter icon-with-margin-right"></i> FILTROS SELECIONADOS <i class="icon icon-angle-down"></i></a>\
                 <div class="slide-panel">\
                 <div class="slide-content with-four-elements">\
                     <div name="filtros" data-bind="foreach: filtros">\

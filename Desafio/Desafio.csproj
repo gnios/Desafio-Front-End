@@ -316,6 +316,7 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Home\Bind.cshtml" />
     <Content Include="Scripts\underscore\underscore-min.map" />
+    <Content Include="Views\Shared\_KoTemplates.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

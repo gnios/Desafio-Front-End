@@ -1,0 +1,22 @@
+﻿
+/* HELPERS */
+
+/* Various */
+#{$documentID} #{$frameworkClass} {
+
+    .with-background {
+        background-color: $accentNegativeColor;
+        color: $textColor;
+        padding: 0 0.5em;
+    }
+    
+    .no-background {
+        background-color: transparent !important; 
+        color: $textColor;
+    }
+    
+    .with-border{
+        border: $borderElements;
+        @include border-radius(8px);
+     }
+}

@@ -17,8 +17,6 @@ function ContasReceberViewModel() {
     var baseUri = "/api/ContasReceber";
     self.contasReceber = ko.observableArray();
 
-
-
     self.gridViewModel = new ko.simpleGrid.viewModel({
         data: self.contasReceber,
         columns: [
@@ -31,7 +29,7 @@ function ContasReceberViewModel() {
             { headerText: "dataPagamento", rowText: "dataPagamento" },
             { headerText: "valor", rowText: "valor" }
         ],
-        pageSize: 4
+        pageSize: 10
     });
 
     self.listar = function () {
